@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="https://i.imgur.com/dqr0VGJ.png" sizes="32x32" />
+		<meta name="vewiport" content="width-device-width, initial-scale=1.0">
+		<script src="lib/jquery-3.6.0.min.js"></script>
+		<script src="lib/anchor.js"></script>
+		<!--Models!-->
+		<script src="script/models/menu.js"></script>
+		<script src="script/models/home.js"></script>
+		<script src="script/models/quotation_graph.js"></script>
+		<!--Views!-->
+		<script src="script/views/menu.js"></script>
+		<script src="script/views/quotations.js"></script>
+		<script src="script/views/home.js"></script>
+		<!--Controllers!-->
+		<script src="script/controllers/page.js"></script>
+		<script src="script/controllers/quotation_graph.js"></script>
+
+
+
+		<!--CSS!-->
+		<link rel="stylesheet" href="style.css"></link>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Stack+Sans+Notch:wght@200&display=swap&family=Zen+Dots&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		
+		<a href="index.html#home" class="ANCHOR home"><img class="white_lotus_img" src="https://i.imgur.com/Sx1ZjSB.jpeg"><h1>White Lotus</h1><span id="mandala">Some Mandala - Form of the Good</span></a>
+		<div id="mobile_header">
+			<a href="index.html#" id="ham">&#9776;</a>
+		</div>
+		<ul class="menu mobile_menu">
+			<li class="thinkers_li"><a href="index.html#" class="show" id="char_tog1">&#9654;</a><a href="index.html#" class="hide" id="char_tog">&#9660;</a><a class="mobile_nav_a" href="index.html#">Western Thinkers</a>
+				<ul class="mobile_sub thinkers_menu">
+					
+				</ul>
+			</li>
+			<li class="sutras_li"><a href="index.html#" class="show" id="sutras_tog1">&#9654;</a><a href="index.html#" class="hide" id="sutras_tog">&#9660;</a><a class="mobile_nav_a" href="index.html#">Buddhist Sutras</a>
+				<ul class="mobile_sub sutras_menu">
+					
+				</ul>
+			</li>
+			<li class="buddhist_li"><a href="index.html#" class="show" id="buddha_tog1">&#9654;</a><a href="index.html#" class="hide" id="buddha_tog">&#9660;</a><a class="mobile_nav_a" href="index.html#">Eastern Dictionary</a>
+				<ul class="mobile_sub eastern_menu">
+					
+				</ul>
+			</li>
+			<li class="hermetic_li"><a href="index.html#" class="show" id="hermetic_tog1">&#9654;</a><a href="index.html#" class="hide" id="herm_tog">&#9660;</a><a class="mobile_nav_a" href="index.html#">Western Dictionary</a>
+				<ul class="mobile_sub western_menu">
+					
+				</ul>
+			</li>	
+			<li class="thoth_li"><a href="index.html#" class="show">&#9654;</a><a href="index.html#" class="hide">&#9660;</a><a class="mobile_nav_a" href="index.html#">Hermetic Dictionary</a>
+				<ul class="mobile_sub hermetic_menu">
+					
+				</ul>
+			</li>			
+		</ul>
+		<div class="sidebar">
+			<ul class="menu">
+				<li class="thinkers_li"><a href="index.html#" class="show" id="char_tog1">&#9654;</a><a href="index.html#" class="hide" id="char_tog">&#9660;</a><a class="nav_a" href="index.html#">Western Thinkers</a>
+					<ul class="thinkers_menu">
+						
+					</ul>
+				</li>
+				<li class="sutras_li"><a href="index.html#" class="show" id="sutras_tog1">&#9654;</a><a href="index.html#" class="hide" id="sutras_tog">&#9660;</a><a class="nav_a" href="index.html#">Buddhist Sutras</a>
+					<ul class="sutras_menu">
+						
+					</ul>
+				</li>
+				<li class="buddhist_li"><a href="index.html#" class="show" id="buddha_tog1">&#9654;</a><a href="index.html#" class="hide" id="buddha_tog">&#9660;</a><a class="nav_a" href="index.html#">Eastern Dictionary</a>
+					<ul class="eastern_menu">
+						
+					</ul>
+				</li>
+				<li class="hermetic_li"><a href="index.html#" class="show" id="hermetic_tog1">&#9654;</a><a href="index.html#" class="hide" id="herm_tog">&#9660;</a><a class="nav_a" href="index.html#">Western Dictionary</a>
+					<ul class="western_menu">
+						
+					</ul>
+				</li>
+				<li class="thoth_li"><a href="index.html#" class="show">&#9654;</a><a href="index.html#" class="hide">&#9660;</a><a class="nav_a" href="index.html#">Hermetic Dictionary</a>
+				<ul class="hermetic_menu">
+					
+				</ul>
+			</li>			
+				
+			</ul>
+			
+		</div>	
+		<div class="page_header">
+			<h2 class="page_heading"></h2>
+		</div>
+
+		<div class="ANCHOR_partial home">
+			<div class="myriad_div">
+				<p id="myriad"></p>
+				<span id="myriad_src" class="src"></span>
+			</div>
+			<p id="home_description"></p>
+			<p id="navigation_instructions"></p>
+			<p id="engineering"></p>			
+		</div>
+		<div class="ANCHOR_partial quotations">
+
+			<div id="quotations_container">
+				
+			</div>
+		</div>
+	</body>
+</html>
