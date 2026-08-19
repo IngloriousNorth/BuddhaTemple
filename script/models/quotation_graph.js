@@ -18,7 +18,7 @@ const graph = {
 		},
 		{
 			index :"universally_good",
-			quotation : "Furthermore, the enlightening being Universally Good entered into the ocean of techniques of inconceivable doors of liberation, and entered into the ocean oof virtues of the buddha. That is to say, there was a door of liberation called purifying all buddha-lands, pacifying the sentient beings, and causing them all to be ultimately emancipated. There was a door of liberation called going to all realms of complete virtues cultivated by all the Buddhas...",
+			quotation : "Furthermore, the enlightening being Universally Good entered into the ocean of techniques of inconceivable doors of liberation, and entered into the ocean of virtues of the buddha. That is to say, there was a door of liberation called purifying all buddha-lands, pacifying the sentient beings, and causing them all to be ultimately emancipated. There was a door of liberation called going to all realms of complete virtues cultivated by all the Buddhas...",
 			src :"Avatamsaka Sutra"
 		},
 		{
