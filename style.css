@@ -59,7 +59,15 @@ q:before, q:after {
 
 }
 
-
+#QFC{
+	width:120px;
+	height:88px;
+	color: gold;
+	background-color: darkgoldenrod;
+	border: 1px solid red;
+	box-shadow:2px 2px 2px yellow;
+	border-radius:5px;
+}
 
 .ANCHOR_partial{
 	overflow-y:auto;
