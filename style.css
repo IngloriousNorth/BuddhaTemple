@@ -53,9 +53,10 @@ q:before, q:after {
 }
 
 .sidebar{
-	background-color:cyan;
+	background-color:lightcyan;
 	width:281px;
-	box-shadow:2px 3px 2px black;
+	border:4px solid blue;
+	box-shadow:3px 4px 5px black;
 
 }
 
@@ -69,7 +70,6 @@ button{
 	box-shadow:2px 2px 2px yellow;
 	border-radius:5px;
 	display:block;
-	margin:0 auto;
 	cursor:pointer;
 	margin-top:40px;
 }
@@ -97,19 +97,19 @@ button:hover{
 h1{
 	display:block;
 	color:white;
-	text-shadow:3px 5px darkviolet;
+	text-shadow:3px 5px blue;
 	text-decoration:none;
 	font-size:27px;
 	padding-top:17px;
-	background-color:yellow;
+	background-color:#000000;
 	padding-left:8px;
 	height:71px;
-	box-shadow:0px 4px 5px red;
+	border-bottom:4px solid cyan;
+	box-shadow:4px 4px 5px black;
 	padding-bottom:3px;
 	position:relative;
-	z-index:999;
-	text-align:left;
-	width:281px;
+	z-index:1;
+	text-align:center;
 	box-sizing:border-box;
 	font-family:"Zen Dots", "Georgia";
 
@@ -120,7 +120,6 @@ h1{
 .menu{
 	width:281px;
 	height:calc(100% - 71px);
-	background-color:cyan;
 	overflow-y:auto;
 
 
@@ -137,13 +136,13 @@ h1{
 	padding-bottom:17px;
 	padding-top:17px;
 	width:281px;
-	color:goldenrod;
-	text-shadow:1px 2px darkviolet;
+	color:darkviolet !important;
+	text-shadow:1px 2px cyan;
 	position:relative;
 	letter-spacing:3px;
 	box-sizing:border-box;
 	text-decoration:none;
-	font-family:"Stack Sans Notch", "Tahoma";
+	font-family:"Zen Dots", "Tahoma";
 	font-weight:400;
 }
 
@@ -152,11 +151,16 @@ h1{
 }
 
 .show, .hide{
-	color:red;
-	padding-top:15px;
-	padding-left:8px;
+	color:green;
+	padding-top:17px;
+	padding-left:9px;
+	padding-right:7px;
 	float:left;
 
+}
+
+.hide{
+	color:red;
 }
 
 .show{
@@ -166,16 +170,24 @@ h1{
 	display:none;
 }
 
-a.quotations:not(.mobile_sub li a.quotations) {
-	padding:12px 8px 12px 30px;
+.nav_a:hover{
+	color:palevioletred;
+}
+
+a.quotations {
+	padding:16px 8px 16px 40px;
 	display:block;
 	box-sizing:border-box;
-	color:orange;
+	color:black;
 	font-size:14px;
 	text-decoration:none;
 	letter-spacing: 3px;
 	font-family:"Stack Sans Notch", "Tahoma";
 	font-weight:400;
+}
+
+a.quotations:hover{
+	color:darkcyan;
 }
 
 
@@ -205,18 +217,21 @@ div.home{
 	height:71px;
 	top:0px;
 	left:281px;
+	border-bottom:4px solid orangered;
+	box-shadow:4px 5px 4px black;
 	width:calc(100% - 281px);
 	padding-right:calc(3.5% + 31px);
 	box-sizing:border-box;
-	background-color:orange;
+	background-color:lightgoldenrodyellow;
 	text-align:right;
-	box-shadow:5px 5px 5px green;
 }
 
 .page_heading{
 	font-size:24px;
 	padding-top:44px;
 	font-weight:bold;
+	position:absolute;
+	z-index:3;
 	color:white !important;
 	text-shadow:3px 2px cyan;
 	height:47px;
@@ -245,7 +260,7 @@ div.home{
 
 .quotation::first-letter{
 	float:left;
-	color:goldenrod;
+	color:#000;
 	font-size:32px;
 	width:34px;
 	font-style:italic;
@@ -263,8 +278,6 @@ div.home{
 	color:black;
 	float:left;
 	display:block;
-	padding-left:16px;
-	padding-right:16px;
 	position:relative;
 	text-align:justify;
 	font-family:"Arial";
@@ -284,7 +297,7 @@ div.home{
 
 
 .src{
-	color:green;
+	color:darkgoldenrod;
 	letter-spacing:1px;
 	text-align:right;
 	bottom:9px;
@@ -312,21 +325,10 @@ div.home{
 
 }
 
-.white_lotus_img{
-	
-	position:fixed;
-	left:0px;
-	width:281px;
-	height:71px;
-	top:0px;
-	z-index:9999;
-	opacity:.23;
-
-}
 
 #myriad{
 	font-style:italic;
-	text-align:center;
+	text-align:left;
 
 }
 
@@ -341,8 +343,7 @@ div.home{
 }
 
 #myriad_src{
-	text-align:center;
-	display:block;
+	text-align:left;
 }
 
 .myriad_div{
@@ -441,9 +442,9 @@ div.home{
 
 	.page_header{
 		position:fixed;
-		margin-right:calc(3.5% + 63px);
+		right:38px;
 		position:fixed;
-		top:167px;
+		top:166px;
 		padding-bottom:0px;
 		box-shadow:none;
 		background-color:transparent;
