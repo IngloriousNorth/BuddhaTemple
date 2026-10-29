@@ -60,8 +60,8 @@ q:before, q:after {
 }
 
 #QFC{
-	width:120px;
-	height:88px;
+	width:77px;
+	height:55px;
 	color: gold;
 	background-color: darkgoldenrod;
 	border: 1px solid red;
@@ -69,6 +69,8 @@ q:before, q:after {
 	border-radius:5px;
 	display:block;
 	margin:0 auto;
+	cursor:pointer;
+	margin-top:40px;
 }
 
 .ANCHOR_partial{
