@@ -244,7 +244,7 @@ const graph = {
 		},
 		{
 			index : "lotus_omniscience",
-			quotation : "Just like the great cloud that rains upon all the grasses, trees, shrubs, and herbs, whose seeds are watered and which grow according to their capacities, the Tathagata teaches the Dharma of one aspect and character, that is to say, the character of liberation, dispassion, and cessation which ultimate leads to Omniscience."
+			quotation : "Just like the great cloud that rains upon all the grasses, trees, shrubs, and herbs, whose seeds are watered and which grow according to their capacities, the Tathagata teaches the Dharma of one aspect and character, that is to say, the character of liberation, dispassion, and cessation which ultimately leads to Omniscience."
 			,
 			src: "The Lotus Sutra"
 		},
@@ -638,11 +638,11 @@ const graph = {
 			,src : "Samadhiraja Sutra"
 		}	
 		,
-		{
+		/*{
 			index : "bodhisattva_bridge",
 			quotation : "May I be a boat, a raft, a bridge... My body, thus and all my goods... I give them all... To bring about the benefit of beings.",
 			src: "Bodhicaryavatara"
-		},
+		},*/
 		{
 			index : "allah_tawhid",
 			quotation: "Say, 'He is Allah, the One. Allah, the Absolute. He begets not, nor was He begotten, and there is nothing comparable to Him.'"
