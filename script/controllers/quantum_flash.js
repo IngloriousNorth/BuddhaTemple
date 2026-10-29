@@ -9,6 +9,7 @@ function fetchAndProcessQuantumGraph() {
         .then(response => response.json()) // Parse response as JSON
         .then(data => {
             // Extract the integer from the .number property
+            console.log(graph);
             const qIndex = parseInt(data.number, 10) || 0;
 
             // Ensure graph data is loaded
