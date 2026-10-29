@@ -1862,11 +1862,6 @@ const graph = {
 			pages: ["Spinoza", "Avatamsaka Sutra", "Dharma", "Gemini (AI)"]
 		},
 		{
-			start: "eckhart_ground_soul",
-			end: "buddha_pratyut",
-			pages: ["Meister Eckhart", "Self-Nature", "Pratyutpanna Sutra", "Gemini (AI)"]
-		},
-		{
 			start: "exalted_king",
 			end: "exalted_golden_light_king",
 			pages: ["Exalted Sublime Golden Light", "Kingship", "Gemini (AI)"]
