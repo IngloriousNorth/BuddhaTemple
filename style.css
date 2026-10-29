@@ -63,7 +63,7 @@ q:before, q:after {
 	width:77px;
 	height:55px;
 	color: gold;
-	background-color: darkgoldenrod;
+	background-color: blue;
 	border: 1px solid red;
 	box-shadow:2px 2px 2px yellow;
 	border-radius:5px;
@@ -71,6 +71,12 @@ q:before, q:after {
 	margin:0 auto;
 	cursor:pointer;
 	margin-top:40px;
+}
+
+#QFC:hover{
+	border:2px solid gold;
+	box-shadow:3px 5px 3px silver;
+	font-weight:bold;
 }
 
 .ANCHOR_partial{
