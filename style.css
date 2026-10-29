@@ -19,12 +19,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-body{
-	backgrond-color: goldenrod;
-	color: #2f2f2f;
-	font-family: "Cairo", serif;
-}
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -52,6 +46,10 @@ q:before, q:after {
 	content: none;
 }
 
+.ANCHOR_partial{
+	background-color:mediumslateblue;
+}
+
 .sidebar{
 	background-color:lightcyan;
 	width:281px;
@@ -65,9 +63,9 @@ button{
 	width:94px;
 	height:55px;
 	color: gold;
-	background-color: green;
-	border: 1px solid cyan;
-	box-shadow:2px 2px 2px yellow;
+	background-color: cyan;
+	border: 1px solid goldenrod;
+	box-shadow:2px 3px 2px silver;
 	border-radius:5px;
 	display:block;
 	cursor:pointer;
@@ -75,10 +73,10 @@ button{
 }
 
 button:hover{
-	border:2px solid red;
-	box-shadow:3px 5px 3px silver;
+	border:2px solid green;
+	box-shadow:3px 5px 7px silver;
 	font-weight:bold;
-	color:cyan;
+	color:white;
 }
 
 .ANCHOR_partial{
@@ -142,8 +140,9 @@ h1{
 	letter-spacing:3px;
 	box-sizing:border-box;
 	text-decoration:none;
-	font-family:"Zen Dots", "Tahoma";
+	font-family:"Rationale", "Tahoma";
 	font-weight:400;
+	font-size:21px;
 }
 
 .menu ul{
@@ -151,7 +150,7 @@ h1{
 }
 
 .show, .hide{
-	color:green;
+	color:gold;
 	padding-top:17px;
 	padding-left:9px;
 	padding-right:7px;
@@ -160,7 +159,7 @@ h1{
 }
 
 .hide{
-	color:red;
+	color:darkgoldenrod;
 }
 
 .show{
@@ -182,7 +181,7 @@ a.quotations {
 	font-size:14px;
 	text-decoration:none;
 	letter-spacing: 3px;
-	font-family:"Stack Sans Notch", "Tahoma";
+	font-family:"Share Tech", "Tahoma";
 	font-weight:400;
 }
 
@@ -197,7 +196,7 @@ a.quotations:hover{
 	width:calc(100% - 281px);
 	position:absolute;
 	top:71px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: mediumslateblue;
     background-blend-mode: lighten;
 		overflow-y:auto;
 
@@ -248,7 +247,7 @@ div.home{
 	padding-bottom:33px;
 	border-bottom:1px solid #EFEFEF;
 	padding-left:8px;
-	width:93%;
+	width:60%;
 	margin:0 auto;
 	display:grid;
 	align-items:center;
@@ -258,13 +257,17 @@ div.home{
 
 }
 
-.quotation::first-letter{
+.src{
+	cursor: pointer;
+}
+
+.quotation::first-letter, #myriad::first-letter{
 	float:left;
-	color:#000;
+	color:blueviolet;
 	font-size:32px;
 	width:34px;
 	font-style:italic;
-	font-family:"Zen Dots", "Georgia";
+	font-family:"Rationale", "Georgia";
 	display:inline-block;
 	vertical-align:middle;
 	padding-right:7px;
@@ -275,12 +278,12 @@ div.home{
 
 
 .quotation{
-	color:black;
+	color:white;
 	float:left;
 	display:block;
 	position:relative;
 	text-align:justify;
-	font-family:"Arial";
+	font-family:"Share Tech", serif, system-ui;
 	box-sizing:border-box;
 	font-style:italic;
 	line-height:19px;
@@ -288,7 +291,6 @@ div.home{
 	display:inline-block;
 	
 	line-height:23px;
-	font-family:"Montserrat", sans-serif;
 
 
 	
@@ -297,7 +299,7 @@ div.home{
 
 
 .src{
-	color:darkgoldenrod;
+	color:gold;
 	letter-spacing:1px;
 	text-align:right;
 	bottom:9px;
@@ -333,7 +335,7 @@ div.home{
 }
 
 #myriad::first-letter{
-	color:goldenrod;
+	color:black;
 	font-size:32px;
 	width:34px;
 	font-style:italic;
