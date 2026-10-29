@@ -60,8 +60,9 @@ q:before, q:after {
 }
 
 #QFC{
-	width:77px;
-	height:55px;
+	font-family:"Zen Dots", system-ui;
+	width:60px;
+	height:40px;
 	color: gold;
 	background-color: blue;
 	border: 1px solid red;
