@@ -59,13 +59,13 @@ q:before, q:after {
 
 }
 
-#QFC{
+button{
 	font-family:"Zen Dots", system-ui;
 	width:94px;
 	height:55px;
 	color: gold;
-	background-color: blue;
-	border: 1px solid red;
+	background-color: green;
+	border: 1px solid blue;
 	box-shadow:2px 2px 2px yellow;
 	border-radius:5px;
 	display:block;
@@ -74,8 +74,8 @@ q:before, q:after {
 	margin-top:40px;
 }
 
-#QFC:hover{
-	border:2px solid gold;
+button:hover{
+	border:2px solid red;
 	box-shadow:3px 5px 3px silver;
 	font-weight:bold;
 	color:white;
