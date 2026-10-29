@@ -47,13 +47,16 @@ q:before, q:after {
 }
 
 .ANCHOR_partial{
-	background-color:mediumslateblue;
+	background-color:#000000;
 }
 
 .sidebar{
-	background-color:lightcyan;
+	background-color:#000;
 	width:281px;
-	border:4px solid blue;
+	border-right:4px solid silver;
+	position:absolute;
+	z-index:1;
+	height:100%;
 	box-shadow:3px 4px 5px black;
 
 }
@@ -102,7 +105,7 @@ h1{
 	background-color:#000000;
 	padding-left:8px;
 	height:71px;
-	border-bottom:4px solid cyan;
+	border-bottom:4px solid white;
 	box-shadow:4px 4px 5px black;
 	padding-bottom:3px;
 	position:relative;
@@ -134,8 +137,7 @@ h1{
 	padding-bottom:17px;
 	padding-top:17px;
 	width:281px;
-	color:darkviolet !important;
-	text-shadow:1px 2px cyan;
+	color:palevioletred; !important;
 	position:relative;
 	letter-spacing:3px;
 	box-sizing:border-box;
@@ -196,7 +198,7 @@ a.quotations:hover{
 	width:calc(100% - 281px);
 	position:absolute;
 	top:71px;
-    background-color: mediumslateblue;
+    background-color: slategray;
     background-blend-mode: lighten;
 		overflow-y:auto;
 
@@ -216,7 +218,7 @@ div.home{
 	height:71px;
 	top:0px;
 	left:281px;
-	border-bottom:4px solid orangered;
+	border-bottom:4px solid white;
 	box-shadow:4px 5px 4px black;
 	width:calc(100% - 281px);
 	padding-right:calc(3.5% + 31px);
