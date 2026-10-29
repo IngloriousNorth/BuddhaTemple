@@ -84,8 +84,8 @@ button:hover{
 
 .ANCHOR_partial{
 	overflow-y:auto;
-	height:calc(100% - 69px);
-	width:calc(100% - 281px);
+	height:100%;
+	position:absolute;
 	box-sizing:border-box;
 	right:0px;
 	top:69px;
@@ -93,7 +93,13 @@ button:hover{
 	position:absolute;
 }
 
-
+#quotationSearchInput{
+	position:fixed;
+	left:0;
+	top:0;
+	height:72px;
+	z-index:9999;
+}
 
 h1{
 	display:block;
@@ -109,7 +115,7 @@ h1{
 	box-shadow:4px 4px 5px black;
 	padding-bottom:3px;
 	position:relative;
-	z-index:1;
+	z-index:3;
 	text-align:center;
 	box-sizing:border-box;
 	font-family:"Zen Dots", "Georgia";
@@ -213,31 +219,26 @@ div.home{
 	padding-left:calc(3.5% + 31px);
 	padding-right: calc(3.5% + 31px);
 }
-.page_header{
-	position:fixed;
-	height:71px;
-	top:0px;
-	left:281px;
-	border-bottom:4px solid white;
-	box-shadow:4px 5px 4px black;
-	width:calc(100% - 281px);
-	padding-right:calc(3.5% + 31px);
-	box-sizing:border-box;
-	background-color:lightgoldenrodyellow;
-	text-align:right;
+
+header{
+	height:72px;
+	width:100%px;
 }
+
 
 .page_heading{
 	font-size:24px;
-	padding-top:44px;
 	font-weight:bold;
-	position:absolute;
-	z-index:3;
+	position:fixed;
+	z-index:9;
 	color:white !important;
+	background-color:black;
 	text-shadow:3px 2px cyan;
-	height:47px;
 	letter-spacing:4px;
-	width:100%;
+	width:333px;
+	right:38px;
+	text-align:right;
+	top:20px;
 
 	font-family:"Zen Dots", "Georgia";
 	
@@ -364,204 +365,4 @@ div.home{
 	padding-left:8px;
 	display:block;
 	width:281px;
-}
-
-
-
-
-
-/* MOBILE */
-@media(max-width:1079px){
-
-	#ham{
-		left:8px;
-		position:fixed;
-		font-size:55px;
-		text-shadow:1px 1px yellow;
-		text-decoration:none;
-		top:14px;
-		z-index:9999;
-		padding-right:13px;
-	}
-
-	#ham:not(.hamGlows){
-		color:darkgoldenrod;
-	}
-
-	.hamGlows{
-		color:red;
-
-	}
-
-
-
-	#ham:hover:not(.hamGlows){
-		color:red;
-	}
-
-	.hamGlows:hover{
-		color:darkgoldenrod;	
-	}
-
-
-
-
-	h1{
-		position:fixed;
-		top:11px;
-		display:block;
-		text-align:left;
-		left:68px;
-		box-shadow:none;
-		font-size:28px;
-		background-color:orange;
-		text-shadow:3px 4px darkviolet;
-		width:240px;
-		color:yellow;
-	}
-
-	#mandala{
-		left:67px;
-		font-size:11px;
-		top:72px;
-		color:darkviolet;
-	}
-
-	#mobile_header{
-		background-color:orange;
-		height:200px;
-		box-shadow:3px 4px 5px cyan;
-		width:100%;
-		display:block;
-		position:fixed;
-		top:0px;
-		z-index:998;	
-	}
-
-	.show, .hide{
-		font-size:24px;
-		color:red;
-		padding-top:33px;
-	}
-
-	.page_header{
-		position:fixed;
-		right:38px;
-		position:fixed;
-		top:166px;
-		padding-bottom:0px;
-		box-shadow:none;
-		background-color:transparent;
-		z-index:998;
-		height:auto;
-	}
-
-
-	.page_heading{
-		color:darkgoldenrod;
-		padding-bottom:0px;
-		padding-top:0px;
-		text-shadow:1px 1px red;
-		text-align:right;
-		font-size:26px;
-		box-shadow:none;
-	}
-
-	.mobile_nav_a{
-		margin-left:15px;
-		font-size:28px;
-		padding:34px 0px 34px 67px;
-		color:white;
-		box-sizing:border-box;
-		display:block;
-		width:auto;
-		font-family:"Stack Sans Notch", "Tahoma";
-		text-decoration:none;
-	}
-
-
-
-	.mobile_sub li a.quotations, .mobile_sub li a.quotations:visited{
-		color:red;
-		font-size:21px;
-		padding:36px 0px 36px 84px;
-		box-sizing:border-box;
-		color:lightgoldenrodyellow;
-		text-decoration:none;
-		display:block;
-		text-decoration:underline;
-		font-family:"Stack Sans Notch", "Tahoma";
-	}
-
-	.sidebar{
-		display:none;
-	}
-
-	.menu{
-		display:none;
-	}
-
-	.highT{
-		font-size:48px;
-		left:0px;
-	}
-
-	.quotation_div{
-		height:220px;
-		margin:0;
-	}
-
-
-
-
-	.mobile_menu{
-		width:100%;
-		height:100%;
-		top:200px;
-		height:calc(100% - 200px);
-		position:absolute;
-		z-index:996;
-		background-color:cyan;
-	}
-
-	.mobile_sidebar{
-		display:block;
-	}
-
-	.ANCHOR_partial{
-		width:100%;
-		height:calc(100% - 200px);
-		padding-left:8px;
-		position:absolute;
-		left:0px;
-		padding-right:8px;
-		margin-left:0px;
-		top:200px;
-		right:0px;
-	}
-
-	div.home{
-		padding-left: calc(3.5% + 47px);
-   		padding-right: calc(3.5% + 47px);
-   		font-size:30px;
-
-	}
-
-	.quotation{
-		font-size:30px;
-	}
-
-	.quotation, .src{
-		font-size:23px;
-	}
-
-	.white_lotus_img{
-		position:fixed;
-		right:0px;
-		left:69px;
-		top:5px;
-		width:225px;
-		height:80px;
-		border-radius:20px;
-	}
 }

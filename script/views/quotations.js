@@ -40,7 +40,7 @@ function implementQuotation(node){
 	$(p).html(node.quotation)
 	var src = document.createElement("p");
 	$(src).addClass("src");
-	$(src).text(" -- " + node.src + (node.ai ? "Gemini" : "");
+	$(src).text(" -- " + node.src + (node.ai ? "Gemini" : ""));
 	$(div).append(p);
 	$(div).append("<br>")
 	$(div).append(src);
