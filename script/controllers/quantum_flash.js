@@ -6,12 +6,13 @@ $(document).ready(function() {
 
 function fetchAndProcessQuantumGraph() {
     fetch('https://Selapian--2f58e6388fb311f1b0781607ee4eb77e.web.val.run')
-        .then(response => response.text())
-        .then(text => {
-            const qIndex = parseInt(text.trim(), 10) || 0;
+        .then(response => response.json()) // Parse response as JSON
+        .then(data => {
+            // Extract the integer from the .number property
+            const qIndex = parseInt(data.number, 10) || 0;
 
             // Ensure graph data is loaded
-            iftypeof graph === 'undefined' || !graph.nodes || !graph.rels) {
+            if (typeof graph === 'undefined' || !graph.nodes || !graph.rels) {
                 console.error('Graph data not found.');
                 return;
             }
@@ -60,8 +61,7 @@ function fetchAndProcessQuantumGraph() {
             // 5. Update DOM elements
             $('#myriad').html(node.quotation);
             $('#myraid_src').html(node.src);
-            $("#myriad, #myriad_src").fadeIn();
-              
+            $("#myriad, #myriad_src").fadeIn();        
         })
         .catch(err => {
             console.error('Failed to fetch quantum index:', err);
