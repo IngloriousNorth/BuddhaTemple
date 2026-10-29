@@ -63,5 +63,11 @@ $(document).ready(function(){
 			$(".page_heading").text(ANCHOR.getParams().path)
 		}
 	}
+
+	$(document).on("ANCHOR", function(){
+		$('.ANCHOR').animate({
+            scrollTop: 0
+        }, 'smooth');
+	})
 	
 })
