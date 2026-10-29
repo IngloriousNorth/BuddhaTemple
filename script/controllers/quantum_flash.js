@@ -53,7 +53,7 @@ $(document).ready(function() {
                     }
 
                     stepIndex = 0;
-                    displayCurrentStep();
+                    transitionAndDisplay();
                 })
                 .catch(err => {
                     console.error('Failed to fetch quantum index:', err);
@@ -63,19 +63,23 @@ $(document).ready(function() {
                 });
         } else {
             // Cycle to the next node in the existing path on subsequent clicks
-            displayCurrentStep();
+            transitionAndDisplay();
         }
     });
 
-    function displayCurrentStep() {
+    function transitionAndDisplay() {
         if (currentPath.length === 0) return;
 
         const nodeKey = currentPath[stepIndex];
         const node = graph.nodes.find(n => n.index === nodeKey);
 
         if (node) {
-            $('#myriad').html(node.quotation);
-            $('#myraid_src').html(node.src);
+            // Fade out, update content while hidden, then fade in
+            $('#myriad, #myraid_src').fadeOut(150, function() {
+                $('#myriad').html(node.quotation);
+                $('#myraid_src').html(node.src);
+                $('#myriad, #myraid_src').fadeIn(200);
+            });
         }
 
         // Advance step, looping back if we reach the end of the shortest path
