@@ -19,8 +19,8 @@ $(document).ready(function() {
                     // Fade out, update content, then fade in for the flash card effect
                     $('#myriad, #myraid_src').fadeOut(150, function() {
                         $('#myriad').html(node.quotation);
-                        $('#myraid_src').html(node.src);
-                        $('#myriad, #myraid_src').fadeIn(200);
+                        $('#myriad_src').html(node.src);
+                        $('#myriad, #myriad_src').fadeIn(200);
                     });
                 }
             })
