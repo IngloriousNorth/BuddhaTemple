@@ -67,6 +67,8 @@ q:before, q:after {
 	border: 1px solid red;
 	box-shadow:2px 2px 2px yellow;
 	border-radius:5px;
+	display:block;
+	margin:0 auto;
 }
 
 .ANCHOR_partial{
