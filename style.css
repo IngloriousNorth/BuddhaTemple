@@ -53,7 +53,7 @@ q:before, q:after {
 }
 
 .sidebar{
-	background-color:blue;
+	background-color:cyan;
 	width:281px;
 	box-shadow:2px 3px 2px black;
 
@@ -65,7 +65,7 @@ button{
 	height:55px;
 	color: gold;
 	background-color: green;
-	border: 1px solid blue;
+	border: 1px solid cyan;
 	box-shadow:2px 2px 2px yellow;
 	border-radius:5px;
 	display:block;
@@ -78,7 +78,7 @@ button:hover{
 	border:2px solid red;
 	box-shadow:3px 5px 3px silver;
 	font-weight:bold;
-	color:blue;
+	color:cyan;
 }
 
 .ANCHOR_partial{
@@ -120,7 +120,7 @@ h1{
 .menu{
 	width:281px;
 	height:calc(100% - 71px);
-	background-color:blue;
+	background-color:cyan;
 	overflow-y:auto;
 
 
@@ -137,7 +137,7 @@ h1{
 	padding-bottom:17px;
 	padding-top:17px;
 	width:281px;
-	color:yellow;
+	color:goldenrod;
 	text-shadow:1px 2px darkviolet;
 	position:relative;
 	letter-spacing:3px;
@@ -218,7 +218,7 @@ div.home{
 	padding-top:44px;
 	font-weight:bold;
 	color:white !important;
-	text-shadow:3px 2px blue;
+	text-shadow:3px 2px cyan;
 	height:47px;
 	letter-spacing:4px;
 	width:100%;
@@ -425,7 +425,7 @@ div.home{
 	#mobile_header{
 		background-color:orange;
 		height:200px;
-		box-shadow:3px 4px 5px blue;
+		box-shadow:3px 4px 5px cyan;
 		width:100%;
 		display:block;
 		position:fixed;
@@ -516,7 +516,7 @@ div.home{
 		height:calc(100% - 200px);
 		position:absolute;
 		z-index:996;
-		background-color:blue;
+		background-color:cyan;
 	}
 
 	.mobile_sidebar{
