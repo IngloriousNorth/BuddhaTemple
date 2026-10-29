@@ -57,7 +57,8 @@ function fetchAndProcessQuantumGraph() {
             // 4. Select node along the shortest path using the quantum index
             const selectedKey = shortestPath[qIndex % shortestPath.length] || targetIndex;
             const node = graph.nodes.find(n => n.index === selectedKey) || graph.nodes[targetNodeIndex];
-
+            
+            $("#myriad, #myriad_src").hide();   
             // 5. Update DOM elements
             $('#myriad').html(node.quotation);
             $('#myraid_src').html(node.src);
