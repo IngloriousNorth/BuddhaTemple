@@ -59,7 +59,7 @@ $(document).ready(function() {
 
                 if (node) {
                     // Smooth flash card fade transition
-                    $('#myriad, #myraid_src').fadeOut(150, function() {
+                    $('#myriad, #myriad_src').fadeOut(150, function() {
                         $('#myriad').html(node.quotation);
                         $('#myriad_src').html(node.src);
                         $('#myriad, #myriad_src').fadeIn(200);
