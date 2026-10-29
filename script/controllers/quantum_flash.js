@@ -60,6 +60,8 @@ function fetchAndProcessQuantumGraph() {
             // 5. Update DOM elements
             $('#myriad').html(node.quotation);
             $('#myraid_src').html(node.src);
+            $("#myriad, #myriad_src").fadeIn();
+              
         })
         .catch(err => {
             console.error('Failed to fetch quantum index:', err);
