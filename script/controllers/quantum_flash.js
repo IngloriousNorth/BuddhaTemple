@@ -3,6 +3,7 @@ $(document).ready(function() {
         fetch('https://Selapian--2f58e6388fb311f1b0781607ee4eb77e.web.val.run')
             .then(response => response.json())
             .then(data => {
+                console.log(data.number);
                 const qIndex = parseInt(data.number, 10) || 0;
 
                 if (typeof graph === 'undefined' || !graph.nodes || graph.nodes.length === 0) {
