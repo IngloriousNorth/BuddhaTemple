@@ -76,9 +76,9 @@ function QRNG(providedStartKey = null) {
 
             if (node) {
                 // Smooth flash card fade transition
-                $('#myriad, #myraid_src').fadeOut(150, function() {
+                $('#myriad, #myriad_src').fadeOut(150, function() {
                     $('#myriad').html(node.quotation);
-                    $('#myraid_src').html(node.src);
+                    $('#myriad_src').html(node.src);
                     $('#myriad, #myraid_src').fadeIn(200);
                 });
             }
