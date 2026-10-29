@@ -284,7 +284,7 @@ div.home{
 
 
 .src{
-	color:darkgoldenrod;
+	color:red;
 	letter-spacing:1px;
 	text-align:right;
 	bottom:9px;
@@ -342,7 +342,7 @@ div.home{
 
 #myriad_src{
 	text-align:center;
-	color:darkgoldenrod;
+	color:red;
 	display:block;
 }
 
