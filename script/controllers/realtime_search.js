@@ -8,7 +8,7 @@ $(document).ready(function() {
             ANCHOR.route("#search?q=" + encodeURIComponent(query));
         } else {
             // Clear or go back home if input is empty
-            ANCHOR.route("#search");
+            window.history.back();
             $('#search_results_container').empty();
         }
     });

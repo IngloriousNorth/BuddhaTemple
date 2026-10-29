@@ -98,7 +98,13 @@ button:hover{
 	left:0;
 	top:0;
 	height:72px;
+	background:slateblue;
 	z-index:9999;
+	color:gold;
+}
+
+#quotationSearchInput::placeholder{
+	color:silver;
 }
 
 h1{
@@ -143,7 +149,7 @@ h1{
 	padding-bottom:17px;
 	padding-top:17px;
 	width:281px;
-	color:palevioletred; !important;
+	color:mediumvioletred; !important;
 	position:relative;
 	letter-spacing:3px;
 	box-sizing:border-box;
