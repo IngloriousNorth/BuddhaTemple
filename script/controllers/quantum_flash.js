@@ -61,8 +61,8 @@ $(document).ready(function() {
                     // Smooth flash card fade transition
                     $('#myriad, #myraid_src').fadeOut(150, function() {
                         $('#myriad').html(node.quotation);
-                        $('#myraid_src').html(node.src);
-                        $('#myriad, #myraid_src').fadeIn(200);
+                        $('#myriad_src').html(node.src);
+                        $('#myriad, #myriad_src').fadeIn(200);
                     });
                 }
             })
