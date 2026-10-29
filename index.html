@@ -15,6 +15,7 @@
 		<!--Controllers!-->
 		<script src="script/controllers/page.js"></script>
 		<script src="script/controllers/quotation_graph.js"></script>
+		<script src="script/controllers/realtime_search.js"></script>
 		<script src="script/controllers/quantum_flash.js"></script>
 
 
@@ -92,7 +93,9 @@
 			</ul>
 			
 		</div>	
+		<input type="text" id="quotationSearchInput" placeholder="Search quotations (supports regex)..." style="width: 100%; padding: 8px; font-size: 16px;">
 		<div class="page_header">
+
 			<h2 class="page_heading"></h2>
 		</div>
 
@@ -113,5 +116,9 @@
 				
 			</div>
 		</div>
+
+		<div class="ANCHOR_partial search">
+			<div id="search_results_container"></div>
+		</div> 
 	</body>
 </html>

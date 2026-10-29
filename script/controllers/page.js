@@ -26,9 +26,13 @@ function initializePages(){
 	switch(ANCHOR.page()){
 		case "home":
 			initializeHome();
+            break;
 		case "quotations" :
 			initializeQuotationsPage();
 			break;		
+        case "search" :
+            initializeSearchPage();
+            break;
 		default :
 			break;
 	}
