@@ -1049,7 +1049,7 @@ const graph = {
 		{
 			start : "descartes_conqueror",
 			end: "dhammapada_conquest",
-			pages: ["Descartes", "The Dhammapada", "Conquest"]
+			pages: ["Descartes", "Kingship", "The Dhammapada", "Conquest"]
 		},
 		{
 			start: "descartes_conqueror",
@@ -1822,6 +1822,11 @@ const graph = {
 			pages: ["Nietzsche", "The Lotus Sutra", "Sun", "Skillful Means", "Gemini (AI)"]
 		},
 		{
+			start: "nietzsche_sun_gift",
+			end: "hegelian_master",
+			pages: ["Nietzsche", "Hegel", "Sun", "Skillful Means", "Sef", "Gemini (AI)"]
+		},
+		{
 			start: "avatamsaka_one_all",
 			end: "hermetic_emerald_monad",
 			pages: ["Avatamsaka Sutra", "Emerald Tablets", "Eastern Lexicon", "Western Lexicon", "Gemini (AI)"]
@@ -1834,17 +1839,17 @@ const graph = {
 		{
 			start: "hermetic_emerald_monad",
 			end: "plotinus_the_one",
-			pages: ["Emerald Tablets", "Western Thinkers", "Western Lexicon", "Gemini (AI)"]
+			pages: ["Emerald Tablets", "Western Thinkers", "Gemini (AI)"]
 		},
 		{
 			start: "arya_arhat_identity",
 			end: "samadhiraja_karma_continuity",
-			pages: ["Eastern Lexicon", "Samadhiraja Sutra", "Karma", "Gemini (AI)"]
+			pages: ["Aristocracy", "Arya", "Eternity", "Samadhiraja Sutra", "Karma", "Gemini (AI)"]
 		},
 		{
 			start: "arya_arhat_identity",
 			end: "upanishad_tat_tvam_asi",
-			pages: ["Eastern Lexicon", "Self", "Dharma", "Gemini (AI)"]
+			pages: ["Eastern Lexicon", "Self", "Eternity", "Dharma", "Gemini (AI)"]
 		},
 		{
 			start: "nietzsche_gateway_moment",
@@ -1857,9 +1862,19 @@ const graph = {
 			pages: ["Nietzsche", "Samadhiraja Sutra", "Karma", "Time", "Gemini (AI)"]
 		},
 		{
+			start : "nietzsche_gateway_moment",
+			end : "dhammapada_wind",
+			pages : ["Dhammpada", "Nietzsche", "Virtue", "Eternity"]
+		}
+		{
 			start: "spinoza_substance_modes",
 			end: "avatamsaka_one_all",
 			pages: ["Spinoza", "Avatamsaka Sutra", "Dharma", "Gemini (AI)"]
+		},
+		{
+			start : "spinoza_substance_modes",
+			end : "derrida_context",
+			pages : ["Spinoza", "Derrida", "Language", "Relativity"]
 		},
 		{
 			start: "exalted_king",
@@ -1869,12 +1884,33 @@ const graph = {
 		{
 			start: "evola_aryan_buddhism",
 			end: "arya_arhat_identity",
-			pages: ["Western Thinkers", "Eastern Lexicon", "Arya", "Gemini (AI)"]
+			pages: ["Western Thinkers", "Julius Evola", "Aristocracy", "Arya", "Gemini (AI)"]
+		},
+		{
+			start: "evola_aryan_buddhism",
+			end : "descartes_conqueror",
+			pages ["Aristocracy", "Conquest", "Julius Evola", "Self", 'Arya']
+		},
+		{
+			start: "evola_aryan_buddhism",
+			end : "tao_conquest",
+			pages: ["Eternity", "Aristocracy","Julius Evola",  "Conquest", "Self", 'Arya']
+		},
+		{
+			start : "evola_aryan_buddhism",
+			end : "dhammapada_conquest",
+			pages : ["Self," "Julius Evola", "Conquest", "Dhammapada"]
 		},
 		{
 			start: "exalted_golden_light_king",
 			end: "arya_aristocracy_spirit",
 			pages: ["Exalted Sublime Golden Light", "Kingship", "Aristocracy", "Arya", "Gemini (AI)"]
+		}
+		,
+		{
+			start: "exalted_golden_light_king",
+			end: "evola_aryan_buddhism",
+			pages: ["Exalted Sublime Golden Light", "Julius Evola", "Kingship", "Aristocracy", "Arya", "Gemini (AI)"]
 		}
 	]
 };
