@@ -65,7 +65,7 @@ $(document).ready(function(){
 	}
 
 	$(document).on("ANCHOR", function(){
-		$('.ANCHOR').animate({
+		$('.ANCHOR_partial').animate({
             scrollTop: 0
         }, 'smooth');
 	})
