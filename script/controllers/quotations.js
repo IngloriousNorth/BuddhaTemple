@@ -1,106 +1,95 @@
- const unfold = function(){
-		//page heading
-		
-		refreshNodes();
-		$("#quotations_container").empty();
-		
-		// Collect matching nodes first so we can sort them
-		let matchedNodes = [];
+import MVC from '../../lib/MAINFRAME.js';
 
-		graph.rels.forEach(function(rel){
-			if(TEMPLAR.pageREC() === "quotations" && TEMPLAR.paramREC() && rel.pages.indexOf(TEMPLAR.paramREC().path) > -1){
-				var start = rel.start;
-				var end = rel.end;
-				var node_start = graph.nodes.find(node => node.index === start);
-				var node_end = graph.nodes.find(node => node.index === end);
-				
-				if(node_start && notQuoted(node_start.index)){				
-					pushIndex(node_start.index);
-					matchedNodes.push(node_start);
-				}
-				if(node_end && notQuoted(node_end.index)){
-					pushIndex(node_end.index);
-					matchedNodes.push(node_end);
-				}
-			}
-		});
+const unfold = function() {
+    refreshNodes();
+    $("#quotations_container").empty();
+    
+    let matchedNodes = [];
+    const params = TEMPLAR.paramREC();
+    const currentPath = params ? params.path : undefined;
+    const currentGraph = MVC.Model.quotationGraph.graph;
 
-		// --- HELPER FUNCTION TO COUNT EDGES ---
-		function getNodeEdgeCount(nodeIndex) {
-			let count = 0;
-			graph.rels.forEach(function(rel) {
-				if (rel.start === nodeIndex || rel.end === nodeIndex) {
-					count++;
-				}
-			});
-			return count;
-		}
+    if (!currentGraph || !currentGraph.rels) return;
 
-		// --- QUANTUM SORT + NUMBER OF EDGES SORTING LOGIC ---
-		matchedNodes.sort(function(a, b) {
-			// 1. Quantum sort factor (from your Val Town proxy QRNG property, e.g., a.qrng)
-			let qrngA = a.qrng !== undefined ? a.qrng : 0;
-			let qrngB = b.qrng !== undefined ? b.qrng : 0;
+    currentGraph.rels.forEach(function(rel) {
+        if (TEMPLAR.pageREC() === "quotations" && currentPath && rel.pages && rel.pages.indexOf(currentPath) > -1) {
+            var start = rel.start;
+            var end = rel.end;
+            var node_start = currentGraph.nodes.find(node => node.index === start);
+            var node_end = currentGraph.nodes.find(node => node.index === end);
+            
+            if (node_start && notQuoted(node_start.index)) {                
+                pushIndex(node_start.index);
+                matchedNodes.push(node_start);
+            }
+            if (node_end && notQuoted(node_end.index)) {
+                pushIndex(node_end.index);
+                matchedNodes.push(node_end);
+            }
+        }
+    });
 
-			// 2. Number of edges factor
-			let edgesA = getNodeEdgeCount(a.index);
-			let edgesB = getNodeEdgeCount(b.index);
+    // Helper to count edges for sorting
+    function getNodeEdgeCount(nodeIndex) {
+        let count = 0;
+        currentGraph.rels.forEach(function(rel) {
+            if (rel.start === nodeIndex || rel.end === nodeIndex) {
+                count++;
+            }
+        });
+        return count;
+    }
 
-			// Combined Sorting: Primary sort by QRNG value, secondary tie-breaker by edge count (descending)
-			if (qrngA !== qrngB) {
-				return qrngA - qrngB; // Ascending QRNG order
-			} else {
-				return edgesB - edgesA; // Descending edge count order if QRNG values match
-			}
-		});
+    // Sort by QRNG value first, then fallback to edge count descending
+    matchedNodes.sort(function(a, b) {
+        let qrngA = a.qrng !== undefined ? a.qrng : 0;
+        let qrngB = b.qrng !== undefined ? b.qrng : 0;
 
-		// Render the sorted nodes
-		matchedNodes.forEach(function(node){
-			implementQuotation(node);
-		});
+        let edgesA = getNodeEdgeCount(a.index);
+        let edgesB = getNodeEdgeCount(b.index);
 
-		$("div.quotations").scrollTop();
-	
+        if (qrngA !== qrngB) {
+            return qrngA - qrngB;
+        } else {
+            return edgesB - edgesA;
+        }
+    });
+
+    matchedNodes.forEach(function(node) {
+        implementQuotation(node);
+    });
+
+    $("div.quotations").scrollTop();
+};
+
+let nodeIndexes = [];
+let nodes = [];
+
+function pushIndex(index) {
+    nodeIndexes.push(index);
 }
 
-function pushIndex(index){
-	nodeIndexes.push(index);
+function refreshNodes() {
+    nodeIndexes = [];
+    nodes = [];
 }
 
-function pushNode(node){
-	nodes.push(node);
+function notQuoted(index) {
+    return nodeIndexes.indexOf(index) === -1;
 }
 
-function refreshNodes(){
-	nodeIndexes = [];
-	nodes = [];
+function implementQuotation(node) {
+    var div = document.createElement("div");
+    $(div).addClass("quotation_div");
+    
+    var p = document.createElement("p");
+    $(p).addClass("quotation").html(node.quotation);
+    
+    var src = document.createElement("p");
+    $(src).addClass("src").text(" -- " + node.src + (node.ai ? " Gemini" : ""));
+    
+    $(div).append(p).append("<br>").append(src);
+    $("#quotations_container").append(div);
 }
 
-function notQuoted(index){
-	if(nodeIndexes.indexOf(index) === -1){
-		return true;
-	}
-	else{
-		return false;
-	}
-}
-
-function implementQuotation(node){
-	var div = document.createElement("div");
-	$(div).addClass("quotation_div")
-	
-
-	var p = document.createElement("p");
-	$(p).addClass("quotation")
-	$(p).html(node.quotation)
-	var src = document.createElement("p");
-	$(src).addClass("src");
-	$(src).text(" -- " + node.src + (node.ai ? "Gemini" : ""));
-	$(div).append(p);
-	$(div).append("<br>")
-	$(div).append(src);
-	$("#quotations_container").append(div);
-	
-}
-
-export default unfold;
+export default { unfold };
