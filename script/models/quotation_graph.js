@@ -1894,7 +1894,7 @@ const graph = {
 		{
 			start: "evola_aryan_buddhism",
 			end : "descartes_conqueror",
-			pages ["Aristocracy", "Conquest", "Julius Evola", "Self", 'Arya']
+			pages : ["Aristocracy", "Conquest", "Julius Evola", "Self", 'Arya']
 		},
 		{
 			start: "evola_aryan_buddhism",
@@ -1904,7 +1904,7 @@ const graph = {
 		{
 			start : "evola_aryan_buddhism",
 			end : "dhammapada_conquest",
-			pages : ["Self," "Julius Evola", "Conquest", "Dhammapada"]
+			pages : ["Self", "Julius Evola", "Conquest", "Dhammapada"]
 		},
 		{
 			start: "exalted_golden_light_king",
