@@ -1890,6 +1890,7 @@ const graph = {
 			start: "evola_aryan_buddhism",
 			end: "arya_arhat_identity",
 			pages: ["Western Thinkers", "Julius Evola", "Aristocracy", "Arya", "Gemini (AI)"]
+		},
 		{
 			start: "evola_aryan_buddhism",
 			end : "descartes_conqueror",

@@ -121,7 +121,7 @@ h1{
 	box-shadow:4px 4px 5px black;
 	padding-bottom:3px;
 	position:relative;
-	z-index:3;
+	z-index:9999;
 	text-align:center;
 	box-sizing:border-box;
 	font-family:"Zen Dots", "Georgia";
@@ -371,4 +371,8 @@ div.home{
 	padding-left:8px;
 	display:block;
 	width:281px;
+}
+
+@media{
+	
 }
