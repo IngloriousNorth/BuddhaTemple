@@ -16,6 +16,12 @@ $(document).ready(function(){
 					fn : function(){
 						MVC.Controller.realTimeSearch.unfold(TEMPLAR.paramREC().q);
 					}
+				},
+				{
+					page: "quotations",
+					fn : function(){
+						MVC.Controller.quotations.unfold();
+					}
 				}
 
 			]
