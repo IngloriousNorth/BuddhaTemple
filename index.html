@@ -1,10 +1,13 @@
 <html>
 	<head>
 		<link rel="icon" type="image/png" href="https://i.imgur.com/dqr0VGJ.png" sizes="32x32" />
-		<meta name="vewiport" content="width-device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- LIBRARIES !-->
 		<script src="lib/jQuery-4.0.0.min.js"></script>
 		<script src="lib/MAINFRAME.js" type="module"></script>
 		<script src="lib/TEMPLAR.js" type="module"></script>
+		<script src="lib/js-mobile.js" type="module"></script>
+
 		<!--Model!-->
 		<script src="script/models/menu.js" type="module"></script>
 		<script src="script/models/home.js" type="module"></script>
@@ -12,16 +15,13 @@
 		<!--View!-->
 		<script src="script/views/menu.js" type="module"></script>
 		<script src="script/views/home.js" type="module"></script>
-		<script src="script/views/js-mobile.js"></script>
 		<!--Controller!-->
 		<script src="script/controllers/quotations.js" type="module"></script>
 		<script src="script/controllers/realtime_search.js" type="module"></script>
 		<script src="script/controllers/flash_card.js" type="module"></script>
 		<script src="script/controllers/Index.js" type="module"></script>
 
-
-
-		<!--CSS!-->
+	<!--CSS!-->
 		<link rel="stylesheet" href="styles/style.css"></link>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,10 +30,10 @@
 	<body>
 		
 		<header>
-			<a href="#" id="js_mobile_menu">&#x2630;</a><a href="#flash" class="TEMPLAR flash"><h1>BuddhaTemple</h1></a>
+			<a href="#" id="js_mobile_menu">&#x2630;</a><a href="#home" class="TEMPLAR home"><h1>BuddhaTemple</h1></a>
 			<input type="text" id="quotationSearchInput" placeholder="Search Nodes: " style="width: 100%; padding: 8px; font-size: 16px;"><h2 class="page_heading"></h2>
 		</header>
-
+		<div class="js_mobile_menu"></div>
 		<div class="sidebar">
 			<ul class="menu">
 				<li class="sutras_li"><a href="index.html#" class="show" id="sutras_tog1">&#9654;</a><a href="index.html#" class="hide" id="sutras_tog">&#9660;</a><a class="nav_a" href="index.html#">Buddhist Sutras</a>
@@ -68,13 +68,13 @@
 		
 
 
-		<div class="TEMPLAR flash">
+		<div class="TEMPLAR home">
 			
 		</div>
 		<div class="TEMPLAR quotations">
 		</div>
 
-		<div class="TEMPLAR search">
+		<div class="TEMPLAR graph-search">
 		</div> 
 	</body>
 </html>

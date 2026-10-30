@@ -3,23 +3,23 @@ import TEMPLAR from '../../lib/TEMPLAR.js';
 
 $(document).ready(function(){
 	TEMPLAR.initialize({
-		pages : ["flash", "search", "quotations"],
-		defaultPage : "flash",
+		pages : ["home", "graph-search", "quotations"],
+		defaultPage : "home",
 		dir : "partials",
 		fade : true,
 		fadeTime : 4444,
 		helm : 
 			[
 				{ 
-					page : "flash",
+					page : "home",
 					fn : function(){
-						$(".page_heading").text("Flash Card")
+						$(".page_heading").text("Home")
 						MVC.View.homeV.initialize();//wat
 						MVC.Controller.flash.initialize(TEMPLAR.paramREC()?.index);
 					}
 				},
 				{
-					page : "search",
+					page : "graph-search",
 					fn : function(){
 						MVC.Controller.search.unfold(TEMPLAR.paramREC().q);
 						$("h2").text("Graph-Search");
@@ -38,5 +38,16 @@ $(document).ready(function(){
 })
 
 $(document).on("TEMPLAR", function(){
-	$(".TEMPLAR").scrollTop();
+	$(".TEMPLAR").scrollTop(0);
+})
+
+$(document).ready(function(){
+	$(".js_mobile_menu").html($(".sidebar").html())
+	$(document).on("click", "a.nav_a", function(e){
+		e.preventDefault();
+
+		$(this).prev().toggle();
+		$(this).prev().prev().toggle();
+		$(this).next().slideToggle();
+	});
 })

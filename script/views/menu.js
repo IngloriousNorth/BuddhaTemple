@@ -50,29 +50,6 @@ const unfold = function(){
 		menu.append(li);
 	}
 
-	$(".nav_a, .mobile_nav_a").click(function(e){
-		e.preventDefault();
-		$(this).prev().toggle();
-		$(this).prev().prev().toggle();
-		$(this).next().slideToggle();
-	});
-
-	//for mobile
-	function processMenuHeading(){
-		if(showing){
-			$(".page_heading").text("Menu");
-		}
-		else if(TEMPLAR.pageREC() === "flash"){
-			$(".page_heading").text("Home");
-		}
-		else if(TEMPLAR.pageREC() === "quotations"){
-			const params = TEMPLAR.paramREC();
-			if (params && params.path) {
-				$(".page_heading").text(params.path);
-			}
-		}
-	}
-
 	$(document).on("TEMPLAR", function(){
 		$('.TEMPLAR').animate({
             scrollTop: 0

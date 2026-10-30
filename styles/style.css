@@ -33,7 +33,7 @@ body {
 	height: 100%;
 	table-layout: fixed;
 	overflow: hidden;
-	background-color:WHITESMOKE !important;
+	background-color:red !important;
 
 }
 ol, ul {
@@ -53,17 +53,14 @@ q:before, q:after {
 }
 
 .sidebar{
-	background-color:blue !important;
-	width:288px;
-	border-right:64px solid GOLD !important;
+	background-color:darkviolet !important;
+	width:333px;
 	padding-right:15px;
-	box-sizing:border-box;
 	position:absolute;
 	top:72px;
 	z-index:1;
 	height:100%;
 	box-shadow:3px 4px 5px black;
-	border-radius:64px;
 
 }
 
@@ -111,21 +108,19 @@ div.TEMPLAR{
 	border-bottom:1px dotted whitesmoke;
 }
 
-#quotationSearchInput{
+input{
 	position:fixed;
-	right:33;
+	right:0;
 	top:0;
-	height:80px;
+	height:72px;
 	width:225px !important;
-	border-top:33px solid blueviolet !important;
-	background:blue!important;
+	background:gray!important;
 	z-index:9999;
 	font-family:"Share Tech", system-ui;
 	color:gold;
-	border-radius:7px;
 }
 
-#quotationSearchInput::placeholder{
+input::placeholder{
 	color:whitesmoke;
 	font-family:"Share Tech", system-ui;
 
@@ -152,6 +147,7 @@ h1{
 	font-size:27px;
 	margin-top:17px;
 	z-index:9999;
+	letter-spacing:4px;
 	padding-left:8px;
 	height:71px;
 	padding-bottom:3px;
@@ -183,19 +179,20 @@ h1{
 
 .nav_a{
 	display:block;
-
+	letter-spacing:1px;
 	padding-left:31px;
 	padding-bottom:17px;
 	padding-top:17px;
 	width:281px;
-	color:palevioletred !important;
+	color:DARKVIOLET !important;
+	text-shadow:1px 2px gold;
 	position:relative;
 	letter-spacing:3px;
 	box-sizing:border-box;
 	text-decoration:none;
 	font-family:"Rationale", "Tahoma";
 	font-weight:400;
-	font-size:27px;
+	font-size:33px;
 }
 
 .menu ul{
@@ -246,19 +243,21 @@ a.quotations:hover{
 
 
 div.TEMPLAR{
-	left:281px;
+	left:333px;
 	height:calc(100% - 72px);
-	width:calc(100% - 288px);
+	width:calc(100% - 333px);
 	padding:55px;
 	position:absolute;
-	top:71px;
+	top:72px;
     background-color: #000000;
     background-blend-mode: lighten;
 		overflow-y:auto;
 		text-align:center;
-	border-bottom-left-radius:128px;
-	border-bottom-right-radius:128px;
 
+}
+
+.src{
+	float:right;
 }
 
 .home p{
@@ -285,7 +284,7 @@ div.home{
 	text-align:right;
 	top:23px;
 
-	font-family:"Rationale", "Arial";
+	font-family:"Georgia";
 	
 
 }
@@ -407,17 +406,19 @@ header{
 	display:none;
 }
 
-@media screen and (max-width:1079px)
-	header{
-		display:none;
-	}
-
+@media screen and (max-width:1079px){
 	#js_mobile_menu{
 		display:block;
 		font-size:32px;
 		position:fixed;
+		z-index:9999;
+		color:whitesmoke;
 		left:3px;
 		top:2px;
+	}
+
+	#js_mobile_menu:hover{
+		color:gold;
 	}
 
 	.js_mobile_menu{
@@ -425,14 +426,49 @@ header{
 	}
 
 	.js_mobile_menu{
+		background:orangered;
 		width:100%;
-		height:100%;
+		position:absolute;
+		z-index:9998;
+		width:100%;
+		height:calc(100% - 72px);
+		top:72px;
+	}
+
+	.sidebar{
+		display:none;
+	}
+
+	h1{
+		font-size:24px;
+		left:55px;
+		top:5px;
+		position:fixed;
+	}
+
+	.page_heading{
+		position:fixed;
+		font-size:19px;
+		right:55px;
+		left:auto;
+		width:auto;
+		bottom:33px;
+		top:auto;
 	}
 
 
 
-}
+	div.TEMPLAR{
+		width:100%;
+		left:0px;
+		border-radius:0;
+	}
 
-@media screen and (max-width:1079px){
-
+	input{
+		position:fixed;
+		right:0px;
+		border:none !important;
+		height:72px;
+		background:gray !important;i
+	}
 }

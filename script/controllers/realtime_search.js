@@ -4,7 +4,7 @@ import TEMPLAR from '../../lib/TEMPLAR.js';
 const unfold = function() {
     const params = TEMPLAR.paramREC();
     const query = params && params.q ? decodeURIComponent(params.q).trim() : "";
-    const resultsContainer = $('.search');
+    const resultsContainer = $('.graph-search');
     resultsContainer.empty();
 
     const currentGraph = MVC && MVC.Model && MVC.Model.quotationGraph ? MVC.Model.quotationGraph.graph : null;
@@ -36,7 +36,7 @@ const unfold = function() {
                 const escapedQuery = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                 // Negative lookahead ensures we don't match inside HTML tags like <br>
                 const regex = new RegExp(`(${escapedQuery})(?![^<>]*>)`, 'gi');
-                return text.replace(regex, '<span style="color: blueviolet; font-weight: bold; background-color: rgba(255, 212, 59, 0.15); padding: 0 2px; border-radius: 3px;">$1</span>');
+                return text.replace(regex, '<span style="color: gold; font-weight: bold; background-color: rgba(255, 212, 59, 0.15); padding: 0 2px; border-radius: 3px;">$1</span>');
             } catch (e) {
                 return text;
             }
@@ -66,10 +66,10 @@ const unfold = function() {
 $(document).on('input', '#quotationSearchInput', function() {
     const query = $(this).val().trim();
     if (query) {
-        $('.search').show();
-        TEMPLAR.route("#search?q=" + encodeURIComponent(query));
+        $('.graph-search').show();
+        TEMPLAR.route("#graph-search?q=" + encodeURIComponent(query));
     } else {
-        $('.search').empty().hide();
+        $('.graph-search').empty().hide();
         TEMPLAR.route("#flash");
     }
 });
