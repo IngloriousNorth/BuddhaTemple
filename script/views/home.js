@@ -1,7 +1,7 @@
 function homeInitialize(){
-	$(".home #myriad").html(white_lotus.myriad)
-	$(".home #myriad_src").text("-- The Lotus Sutra")
-	$(".home #home_description").html(white_lotus.home_description)
-	$(".home #navigation_instructions").text(white_lotus.navigation_instructions)
-	$(".home #engineering").text(white_lotus.engineering)
+	$(".flash #myriad").html(white_lotus.myriad)
+	$(".flash #myriad_src").text("-- The Lotus Sutra")
+	$(".flash #home_description").html(white_lotus.flash_description)
+	$(".flash #navigation_instructions").text(white_lotus.navigation_instructions)
+	$(".flash #engineering").text(white_lotus.engineering)
 }
