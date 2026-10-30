@@ -8,13 +8,13 @@ $(document).ready(function(){
 				{ 
 					page : "flash",
 					fn : function(){
-						MVC.Controllers.flashCard.flashInitialize(TEMPLAR.paramREC().index);
+						MVC.Controller.flashCard.flashInitialize(TEMPLAR.paramREC().index);
 					}
 				},
 				{
 					page : "search",
 					fn : function(){
-						MVC.Controllers.realTimeSearch.unfold(TEMPLAR.paramREC().q);
+						MVC.Controller.realTimeSearch.unfold(TEMPLAR.paramREC().q);
 					}
 				}
 

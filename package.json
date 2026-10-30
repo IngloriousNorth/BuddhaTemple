@@ -1,0 +1,28 @@
+{
+  "name": "buddhatemple",
+  "version": "1.0.0",
+  "description": "While I actually did personally write the DB, I didn't copy and paste duplicate quotations in every page; actually, it is stored in a JSON graph DB.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IngloriousNorth/single-vehicle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IngloriousNorth/single-vehicle/issues"
+  },
+  "homepage": "https://github.com/IngloriousNorth/single-vehicle#readme",
+  "dependencies": {
+    "chokidar": "^6.0.0",
+    "simple-git": "^4.0.2"
+  }
+}
