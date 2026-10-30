@@ -33,7 +33,7 @@ body {
 	height: 100%;
 	table-layout: fixed;
 	overflow: hidden;
-	background-color:ORANGERED !important;
+	background-color:WHITESMOKE !important;
 
 }
 ol, ul {
@@ -118,7 +118,7 @@ div.TEMPLAR{
 	height:80px;
 	width:225px !important;
 	border-top:33px solid gold !important;
-	background:darkslateblue!important;
+	background:blue!important;
 	z-index:9999;
 	font-family:"Share Tech", system-ui;
 	color:gold;
@@ -140,7 +140,7 @@ header{
 	top:0;
 	right:0;
 	background-color:darkred;
-	border-bottom:4px solid whitesmoke;
+	border-bottom:4px solid mediumaquamarine;
 
 }
 
@@ -234,8 +234,7 @@ a.quotations {
 	font-size:17px;
 	text-decoration:none;
 	letter-spacing: 3px;
-	font-family:"Share Tech", "Tahoma";
-	font-weight:400;
+	font-family:"Share Tech", "serif";
 }
 
 a.quotations:hover{
@@ -298,7 +297,7 @@ div.TEMPLAR{
 
 .quotation::first-letter, #myriad::first-letter{
 	float:left;
-	color:blueviolet !important;
+	color:BLUEVIOLET !important;
 	font-size:32px;
 	width:34px;
 	font-style:italic;
@@ -321,9 +320,8 @@ div.TEMPLAR{
 	text-align:justify;
 	font-family:"Share Tech", serif, system-ui;
 	box-sizing:border-box;
-	font-style:italic;
 	line-height:19px;
-	font-size:16px;
+	font-size:19px;
 	display:inline-block;
 	
 	line-height:23px;
@@ -335,7 +333,7 @@ div.TEMPLAR{
 
 
 .src{
-	color:gold;
+	color:silver;
 	letter-spacing:1px;
 	text-align:right;
 	bottom:9px;
@@ -344,7 +342,7 @@ div.TEMPLAR{
 	padding-right:16px;
 	display:inline-block;
 
-	font-family:"Montserrat", sans-serif;
+	font-family:"Rationale", sans-serif;
 }
 
 .mobile_sidebar{

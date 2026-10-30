@@ -6,6 +6,8 @@ $(document).ready(function(){
 		pages : ["flash", "search", "quotations"],
 		defaultPage : "flash",
 		dir : "partials",
+		fade : true,
+		fadeTime : 4444,
 		helm : 
 			[
 				{ 
