@@ -1920,4 +1920,4 @@ const graph = {
 	]
 };
 
-export default graph;
+export default { graph };
