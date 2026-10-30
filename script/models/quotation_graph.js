@@ -895,6 +895,11 @@ const graph = {
 	],
 	rels : [	
 		{
+			start: "spinoza_substance_modes",
+			end : "avatam_sun",
+			pages : ["Avatamsaka", "Spinoza", "Sun", "Eternity", "Virtue"]
+		},
+		{
 			start : "lotus_vehicle",
 			end : "all_good",
 			pages : ["Final Cause", "Wisdom", "Omniscience", "The Lotus Sutra", "Christ"]
@@ -1885,7 +1890,6 @@ const graph = {
 			start: "evola_aryan_buddhism",
 			end: "arya_arhat_identity",
 			pages: ["Western Thinkers", "Julius Evola", "Aristocracy", "Arya", "Gemini (AI)"]
-		},
 		{
 			start: "evola_aryan_buddhism",
 			end : "descartes_conqueror",
