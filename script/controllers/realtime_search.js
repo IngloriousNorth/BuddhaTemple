@@ -9,7 +9,10 @@ const unfold = function(){
         return;
     }
 
-    if (typeof graph === 'undefined' || !graph.nodes) {
+    // Access graph from MVC model or global scope safely
+    const currentGraph = (typeof graph !== 'undefined') ? graph : (MVC && MVC.Model && MVC.Model.quotationGraph ? MVC.Model.quotationGraph.graph : null);
+
+    if (!currentGraph || !currentGraph.nodes) {
         return;
     }
 
@@ -18,7 +21,7 @@ const unfold = function(){
         const regex = new RegExp(query, 'i');
 
         // Filter nodes matching regex on quotation or src
-        const matches = graph.nodes.filter(node => 
+        const matches = currentGraph.nodes.filter(node => 
             regex.test(node.quotation) || regex.test(node.src)
         );
 
@@ -47,49 +50,41 @@ const unfold = function(){
             $(div).append(src);
 
             // --- FIRST-ORDER RELATIONS EXTRACTION ---
-            const edgesCollection = MVC.Model.quotationGraph.graph;
-            // Match edges where source or target matches node.id (or node object itself depending on your graph setup)
-            const nodeId = node.id !== undefined ? node.id : node;
-            
-            const relatedEdges = edgesCollection.filter(edge => {
-                const sourceId = typeof edge.source === 'object' ? edge.source.id : edge.source;
-                const targetId = typeof edge.target === 'object' ? edge.target.id : edge.target;
-                return sourceId === nodeId || targetId === nodeId;
-            });
+            if (currentGraph.rels && Array.isArray(currentGraph.rels)) {
+                const relatedRels = currentGraph.rels.filter(rel => 
+                    rel.start === node.index || rel.end === node.index
+                );
 
-            if (relatedEdges.length > 0) {
-                var relationsContainer = document.createElement("div");
-                $(relationsContainer).addClass("relations_container").css({
-                    'margin-top': '8px',
-                    'padding-left': '15px',
-                    'font-size': '0.9em',
-                    'border-left': '2px solid rgba(255,255,255,0.2)',
-                    'color': '#aaa'
-                });
+                if (relatedRels.length > 0) {
+                    var relationsContainer = document.createElement("div");
+                    $(relationsContainer).addClass("relations_container").css({
+                        'margin-top': '8px',
+                        'padding-left': '15px',
+                        'font-size': '0.9em',
+                        'border-left': '2px solid rgba(255,255,255,0.2)',
+                        'color': '#aaa'
+                    });
 
-                var relTitle = document.createElement("p");
-                $(relTitle).text("First-order relations:").css({'margin': '0 0 4px 0', 'font-weight': 'bold'});
-                $(relationsContainer).append(relTitle);
+                    var relTitle = document.createElement("p");
+                    $(relTitle).text("First-order relations (" + relatedRels.length + "):").css({'margin': '0 0 4px 0', 'font-weight': 'bold'});
+                    $(relationsContainer).append(relTitle);
 
-                relatedEdges.forEach(edge => {
-                    // Find the connected node ID/object
-                    const sourceId = typeof edge.source === 'object' ? edge.source.id : edge.source;
-                    const targetId = typeof edge.target === 'object' ? edge.target.id : edge.target;
-                    
-                    const connectedId = (sourceId === nodeId) ? targetId : sourceId;
-                    const connectedNode = graph.nodes.find(n => (n.id !== undefined ? n.id : n) === connectedId);
+                    relatedRels.forEach(rel => {
+                        const neighborIndex = (rel.start === node.index) ? rel.end : rel.start;
+                        const neighborNode = currentGraph.nodes.find(n => n.index === neighborIndex);
 
-                    var relItem = document.createElement("p");
-                    $(relItem).css('margin', '2px 0');
-                    
-                    const relationText = edge.type || edge.relation || "connected to";
-                    const targetText = connectedNode ? (connectedNode.quotation || connectedNode.src || JSON.stringify(connectedNode)) : connectedId;
-                    
-                    $(relItem).text(`• [${relationText}] -> ${targetText}`);
-                    $(relationsContainer).append(relItem);
-                });
+                        var relItem = document.createElement("p");
+                        $(relItem).css('margin', '2px 0');
+                        
+                        const relationText = rel.type || "connected to";
+                        const targetText = neighborNode ? `"${neighborNode.quotation}" <span class="src">-- ${neighborNode.src}</span>` : `Node #${neighborIndex}`;
+                        
+                        $(relItem).html(`• [${relationText}] ↳ ${targetText}`);
+                        $(relationsContainer).append(relItem);
+                    });
 
-                $(div).append(relationsContainer);
+                    $(div).append(relationsContainer);
+                }
             }
             // ----------------------------------------
 
@@ -103,18 +98,13 @@ const unfold = function(){
 
 // Listen for input changes in real-time
 $(document).on('input', '#quotationSearchInput', function() {
-        const query = $(this).val().trim();
-        console.log('called' , query)
-        if (query) {
-            // Route to the search page view when there is input
-            TEMPLAR.route("#search?q=" + encodeURIComponent(query));
-        } else {
-            // Clear or go back home if input is empty
-            $('.search').empty();
-            TEMPLAR.route("#home")
-
-            console.log('routed home')
-        }
+    const query = $(this).val().trim();
+    if (query) {
+        TEMPLAR.route("#search?q=" + encodeURIComponent(query));
+    } else {
+        $('.search').empty();
+        TEMPLAR.route("#home");
+    }
 });
 
-export default unfold;
+export default { unfold };
