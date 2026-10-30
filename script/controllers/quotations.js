@@ -9,7 +9,7 @@ module.exports = {
 		let matchedNodes = [];
 
 		graph.rels.forEach(function(rel){
-			if(ANCHOR.page() === "quotations" && ANCHOR.getParams() && rel.pages.indexOf(ANCHOR.getParams().path) > -1){
+			if(TEMPLAR.pageREC() === "quotations" && TEMPLAR.paramREC() && rel.pages.indexOf(TEMPLAR.paramREC().path) > -1){
 				var start = rel.start;
 				var end = rel.end;
 				var node_start = graph.nodes.find(node => node.index === start);
