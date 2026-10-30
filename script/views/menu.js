@@ -1,3 +1,5 @@
+import MVC from '../../lib/MAINFRAME.js';
+
 const unfold = function(){
 	MVC.Model.menu.western_thinkers.forEach(function(item){
 		addDictionary(item, $(".thinkers_menu"))
