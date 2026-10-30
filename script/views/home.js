@@ -6,4 +6,4 @@ const initialize = function(){
 	$(".flash #engineering").text(white_lotus.engineering)
 }
 
-export default initialize;
+export default { initialize };
