@@ -96,4 +96,4 @@ $(document).ready(function() {
     });
 });
 
-export default flashInitialize;
+export default { initialize };
