@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 
 	menu.western_thinkers.forEach(function(item){
 		addDictionary(item, $(".thinkers_menu"))
@@ -70,4 +70,4 @@ $(document).ready(function(){
         }, 'smooth');
 	})
 	
-})
+export default unfold;
