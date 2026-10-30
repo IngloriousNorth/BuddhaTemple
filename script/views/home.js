@@ -1,3 +1,5 @@
+import MVC from '../../lib/MAINFRAME.js';
+
 const initialize = function(){
 	$(".flash #myriad").html(white_lotus.myriad)
 	$(".flash #myriad_src").text("-- The Lotus Sutra")
