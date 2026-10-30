@@ -1870,7 +1870,7 @@ const graph = {
 			start : "nietzsche_gateway_moment",
 			end : "dhammapada_wind",
 			pages : ["Dhammpada", "Nietzsche", "Virtue", "Eternity"]
-		}
+		},
 		{
 			start: "spinoza_substance_modes",
 			end: "avatamsaka_one_all",
