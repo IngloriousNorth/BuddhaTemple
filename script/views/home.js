@@ -1,4 +1,4 @@
-function initializeHome(){
+function homeInitialize(){
 	$(".home #myriad").html(white_lotus.myriad)
 	$(".home #myriad_src").text("-- The Lotus Sutra")
 	$(".home #home_description").html(white_lotus.home_description)
