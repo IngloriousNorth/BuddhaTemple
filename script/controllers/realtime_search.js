@@ -29,22 +29,19 @@ const unfold = function() {
         }
 
         matches.forEach(node => {
+            // Main quotation container
             var div = document.createElement("div");
-            $(div).addClass("quotation_div").css({
-                'margin-bottom': '15px',
-                'padding': '10px',
-                'border-bottom': '1px solid rgba(255,255,255,0.1)'
-            });
+            $(div).addClass("quotation_div");
 
             var p = document.createElement("p");
-            $(p).addClass("quotation").html(node.quotation).css('cursor', 'pointer');
+            $(p).addClass("quotation").html(node.quotation);
             
             var src = document.createElement("p");
-            $(src).addClass("src").text(" -- " + node.src).css('cursor', 'pointer');
+            $(src).addClass("src").text(" -- " + node.src + (node.ai ? "Gemini" : ""));
 
             $(div).append(p).append("<br>").append(src);
 
-            // First-order relations extraction
+            // First-order relations extraction formatted EXACTLY like implementQuotation
             if (currentGraph.rels && Array.isArray(currentGraph.rels)) {
                 const relatedRels = currentGraph.rels.filter(rel => 
                     rel.start === node.index || rel.end === node.index
@@ -53,29 +50,33 @@ const unfold = function() {
                 if (relatedRels.length > 0) {
                     var relationsContainer = document.createElement("div");
                     $(relationsContainer).addClass("relations_container").css({
-                        'margin-top': '8px',
+                        'margin-top': '12px',
                         'padding-left': '15px',
-                        'font-size': '0.9em',
-                        'border-left': '2px solid rgba(255,255,255,0.2)',
-                        'color': '#aaa'
+                        'border-left': '2px solid rgba(255,255,255,0.2)'
                     });
 
                     var relTitle = document.createElement("p");
-                    $(relTitle).text("First-order relations (" + relatedRels.length + "):").css({'margin': '0 0 4px 0', 'font-weight': 'bold'});
+                    $(relTitle).text("First-order relations (" + relatedRels.length + "):").css({'font-weight': 'bold', 'margin-bottom': '6px'});
                     $(relationsContainer).append(relTitle);
 
                     relatedRels.forEach(rel => {
                         const neighborIndex = (rel.start === node.index) ? rel.end : rel.start;
                         const neighborNode = currentGraph.nodes.find(n => n.index === neighborIndex);
 
-                        var relItem = document.createElement("p");
-                        $(relItem).css('margin', '2px 0');
-                        
-                        const relationText = rel.type || "connected to";
-                        const targetText = neighborNode ? `"${neighborNode.quotation}" <span class="src">-- ${neighborNode.src}</span>` : `Node #${neighborIndex}`;
-                        
-                        $(relItem).html(`• [${relationText}] ↳ ${targetText}`);
-                        $(relationsContainer).append(relItem);
+                        if (neighborNode) {
+                            // Sub-quotation div matching .quotation_div layout structure
+                            var relDiv = document.createElement("div");
+                            $(relDiv).addClass("quotation_div").css({'margin': '8px 0', 'padding-left': '5px'});
+
+                            var relP = document.createElement("p");
+                            $(relP).addClass("quotation").html(`[${rel.type || "connected"}] ${neighborNode.quotation}`);
+                            
+                            var relSrc = document.createElement("p");
+                            $(relSrc).addClass("src").text(" -- " + neighborNode.src + (neighborNode.ai ? "Gemini" : ""));
+
+                            $(relDiv).append(relP).append("<br>").append(relSrc);
+                            $(relationsContainer).append(relDiv);
+                        }
                     });
 
                     $(div).append(relationsContainer);
@@ -90,7 +91,7 @@ const unfold = function() {
     }
 };
 
-// Real-time input binding with clean hiding/routing
+// Real-time input binding with clean hiding/clearing
 $(document).on('input', '#quotationSearchInput', function() {
     const query = $(this).val().trim();
     if (query) {
