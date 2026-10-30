@@ -1,3 +1,9 @@
+const flashInitialize = function(index){
+    var node = graph.nodes.find(n => n.index === index);
+    $("#myriad").html(node.quotation);
+    $("#myriad_src").html(node.src);
+}
+
 const QRNG = function(providedStartKey = null) {
     fetch('https://Selapian--2f58e6388fb311f1b0781607ee4eb77e.web.val.run')
         .then(response => response.json())
@@ -93,4 +99,4 @@ $(document).ready(function() {
     });
 });
 
-export default QRNG;
+export default flashInitialize;
