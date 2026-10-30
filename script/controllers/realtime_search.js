@@ -107,11 +107,11 @@ $(document).on('input', '#quotationSearchInput', function() {
         console.log('called' , query)
         if (query) {
             // Route to the search page view when there is input
-            ANCHOR.route("#search?q=" + encodeURIComponent(query));
+            TEMPLAR.route("#search?q=" + encodeURIComponent(query));
         } else {
             // Clear or go back home if input is empty
             $('.search').empty();
-            ANCHOR.route("#home")
+            TEMPLAR.route("#home")
 
             console.log('routed home')
         }
