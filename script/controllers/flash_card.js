@@ -1,15 +1,15 @@
 import MVC from '../../lib/MAINFRAME.js';
+import TEMPEST from '../../lib/TEMPEST.js';
 
 const initialize = function(index = undefined){
     var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
     if(!node){
-        MVC.View.home.initialize();
+        MVC.View.homeV.initialize();
     }
     else{
         $("#myriad").html(node.quotation);
         $("#myriad_src").html(node.src);    
     }
-    
 }
 
 const QRNG = function(providedStartKey = null) {
@@ -17,11 +17,12 @@ const QRNG = function(providedStartKey = null) {
         .then(response => response.json())
         .then(data => {
             const qIndex = parseInt(data.number, 10) || 0;
+            const graph = MVC.Model.quotationGraph.graph;
 
             // 1. Build Adjacency List from graph.rels
             const adj = {};
-            MVC.Model.quotationGraph.graph.nodes.forEach(n => { adj[n.index] = []; });
-            MVC.Model.quotationGraph.graph.rels.forEach(r => {
+            graph.nodes.forEach(n => { adj[n.index] = []; });
+            graph.rels.forEach(r => {
                 if (adj[r.start] && adj[r.end]) {
                     adj[r.start].push(r.end);
                     adj[r.end].push(r.start); // Undirected connection graph
@@ -68,10 +69,9 @@ const QRNG = function(providedStartKey = null) {
             const targetKey = arr[Math.abs(qIndex) % arr.length];
             const node = graph.nodes.find(n => n.index === targetKey) || graph.nodes[0];
 
-
             if (node) {
                 // Smooth flash card fade transition
-                TEMPEST.paramSET({"index" : node.index})
+                TEMPEST.paramSET({"index" : node.index});
                 $('#myriad, #myriad_src').fadeOut(150, function() {
                     $('#myriad').html(node.quotation);
                     $('#myriad_src').html(" -- " + node.src);
@@ -81,18 +81,20 @@ const QRNG = function(providedStartKey = null) {
         })
         .catch(err => {
             console.error('Failed to fetch quantum index:', err);
+            const graph = MVC.Model.quotationGraph.graph;
             const fallbackNode = graph.nodes[0];
             $('#myriad').html(fallbackNode.quotation);
-            $('#myraid_src').html(fallbackNode.src);
+            $('#myriad_src').html(fallbackNode.src);
         });
 }
 
 $(document).ready(function() {
-    $('#QFC').on('click', function() {
+    $("button").on('click', function() {
         const currentText = $('#myriad').text().trim();
         let startNodeKey = null;
 
-        if (currentText && typeof graph !== 'undefined' && graph.nodes) {
+        const graph = MVC && MVC.Model && MVC.Model.quotationGraph ? MVC.Model.quotationGraph.graph : null;
+        if (currentText && graph && graph.nodes) {
             const matchedNode = graph.nodes.find(n => n.quotation.trim() === currentText);
             if (matchedNode) {
                 startNodeKey = matchedNode.index;

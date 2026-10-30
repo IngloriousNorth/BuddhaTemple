@@ -1,0 +1,402 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html{
+	height: 100%;
+}
+body {
+	line-height: 1;
+	height: 100%;
+	table-layout: fixed;
+	overflow: hidden;
+	background-color:darkslategray !important;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+#myriad{
+	width:100%;
+}
+
+.sidebar{
+	background-color:blue !important;
+	width:288px;
+	border-right:64px solid GOLD !important;
+	padding-right:15px;
+	box-sizing:border-box;
+	position:absolute;
+	top:72px;
+	z-index:1;
+	height:100%;
+	box-shadow:3px 4px 5px black;
+	border-radius:64px;
+
+}
+
+button{
+	font-family:"Zen Dots", system-ui;
+	width:94px;
+	height:55px;
+	color: gold;
+	background-color: #000000;
+	border: 1px solid goldenrod;
+	box-shadow:2px 3px 2px silver;
+	border-radius:5px;
+	display:block;
+	position:absoulute;
+	marign-top:128px;
+	cursor:pointer;
+	margin-top:40px;
+}
+
+button:hover{
+	border:4px solid gold;
+	box-shadow:3px 5px 7px silver;
+	font-weight:bold;
+	color:white;
+}
+
+.src{
+	text-align:right;
+}
+
+div.TEMPEST{
+	overflow-y:auto;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	right:0px;
+	top:69px;
+	bottom:0px;
+	position:absolute;
+}
+
+.quotation_div{
+	padding:32px;
+	height:200px;
+	border:1px dotted goldenrod;
+}
+
+#quotationSearchInput{
+	position:fixed;
+	right:33;
+	top:0;
+	height:72px;
+	width:225px !important;
+	border-top:33px solid gold !important;
+	background:darkslateblue!important;
+	z-index:9999;
+	font-family:"Share Tech", system-ui;
+	color:gold;
+	border-radius:7px;
+}
+
+#quotationSearchInput::placeholder{
+	color:darkred;
+	font-family:"Share Tech", system-ui;
+
+}
+
+header{
+	z-index:9999;
+	box-shadow:4px 4px 5px black;
+	position:fixed;
+	width:100%;
+	height:72px;
+	top:0;
+	right:0;
+	background-color:darkred;
+
+}
+
+h1{
+	display:block;
+	color:gold;
+	text-shadow:5px 5px mediumaquamarine;
+	text-decoration:none;
+	font-size:27px;
+	margin-top:17px;
+	z-index:9999;
+	padding-left:8px;
+	height:71px;
+	padding-bottom:3px;
+	position:absoulute;
+	text-align:center;
+	box-sizing:border-box;
+	font-family:"Zen Dots", "Georgia";
+
+
+	
+}
+
+.menu{
+	width:288px;
+	height:100%;
+	margin:0 auto;
+	overflow-y:auto;
+
+
+}
+
+.menu li{
+	border-bottom:1px solid goldenrod;
+	
+}
+
+.nav_a{
+	display:block;
+
+	padding-left:31px;
+	padding-bottom:17px;
+	padding-top:17px;
+	width:281px;
+	color:palevioletred !important;
+	position:relative;
+	letter-spacing:3px;
+	box-sizing:border-box;
+	text-decoration:none;
+	font-family:"Rationale", "Tahoma";
+	font-weight:400;
+	font-size:27px;
+}
+
+.menu ul{
+	display:none;
+}
+
+.show, .hide{
+	color:gold;
+	padding-top:17px;
+	padding-left:9px;
+	padding-right:7px;
+	float:left;
+
+}
+
+.hide{
+	color:darkgoldenrod;
+}
+
+.show{
+}
+
+.hide{
+	display:none;
+}
+
+.nav_a:hover{
+	color:palevioletred;
+}
+
+a.quotations {
+	padding:16px 8px 16px 8px;
+	display:block;
+	height:40px;
+	box-sizing:border-box;
+	color:whitesmoke;
+	z-index:999;
+	position:relative;
+	font-size:17px;
+	text-decoration:none;
+	letter-spacing: 3px;
+	font-family:"Share Tech", "Tahoma";
+	font-weight:400;
+}
+
+a.quotations:hover{
+	color:gold;
+}
+
+
+div.TEMPEST{
+	left:281px;
+	height:calc(100% - 72px);
+	width:calc(100% - 288px);
+	padding:55px;
+	position:absolute;
+	top:71px;
+    background-color: black;
+    background-blend-mode: lighten;
+		overflow-y:auto;
+		text-align:center;
+	border-bottom-left-radius:128px;
+	border-bottom-right-radius:128px;
+
+}
+
+.home p{
+	
+	padding-top:32px;
+}
+
+div.home{
+	padding-left:calc(3.5% + 31px);
+	padding-right: calc(3.5% + 31px);
+}
+
+
+.page_heading{
+	font-size:20px;
+	font-weight:bold;
+	position:fixed;
+	z-index:9;
+	color:white !important;
+	text-shadow:1px 1px gold;
+	letter-spacing:4px;
+	width:333px;
+	left:38px;
+	text-align:right;
+	top:23px;
+
+	font-family:"Rationale", "Arial";
+	
+
+}
+
+div.TEMPEST{
+	padding-top:27px;
+}
+
+
+.src{
+}
+
+.quotation::first-letter, #myriad::first-letter{
+	float:left;
+	color:blueviolet !important;
+	font-size:32px;
+	width:34px;
+	font-style:italic;
+	font-family:"Rationale", "Georgia";
+	display:inline-block;
+	vertical-align:middle;
+	padding-right:7px;
+
+
+}
+
+
+
+.quotation{
+	color:#50C777;
+	float:left;
+	display:block;
+	margin:0 auto;
+	position:relative;
+	text-align:justify;
+	font-family:"Share Tech", serif, system-ui;
+	box-sizing:border-box;
+	font-style:italic;
+	line-height:19px;
+	font-size:16px;
+	display:inline-block;
+	
+	line-height:23px;
+
+
+	
+}
+
+
+
+.src{
+	color:gold;
+	letter-spacing:1px;
+	text-align:right;
+	bottom:9px;
+	font-size:16px;
+	padding-top:11px;
+	padding-right:16px;
+	display:inline-block;
+
+	font-family:"Montserrat", sans-serif;
+}
+
+.mobile_sidebar{
+	display:none;
+}
+
+#mobile_header{
+	display:none;
+}
+
+div.home{
+	text-align:justify;
+	font-family:"Montserrat", sans-serif;
+	font-style:normal;
+
+}
+
+
+#myriad{
+	font-style:italic;
+	text-align:left;
+
+}
+
+.quotation::first-letter{
+	font-size:32px;
+	width:34px;
+	font-style:italic;
+	font-family:"Zen Dots", "Georgia";
+	padding-right:7px;
+
+}
+
+#myriad_src{
+	text-align:left;
+}
+
+.myriad_div{
+
+}
+
+#mandala{
+	position:fixed;
+	top:55px;
+	z-index:9999;
+	font-family:"Montserrat", sans-serif;
+	color:darkviolet;
+	font-size:11px;
+	padding-left:8px;
+	display:block;
+	width:281px;
+}
+
+@media{
+
+}

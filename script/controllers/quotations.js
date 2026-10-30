@@ -3,7 +3,7 @@ import TEMPEST from '../../lib/TEMPEST.js';
 
 const unfold = function() {
     refreshNodes();
-    $("#quotations_container").empty();
+    $("div.TEMPEST.quotations").empty();
     
     let matchedNodes = [];
     const params = TEMPEST.paramREC();
@@ -60,7 +60,7 @@ const unfold = function() {
         implementQuotation(node);
     });
 
-    $("div.quotations").scrollTop();
+    $("div.TEMPEST").scrollTop();
 };
 
 let nodeIndexes = [];
@@ -89,8 +89,10 @@ function implementQuotation(node) {
     var src = document.createElement("p");
     $(src).addClass("src").text(" -- " + node.src + (node.ai ? " Gemini" : ""));
     
-    $(div).append(p).append("<br>").append(src);
-    $("#quotations_container").append(div);
+    $(div).append(p).append("<br><br><br><br><br>").append(src);
+    
+    // Fixed container selector matching the rest of the file
+    $("div.TEMPEST.quotations").append(div);
 }
 
 export default { unfold };

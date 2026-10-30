@@ -3,43 +3,34 @@ import TEMPEST from '../../lib/TEMPEST.js';
 
 $(document).ready(function(){
 	TEMPEST.initialize({
-		default : "flash",
+		pages : ["flash", "search", "quotations"],
+		defaultPage : "flash",
+		dir : "partials",
 		helm : 
 			[
 				{ 
 					page : "flash",
 					fn : function(){
-						MVC.View.home.initialize();
-						MVC.Controller.flashCard.initialize(TEMPEST.paramREC()?.index);
+						$(".page_heading").text("Flash Card")
+						MVC.View.homeV.initialize();//wat
+						MVC.Controller.flash.initialize(TEMPEST.paramREC()?.index);
 					}
 				},
 				{
 					page : "search",
 					fn : function(){
-						MVC.Controller.realTimeSearch.unfold(TEMPEST.paramREC().q);
+						MVC.Controller.search.unfold(TEMPEST.paramREC().q);
+						$("h2").text("Graph-Search");
 					}
 				},
 				{
 					page: "quotations",
 					fn : function(){
 						MVC.Controller.quotations.unfold();
+						$(".page_heading").text(TEMPEST.paramREC().path)
 					}
 				}
 
 			]
 	}, ()=>MVC.View.menuV.unfold());
-})
-
-$(document).on("TEMPEST", function(){
-
-
-	$(".mobile_menu").hide();
-	
-	if(TEMPEST.pageREC() === "flash"){
-		$(".page_heading").text("Flash Card")
-	}
-	else{
-		$(".page_heading").text(TEMPEST.paramREC().path)
-	}
-		
 })
