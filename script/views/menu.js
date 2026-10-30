@@ -69,4 +69,4 @@ const unfold = function(){
         }, 'smooth');
 	})
 }
-export default unfold;
+export default { unfold };
