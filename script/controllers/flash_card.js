@@ -2,8 +2,14 @@ import MVC from '../../lib/MAINFRAME.js';
 
 const initialize = function(index = undefined){
     var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
-    $("#myriad").html(node.quotation);
-    $("#myriad_src").html(node.src);
+    if(!node){
+        MVC.View.home.initialize();
+    }
+    else{
+        $("#myriad").html(node.quotation);
+        $("#myriad_src").html(node.src);    
+    }
+    
 }
 
 const QRNG = function(providedStartKey = null) {
