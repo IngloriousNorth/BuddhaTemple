@@ -1,5 +1,4 @@
-
-
+const unfold = function(){
 	menu.western_thinkers.forEach(function(item){
 		addDictionary(item, $(".thinkers_menu"))
 	})
@@ -69,5 +68,5 @@
             scrollTop: 0
         }, 'smooth');
 	})
-	
+}
 export default unfold;
