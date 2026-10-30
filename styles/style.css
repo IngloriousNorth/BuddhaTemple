@@ -117,7 +117,7 @@ div.TEMPLAR{
 	top:0;
 	height:80px;
 	width:225px !important;
-	border-top:33px solid gold !important;
+	border-top:33px solid blueviolet !important;
 	background:blue!important;
 	z-index:9999;
 	font-family:"Share Tech", system-ui;
@@ -168,7 +168,10 @@ h1{
 	width:288px;
 	height:100%;
 	margin:0 auto;
+	margin-top:40px;
 	overflow-y:auto;
+
+
 
 
 }
@@ -312,7 +315,7 @@ div.TEMPLAR{
 
 
 .quotation{
-	color:#50C777;
+	color:cyan;
 	float:left;
 	display:block;
 	margin:0 auto;
@@ -396,6 +399,40 @@ div.home{
 	width:281px;
 }
 
-@media{
+header{
+	display:block;
+}
+
+#js_mobile_menu, .js_mobile_menu{
+	display:none;
+}
+
+@media screen and (max-width:1079px)
+	header{
+		display:none;
+	}
+
+	#js_mobile_menu{
+		display:block;
+		font-size:32px;
+		position:fixed;
+		left:3px;
+		top:2px;
+	}
+
+	.js_mobile_menu{
+		display:none;
+	}
+
+	.js_mobile_menu{
+		width:100%;
+		height:100%;
+	}
+
+
+
+}
+
+@media screen and (max-width:1079px){
 
 }
