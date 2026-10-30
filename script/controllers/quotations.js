@@ -1,19 +1,19 @@
 import MVC from '../../lib/MAINFRAME.js';
-import TEMPEST from '../../lib/TEMPEST.js';
+import TEMPLAR from '../../lib/TEMPLAR.js';
 
 const unfold = function() {
     refreshNodes();
-    $("div.TEMPEST.quotations").empty();
+    $("div.TEMPLAR.quotations").empty();
     
     let matchedNodes = [];
-    const params = TEMPEST.paramREC();
+    const params = TEMPLAR.paramREC();
     const currentPath = params ? params.path : undefined;
     const currentGraph = MVC.Model.quotationGraph.graph;
 
     if (!currentGraph || !currentGraph.rels) return;
 
     currentGraph.rels.forEach(function(rel) {
-        if (TEMPEST.pageREC() === "quotations" && currentPath && rel.pages && rel.pages.indexOf(currentPath) > -1) {
+        if (TEMPLAR.pageREC() === "quotations" && currentPath && rel.pages && rel.pages.indexOf(currentPath) > -1) {
             var start = rel.start;
             var end = rel.end;
             var node_start = currentGraph.nodes.find(node => node.index === start);
@@ -60,7 +60,7 @@ const unfold = function() {
         implementQuotation(node);
     });
 
-    $("div.TEMPEST").scrollTop();
+    $("div.TEMPLAR").scrollTop();
 };
 
 let nodeIndexes = [];
@@ -92,7 +92,7 @@ function implementQuotation(node) {
     $(div).append(p).append("<br><br><br><br><br>").append(src);
     
     // Fixed container selector matching the rest of the file
-    $("div.TEMPEST.quotations").append(div);
+    $("div.TEMPLAR.quotations").append(div);
 }
 
 export default { unfold };

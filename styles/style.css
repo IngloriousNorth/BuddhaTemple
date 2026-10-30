@@ -33,7 +33,7 @@ body {
 	height: 100%;
 	table-layout: fixed;
 	overflow: hidden;
-	background-color:darkslategray !important;
+	background-color:ORANGERED !important;
 
 }
 ol, ul {
@@ -94,7 +94,7 @@ button:hover{
 	text-align:right;
 }
 
-div.TEMPEST{
+div.TEMPLAR{
 	overflow-y:auto;
 	height:100%;
 	position:absolute;
@@ -108,14 +108,14 @@ div.TEMPEST{
 .quotation_div{
 	padding:32px;
 	height:200px;
-	border:1px dotted goldenrod;
+	border-bottom:1px dotted whitesmoke;
 }
 
 #quotationSearchInput{
 	position:fixed;
 	right:33;
 	top:0;
-	height:72px;
+	height:80px;
 	width:225px !important;
 	border-top:33px solid gold !important;
 	background:darkslateblue!important;
@@ -126,7 +126,7 @@ div.TEMPEST{
 }
 
 #quotationSearchInput::placeholder{
-	color:darkred;
+	color:whitesmoke;
 	font-family:"Share Tech", system-ui;
 
 }
@@ -140,12 +140,13 @@ header{
 	top:0;
 	right:0;
 	background-color:darkred;
+	border-bottom:4px solid whitesmoke;
 
 }
 
 h1{
 	display:block;
-	color:gold;
+	color:#000000;
 	text-shadow:5px 5px mediumaquamarine;
 	text-decoration:none;
 	font-size:27px;
@@ -242,14 +243,14 @@ a.quotations:hover{
 }
 
 
-div.TEMPEST{
+div.TEMPLAR{
 	left:281px;
 	height:calc(100% - 72px);
 	width:calc(100% - 288px);
 	padding:55px;
 	position:absolute;
 	top:71px;
-    background-color: black;
+    background-color: #000000;
     background-blend-mode: lighten;
 		overflow-y:auto;
 		text-align:center;
@@ -287,7 +288,7 @@ div.home{
 
 }
 
-div.TEMPEST{
+div.TEMPLAR{
 	padding-top:27px;
 }
 

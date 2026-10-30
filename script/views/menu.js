@@ -1,5 +1,5 @@
 import MVC from '../../lib/MAINFRAME.js';
-import TEMPEST from '../../lib/TEMPEST.js';
+import TEMPLAR from '../../lib/TEMPLAR.js';
 
 const unfold = function(){
 	const menuData = MVC.Model.menu.menu;
@@ -34,7 +34,7 @@ const unfold = function(){
 		const li = document.createElement("li");
 		const a = document.createElement("a");
 		$(a).text(item);
-		$(a).addClass("TEMPEST");
+		$(a).addClass("TEMPLAR");
 		$(a).addClass("quotations");
 		
 		const menuClass = $(menu).attr("class");
@@ -62,19 +62,19 @@ const unfold = function(){
 		if(showing){
 			$(".page_heading").text("Menu");
 		}
-		else if(TEMPEST.pageREC() === "flash"){
+		else if(TEMPLAR.pageREC() === "flash"){
 			$(".page_heading").text("Home");
 		}
-		else if(TEMPEST.pageREC() === "quotations"){
-			const params = TEMPEST.paramREC();
+		else if(TEMPLAR.pageREC() === "quotations"){
+			const params = TEMPLAR.paramREC();
 			if (params && params.path) {
 				$(".page_heading").text(params.path);
 			}
 		}
 	}
 
-	$(document).on("TEMPEST", function(){
-		$('.TEMPEST').animate({
+	$(document).on("TEMPLAR", function(){
+		$('.TEMPLAR').animate({
             scrollTop: 0
         }, 'smooth');
 	});

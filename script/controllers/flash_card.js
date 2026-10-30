@@ -1,7 +1,21 @@
 import MVC from '../../lib/MAINFRAME.js';
-import TEMPEST from '../../lib/TEMPEST.js';
+import TEMPLAR from '../../lib/TEMPLAR.js';
 
 const initialize = function(index = undefined){
+    $("button").on('click', function() {
+        const currentText = $('#myriad').text().trim();
+        let startNodeKey = null;
+
+        const graph = MVC && MVC.Model && MVC.Model.quotationGraph ? MVC.Model.quotationGraph.graph : null;
+        if (currentText && graph && graph.nodes) {
+            const matchedNode = graph.nodes.find(n => n.quotation.trim() === currentText);
+            if (matchedNode) {
+                startNodeKey = matchedNode.index;
+            }
+        }
+        QRNG(startNodeKey);
+    });
+    
     var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
     if(!node){
         MVC.View.homeV.initialize();
@@ -71,7 +85,7 @@ const QRNG = function(providedStartKey = null) {
 
             if (node) {
                 // Smooth flash card fade transition
-                TEMPEST.paramSET({"index" : node.index});
+                TEMPLAR.paramSET({"index" : node.index});
                 $('#myriad, #myriad_src').fadeOut(150, function() {
                     $('#myriad').html(node.quotation);
                     $('#myriad_src').html(" -- " + node.src);
@@ -87,21 +101,5 @@ const QRNG = function(providedStartKey = null) {
             $('#myriad_src').html(fallbackNode.src);
         });
 }
-
-$(document).ready(function() {
-    $("button").on('click', function() {
-        const currentText = $('#myriad').text().trim();
-        let startNodeKey = null;
-
-        const graph = MVC && MVC.Model && MVC.Model.quotationGraph ? MVC.Model.quotationGraph.graph : null;
-        if (currentText && graph && graph.nodes) {
-            const matchedNode = graph.nodes.find(n => n.quotation.trim() === currentText);
-            if (matchedNode) {
-                startNodeKey = matchedNode.index;
-            }
-        }
-        QRNG(startNodeKey);
-    });
-});
 
 export default { initialize };

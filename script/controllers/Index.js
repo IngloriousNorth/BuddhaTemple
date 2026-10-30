@@ -1,8 +1,8 @@
 import MVC from '../../lib/MAINFRAME.js';
-import TEMPEST from '../../lib/TEMPEST.js';
+import TEMPLAR from '../../lib/TEMPLAR.js';
 
 $(document).ready(function(){
-	TEMPEST.initialize({
+	TEMPLAR.initialize({
 		pages : ["flash", "search", "quotations"],
 		defaultPage : "flash",
 		dir : "partials",
@@ -13,13 +13,13 @@ $(document).ready(function(){
 					fn : function(){
 						$(".page_heading").text("Flash Card")
 						MVC.View.homeV.initialize();//wat
-						MVC.Controller.flash.initialize(TEMPEST.paramREC()?.index);
+						MVC.Controller.flash.initialize(TEMPLAR.paramREC()?.index);
 					}
 				},
 				{
 					page : "search",
 					fn : function(){
-						MVC.Controller.search.unfold(TEMPEST.paramREC().q);
+						MVC.Controller.search.unfold(TEMPLAR.paramREC().q);
 						$("h2").text("Graph-Search");
 					}
 				},
@@ -27,7 +27,7 @@ $(document).ready(function(){
 					page: "quotations",
 					fn : function(){
 						MVC.Controller.quotations.unfold();
-						$(".page_heading").text(TEMPEST.paramREC().path)
+						$(".page_heading").text(TEMPLAR.paramREC().path)
 					}
 				}
 

@@ -1,8 +1,8 @@
 import MVC from '../../lib/MAINFRAME.js';
-import TEMPEST from '../../lib/TEMPEST.js';
+import TEMPLAR from '../../lib/TEMPLAR.js';
 
 const unfold = function() {
-    const params = TEMPEST.paramREC();
+    const params = TEMPLAR.paramREC();
     const query = params && params.q ? decodeURIComponent(params.q).trim() : "";
     const resultsContainer = $('.search');
     resultsContainer.empty();
@@ -67,10 +67,10 @@ $(document).on('input', '#quotationSearchInput', function() {
     const query = $(this).val().trim();
     if (query) {
         $('.search').show();
-        TEMPEST.route("#search?q=" + encodeURIComponent(query));
+        TEMPLAR.route("#search?q=" + encodeURIComponent(query));
     } else {
         $('.search').empty().hide();
-        TEMPEST.route("#flash");
+        TEMPLAR.route("#flash");
     }
 });
 
