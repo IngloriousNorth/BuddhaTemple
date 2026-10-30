@@ -1,5 +1,5 @@
 const unfold = function(){
-    const params = ANCHOR.getParams();
+    const params = TEMPLAR.paramREC()();
     const query = params && params.q ? decodeURIComponent(params.q) : "";
     const resultsContainer = $('.search');
     resultsContainer.empty();
