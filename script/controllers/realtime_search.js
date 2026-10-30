@@ -1,5 +1,5 @@
 const unfold = function(){
-    const params = TEMPLAR.paramREC()();
+    const params = TEMPLAR.paramREC();
     const query = params && params.q ? decodeURIComponent(params.q) : "";
     const resultsContainer = $('.search');
     resultsContainer.empty();
@@ -22,7 +22,7 @@ const unfold = function(){
             regex.test(node.quotation) || regex.test(node.src)
         );
 
-        if (matches.length === 0 || !ANCHOR.getParams()) {
+        if (matches.length === 0 || !TEMPLAR.paramREC()) {
             resultsContainer.html('<p style="color: #ff6b6b;">No matching quotations found.</p>');
             return;
         }
