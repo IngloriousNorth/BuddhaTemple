@@ -1,6 +1,6 @@
 import MVC from '../../lib/MAINFRAME.js';
 
-const initialize = function(index){
+const initialize = function(index = undefined){
     var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
     $("#myriad").html(node.quotation);
     $("#myriad_src").html(node.src);
