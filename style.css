@@ -99,7 +99,7 @@ button:hover{
 	top:0;
 	height:72px;
 	background:slateblue;
-	z-index:9999;
+	z-index:9997;
 	color:gold;
 }
 
@@ -374,5 +374,5 @@ div.home{
 }
 
 @media{
-	
+
 }
