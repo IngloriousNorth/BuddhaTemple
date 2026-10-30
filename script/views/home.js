@@ -5,7 +5,7 @@ const initialize = function(){
 	$(".flash #myriad_src").text("-- The Lotus Sutra")
 	$(".flash #home_description").html(MVC.Model.home.white_lotus.flash_description)
 	$(".flash #navigation_instructions").text(MVC.Model.home.white_lotus.navigation_instructions)
-	$(".flash #engineering").text(white_lotus.engineering)
+	$(".flash #engineering").text(MVC.Model.home.white_lotus.engineering)
 }
 
 export default { initialize };
