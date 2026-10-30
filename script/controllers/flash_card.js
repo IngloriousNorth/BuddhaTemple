@@ -15,7 +15,7 @@ const initialize = function(index = undefined){
         }
         QRNG(startNodeKey);
     });
-    
+
     var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
     if(!node){
         MVC.View.homeV.initialize();
@@ -86,15 +86,14 @@ const QRNG = function(providedStartKey = null) {
             if (node) {
                 // Smooth flash card fade transition
                 TEMPLAR.paramSET({"index" : node.index});
-                $('#myriad, #myriad_src').fadeOut(150, function() {
+                $('#myriad, #myriad_src, div.TEMPLAR.home').fadeOut(150, function() {
                     $('#myriad').html(node.quotation);
                     $('#myriad_src').html(" -- " + node.src);
-                    $('#myriad, #myriad_src').fadeIn(200);
+                    $('#myriad, #myriad_src, div.TEMPLAR.home').fadeIn(150);
                 });
             }
         })
         .catch(err => {
-            console.error('Failed to fetch quantum index:', err);
             const graph = MVC.Model.quotationGraph.graph;
             const fallbackNode = graph.nodes[0];
             $('#myriad').html(fallbackNode.quotation);

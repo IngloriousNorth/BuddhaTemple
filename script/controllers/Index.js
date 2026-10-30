@@ -7,7 +7,7 @@ $(document).ready(function(){
 		defaultPage : "home",
 		dir : "partials",
 		fade : true,
-		fadeTime : 4444,
+		fadeTime : 777,
 		helm : 
 			[
 				{ 
