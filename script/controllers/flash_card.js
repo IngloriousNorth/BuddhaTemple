@@ -1,19 +1,4 @@
-$(document).ready(function() {
-    $('#QFC').on('click', function() {
-        const currentText = $('#myriad').text().trim();
-        let startNodeKey = null;
-
-        if (currentText && typeof graph !== 'undefined' && graph.nodes) {
-            const matchedNode = graph.nodes.find(n => n.quotation.trim() === currentText);
-            if (matchedNode) {
-                startNodeKey = matchedNode.index;
-            }
-        }
-        QRNG(startNodeKey);
-    });
-});
-
-function QRNG(providedStartKey = null) {
+const QRNG = function(providedStartKey = null) {
     fetch('https://Selapian--2f58e6388fb311f1b0781607ee4eb77e.web.val.run')
         .then(response => response.json())
         .then(data => {
@@ -92,3 +77,20 @@ function QRNG(providedStartKey = null) {
             $('#myraid_src').html(fallbackNode.src);
         });
 }
+
+$(document).ready(function() {
+    $('#QFC').on('click', function() {
+        const currentText = $('#myriad').text().trim();
+        let startNodeKey = null;
+
+        if (currentText && typeof graph !== 'undefined' && graph.nodes) {
+            const matchedNode = graph.nodes.find(n => n.quotation.trim() === currentText);
+            if (matchedNode) {
+                startNodeKey = matchedNode.index;
+            }
+        }
+        QRNG(startNodeKey);
+    });
+});
+
+export default QRNG;

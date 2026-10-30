@@ -1,20 +1,4 @@
-// Listen for input changes in real-time
-$(document).on('input', '#quotationSearchInput', function() {
-        const query = $(this).val().trim();
-        console.log('called' , query)
-        if (query) {
-            // Route to the search page view when there is input
-            ANCHOR.route("#search?q=" + encodeURIComponent(query));
-        } else {
-            // Clear or go back home if input is empty
-            $('.search').empty();
-            ANCHOR.route("#home")
-
-            console.log('routed home')
-        }
-});
-
-function initializeSearchPage() {
+const unfold = function(){
     const params = ANCHOR.getParams();
     const query = params && params.q ? decodeURIComponent(params.q) : "";
     const resultsContainer = $('.search');
@@ -118,3 +102,21 @@ function initializeSearchPage() {
         resultsContainer.html('<p style="color: #ff6b6b;">Invalid regular expression syntax...</p>');
     }
 }
+
+// Listen for input changes in real-time
+$(document).on('input', '#quotationSearchInput', function() {
+        const query = $(this).val().trim();
+        console.log('called' , query)
+        if (query) {
+            // Route to the search page view when there is input
+            ANCHOR.route("#search?q=" + encodeURIComponent(query));
+        } else {
+            // Clear or go back home if input is empty
+            $('.search').empty();
+            ANCHOR.route("#home")
+
+            console.log('routed home')
+        }
+});
+
+export default unfold;

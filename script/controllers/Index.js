@@ -34,4 +34,4 @@ $(document).on("TEMPLAR", function(){
 		$(".page_heading").text(TEMPLAR.paramREC().path)
 	}
 		
-}
+})
