@@ -71,7 +71,7 @@ const QRNG = function(providedStartKey = null) {
 
             if (node) {
                 // Smooth flash card fade transition
-                TEMPLAR.paramSET({"index" : node.index})
+                TEMPEST.paramSET({"index" : node.index})
                 $('#myriad, #myriad_src').fadeOut(150, function() {
                     $('#myriad').html(node.quotation);
                     $('#myriad_src').html(" -- " + node.src);

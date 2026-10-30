@@ -24,7 +24,7 @@ const unfold = function(){
 		const li = document.createElement("li");
 		const a = document.createElement("a");
 		$(a).text(item)
-		$(a).addClass("TEMPLAR")
+		$(a).addClass("TEMPEST")
 		$(a).addClass("quotations")
 		$(a).attr("href" , "#quotations?path=" + item)
  		$(li).append(a)
@@ -65,8 +65,8 @@ const unfold = function(){
 		}
 	}
 
-	$(document).on("TEMPLAR", function(){
-		$('.TEMPLAR').animate({
+	$(document).on("TEMPEST", function(){
+		$('.TEMPEST').animate({
             scrollTop: 0
         }, 'smooth');
 	})

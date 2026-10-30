@@ -1,8 +1,8 @@
 import MVC from '../../lib/MAINFRAME.js';
-import TEMPLAR from '../../lib/TEMPLAR.js';
+import TEMPEST from '../../lib/TEMPEST.js';
 
 $(document).ready(function(){
-	TEMPLAR.initialize({
+	TEMPEST.initialize({
 		default : "flash",
 		helm : 
 			[
@@ -10,13 +10,13 @@ $(document).ready(function(){
 					page : "flash",
 					fn : function(){
 						MVC.View.home.initialize();
-						MVC.Controller.flashCard.initialize(TEMPLAR.paramREC()?.index);
+						MVC.Controller.flashCard.initialize(TEMPEST.paramREC()?.index);
 					}
 				},
 				{
 					page : "search",
 					fn : function(){
-						MVC.Controller.realTimeSearch.unfold(TEMPLAR.paramREC().q);
+						MVC.Controller.realTimeSearch.unfold(TEMPEST.paramREC().q);
 					}
 				},
 				{
@@ -30,16 +30,16 @@ $(document).ready(function(){
 	}, ()=>MVC.View.menuV.unfold());
 })
 
-$(document).on("TEMPLAR", function(){
+$(document).on("TEMPEST", function(){
 
 
 	$(".mobile_menu").hide();
 	
-	if(TEMPLAR.pageREC() === "flash"){
+	if(TEMPEST.pageREC() === "flash"){
 		$(".page_heading").text("Flash Card")
 	}
 	else{
-		$(".page_heading").text(TEMPLAR.paramREC().path)
+		$(".page_heading").text(TEMPEST.paramREC().path)
 	}
 		
 })
