@@ -33,7 +33,7 @@ body {
 	height: 100%;
 	table-layout: fixed;
 	overflow: hidden;
-	background-color:red !important;
+	background-color:lightyellow; !important;
 
 }
 ol, ul {
@@ -118,6 +118,7 @@ input{
 	z-index:9999;
 	font-family:"Share Tech", system-ui;
 	color:gold;
+	border:1px dotted cyan;
 }
 
 input::placeholder{

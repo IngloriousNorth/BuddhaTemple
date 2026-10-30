@@ -1,6 +1,22 @@
 const graph = {
 	nodes : [
 		{
+			index : "hart_extraordinary",
+			quotation : "In Strategy, the longest [indirect] way round is often the shortest way home.",
+			src : "B.H. Liddel Hart, Strategy."
+		},
+		{
+		      "index": "sun_extraordinary",
+		      "quotation": "The supreme art of war is to subdue the enemy without fighting.",
+		      "src": "Sun Tzu, The Art of War"
+		},
+		{
+      		"index": "sartre_nothingness",
+      		"quotation": "Human reality is not a thing, but a nothingness; it is the nihilation of the in-itself, the sudden break-through of a void at the heart of being.",
+      		"src": "Jean-Paul Sartre, Being and Nothingness",
+      		ai : true
+    	},
+		{
 			index: "jesus_gods",
 			quotation : "It is written, I have said, 'Ye are gods, and Ye are all Sons of the Most High!",
 			src : "John 10:34",
@@ -805,91 +821,91 @@ const graph = {
 			index: "avatamsaka_one_all",
 			quotation: "In one dharma are contained all dharmas, and all dharmas are contained in one. One atom contains all worlds, and all worlds enter into a single atom. The One is the All, and the All is the One.",
 			src: "Avatamsaka Sutra (Book 10: The Chief Of Good)",
-			pages: ["Buddhist Sutras", "Eastern Lexicon", "Avatamsaka Sutra", "Gemini (AI)"],
+			pages: ["Buddhist Sutras", "Eastern Lexicon", "Avatamsaka Sutra"],
 			ai: true
 		},
 		{
 			index: "hermetic_emerald_monad",
 			quotation: "That which is Below corresponds to that which is Above, and that which is Above corresponds to that which is Below, to accomplish the miracles of the One Thing.",
 			src: "Hermetic Emerald Tablets of Thoth",
-			pages: ["Western Lexicon", "Hermetic Lexicon", "Emerald Tablets", "Gemini (AI)"],
+			pages: ["Western Lexicon", "Hermetic Lexicon", "Emerald Tablets"],
 			ai: true
 		},
 		{
 			index: "upanishad_tat_tvam_asi",
 			quotation: "That which is the subtle essence—in that have all beings their existence. That is the Truth. That is the Self. And That art thou, Svetaketu.",
 			src: "Chandogya Upanishad (6.8.7)",
-			pages: ["Eastern Lexicon", "Self", "Gemini (AI)"],
+			pages: ["Eastern Lexicon", "Self"],
 			ai: true
 		},
 		{
 			index: "plotinus_the_one",
 			quotation: "The One is all things and no one of them; the source of all things is not all things, and yet all things are there; they have raced back to it.",
 			src: "Plotinus, The Enneads (VI.9.2)",
-			pages: ["Western Thinkers", "Western Lexicon", "Gemini (AI)"],
+			pages: ["Western Thinkers", "Western Lexicon"],
 			ai: true
 		},
 		{
 			index: "nietzsche_sun_gift",
 			quotation: "Thou great star! What would your happiness be if you had not those for whom you shine!",
 			src: "Friedrich Nietzsche, Thus Spoke Zarathustra (Prologue §1)",
-			pages: ["Western Thinkers", "Nietzsche", "Sun", "Gemini (AI)"],
+			pages: ["Western Thinkers", "Nietzsche", "Sun"],
 			ai: true
 		},
 		{
 			index: "nietzsche_gateway_moment",
 			quotation: "Behold this moment! From this gateway *Moment* a long, eternal lane runs backward: behind us lies an eternity. Must not whatever can walk have walked on this lane before?",
 			src: "Friedrich Nietzsche, Thus Spoke Zarathustra (On Vision and Riddle)",
-			pages: ["Western Thinkers", "Nietzsche", "Time", "Gemini (AI)"],
+			pages: ["Western Thinkers", "Nietzsche", "Time"],
 			ai: true
 		},
 		{
 			index: "samadhiraja_karma_continuity",
 			quotation: "No being passes from this world to another world; yet karma does not perish, and the fruit of good and evil deeds is reaped where it was sown.",
 			src: "Samadhiraja Sutra",
-			pages: ["Buddhist Sutras", "Eastern Lexicon", "Karma", "Gemini (AI)"],
+			pages: ["Buddhist Sutras", "Eastern Lexicon", "Karma"],
 			ai: true
 		},
 		{
 			index: "arya_arhat_identity",
 			quotation: "The noble one (Arya) is so called because of noble qualities; the Arhat has destroyed the enemy of defilements, crossed the ocean of becoming, and stands firm in the unconditioned truth.",
 			src: "Early Buddhist & Vedic Lexicon (Arya / Arhat Synthesis)",
-			pages: ["Eastern Lexicon", "Dharma", "Gemini (AI)"],
+			pages: ["Eastern Lexicon", "Dharma"],
 			ai: true
 		},
 		{
 			index: "eckhart_ground_soul",
 			quotation: "The eye with which God sees me is the same eye with which I see Him; my eye and His eye are one eye, one seeing, one knowing, and one love.",
 			src: "Meister Eckhart, Sermons",
-			pages: ["Western Thinkers", "Self-Nature", "Gemini (AI)"],
+			pages: ["Western Thinkers", "Self-Nature"],
 			ai: true
 		},
 		{
 			index: "spinoza_substance_modes",
 			quotation: "Whatever is, is in God, and nothing can be or be conceived without God. All things that are, are modes of divine attributes.",
 			src: "Baruch Spinoza, Ethics",
-			pages: ["Western Thinkers", "Dharma", "Gemini (AI)"],
+			pages: ["Western Thinkers", "Dharma"],
 			ai: true
 		},
 		{
 			index: "exalted_golden_light_king",
 			quotation: "It is he who effects fruition for beings in this life, for he demonstrates the ripened effects of deeds done well and wrongly done; for this reason he is called 'king.'",
 			src: "Exalted Sublime Golden Light",
-			pages: ["Exalted Sublime Golden Light", "Kingship", "Gemini (AI)"],
+			pages: ["Exalted Sublime Golden Light", "Kingship"],
 			ai: true
 		},
 		{
 			index: "evola_aryan_buddhism",
 			quotation: "The doctrine of awakening is an active spirituality, an 'Aryan' renunciation and self-mastery that opposes passive mysticism, treating liberation as the absolute sovereignty of an awakened, unconditioned consciousness.",
 			src: "Julius Evola, The Doctrine of Awakening",
-			pages: ["Western Thinkers", "Arya", "Aristocracy", "Gemini (AI)"],
+			pages: ["Western Thinkers", "Arya", "Aristocracy"],
 			ai: true
 		},
 		{
 			index: "arya_aristocracy_spirit",
 			quotation: "The true nobleman (Arya) is defined not by blood, but by the inner conquest of the self—an elite of spiritual combatants who stand above the conditioned mass of reactions.",
 			src: "Traditionalist Synthesis on Arya and Kingship",
-			pages: ["Eastern Lexicon", "Aristocracy", "Arya", "Gemini (AI)"],
+			pages: ["Eastern Lexicon", "Aristocracy", "Arya"],
 			ai: true
 		}
 	],
@@ -897,7 +913,7 @@ const graph = {
 		{
 			start: "spinoza_substance_modes",
 			end : "avatam_sun",
-			pages : ["Avatamsaka", "Spinoza", "Sun", "Eternity", "Virtue"]
+			pages : ["Avatamsaka", "Spinoza", "The One", "Sun", "Eternity", "Virtue"]
 		},
 		{
 			start : "lotus_vehicle",
@@ -1814,57 +1830,77 @@ const graph = {
 		{
 			start: "lotus_omniscience",
 			end: "avatamsaka_one_all",
-			pages: ["The Lotus Sutra", "Avatamsaka Sutra", "Omniscience", "Skillful Means", "Gemini (AI)"]
+			pages: ["The Lotus Sutra", "Avatamsaka Sutra", "Omniscience", "Skillful Means"]
 		},
 		{
 			start: "nietzsche_sun_gift",
 			end: "avatam_sun",
-			pages: ["Nietzsche", "Avatamsaka Sutra", "Sun", "Omniscience", "Gemini (AI)"]
+			pages: ["Nietzsche", "Avatamsaka Sutra", "Sun", "Omniscience"]
 		},
 		{
 			start: "nietzsche_sun_gift",
 			end: "lotus_omniscience",
-			pages: ["Nietzsche", "The Lotus Sutra", "Sun", "Skillful Means", "Gemini (AI)"]
+			pages: ["Nietzsche", "The Lotus Sutra", "Sun", "Skillful Means"]
 		},
 		{
 			start: "nietzsche_sun_gift",
 			end: "hegelian_master",
-			pages: ["Nietzsche", "Hegel", "Sun", "Skillful Means", "Sef", "Gemini (AI)"]
+			pages: ["Nietzsche", "Hegel", "Sun", "Skillful Means", "Sef"]
 		},
 		{
 			start: "avatamsaka_one_all",
 			end: "hermetic_emerald_monad",
-			pages: ["Avatamsaka Sutra", "Emerald Tablets", "Eastern Lexicon", "Western Lexicon", "Gemini (AI)"]
+			pages: ["Avatamsaka Sutra", "Emerald Tablets", "The One", "Eternity"]
+		},
+		{
+			start: "avatamsaka_one_all",
+			end : "russell_logic",
+			pages : ["Avatamsaka", "Bertrand Rusell", "The One"]
 		},
 		{
 			start: "avatamsaka_one_all",
 			end: "upanishad_tat_tvam_asi",
-			pages: ["Avatamsaka Sutra", "Self", "Eastern Lexicon", "Gemini (AI)"]
+			pages: ["Avatamsaka Sutra", "Self", "The One"]
+		},
+		{
+			start : "russell_universe",
+			end :"upanishad_tat_tvam_asi",
+			pages : ["The One", "Upanishad", "Logic", "Bertrand Russell"]
 		},
 		{
 			start: "hermetic_emerald_monad",
 			end: "plotinus_the_one",
-			pages: ["Emerald Tablets", "Western Thinkers", "Gemini (AI)"]
+			pages: ["Emerald Tablets", "Western Thinkers"]
+		},
+		{
+			start : "hermetic_emerald_monad",
+			end : "russell_logic",
+			pages : ["Bertrand Russell", "Emerald Tablets", "Logic", "The One", "Eternity", "Science"]
+		},
+		{
+			start : "russell_logic",
+			end : "plotinus_the_one",
+			pages : ["The One", "Bertrand Russell", "Plotinus", "Science"]
 		},
 		{
 			start: "arya_arhat_identity",
 			end: "samadhiraja_karma_continuity",
-			pages: ["Aristocracy", "Arya", "Eternity", "Samadhiraja Sutra", "Karma", "Gemini (AI)"]
+			pages: ["Aristocracy", "Arya", "Eternity", "Samadhiraja Sutra", "Karma"]
 		},
 		{
 			start: "arya_arhat_identity",
 			end: "upanishad_tat_tvam_asi",
-			pages: ["Eastern Lexicon", "Self", "Eternity", "Dharma", "Gemini (AI)"]
+			pages: ["Eastern Lexicon", "Self", "Eternity", "Dharma"]
 		},
 		{
 			start: "nietzsche_gateway_moment",
 			end: "arya_arhat_identity",
-			pages: ["Nietzsche", "Eastern Lexicon", "Time", "Gemini (AI)"]
+			pages: ["Nietzsche", "Eastern Lexicon", "Time"]
 		},
 		{
 			start: "nietzsche_gateway_moment",
 			end: "samadhiraja_karma_continuity",
-			pages: ["Nietzsche", "Samadhiraja Sutra", "Karma", "Time", "Gemini (AI)"]
+			pages: ["Nietzsche", "Samadhiraja Sutra", "Karma", "Time"]
 		},
 		{
 			start : "nietzsche_gateway_moment",
@@ -1874,7 +1910,7 @@ const graph = {
 		{
 			start: "spinoza_substance_modes",
 			end: "avatamsaka_one_all",
-			pages: ["Spinoza", "Avatamsaka Sutra", "Dharma", "Gemini (AI)"]
+			pages: ["Spinoza", "Avatamsaka Sutra", "Dharma"]
 		},
 		{
 			start : "spinoza_substance_modes",
@@ -1884,12 +1920,12 @@ const graph = {
 		{
 			start: "exalted_king",
 			end: "exalted_golden_light_king",
-			pages: ["Exalted Sublime Golden Light", "Kingship", "Gemini (AI)"]
+			pages: ["Exalted Sublime Golden Light", "Kingship"]
 		},
 		{
 			start: "evola_aryan_buddhism",
 			end: "arya_arhat_identity",
-			pages: ["Western Thinkers", "Julius Evola", "Aristocracy", "Arya", "Gemini (AI)"]
+			pages: ["Western Thinkers", "Julius Evola", "Aristocracy", "Arya"]
 		},
 		{
 			start: "evola_aryan_buddhism",
@@ -1909,13 +1945,43 @@ const graph = {
 		{
 			start: "exalted_golden_light_king",
 			end: "arya_aristocracy_spirit",
-			pages: ["Exalted Sublime Golden Light", "Kingship", "Aristocracy", "Arya", "Gemini (AI)"]
+			pages: ["Exalted Sublime Golden Light", "Kingship", "Aristocracy", "Arya"]
 		}
 		,
 		{
 			start: "exalted_golden_light_king",
 			end: "evola_aryan_buddhism",
-			pages: ["Exalted Sublime Golden Light", "Julius Evola", "Kingship", "Aristocracy", "Arya", "Gemini (AI)"]
+			pages: ["Exalted Sublime Golden Light", "Julius Evola", "Kingship", "Aristocracy", "Arya"]
+		},
+		{
+			start : "sartre_nothingness",
+			end : "heart_form",
+			pages : ["Heart Sutra", "Jean-Paul Sartre", "non-Being", "Sunyata"]
+		},
+		{
+			start : "allah_tawhid",
+			end : "sartre_nothingness",
+			pages : ["The One", "non-Being", "Jean-Paul Sartre"]
+		},
+		{
+			start : "diamond_marks",
+			end : "sartre_nothignness",
+			pages : ["Diamond Sutra", "Jean-Paul Sartre", "non-Being", "Sunyata", "Virtue"]
+		},
+		{
+			start : "hart_extraordinary",
+			end : "sun_extraordinary",
+			pages : ["Conquest", "Tao", "Sun", "Christ"]
+		},
+		{
+			start : "hart_extraordinary",
+			end : "tao_conquest",
+			pages : ["Conquest", "Tao", "Skillful Means"]
+		},
+		{
+			start : "sun_extraordinary",
+			end : "tao_conquest",
+			pages : ["Conquest", "Tao", "Virtue", "Skillful Means"]
 		}
 	]
 };

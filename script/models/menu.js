@@ -2,7 +2,7 @@ const menu = {
 	"western_thinkers" : ["Heraclitus", "Socrates", "Plato", "Aristotle", "Marcus Aurelius", "Plotinus", 
 		"Descartes", "Spinoza", "Hume", "Kant", 
 		"Hegel", "Nietzsche", "Saussure", "Bertrand Russell", "Gotthard Gunther", 
-		"Thomas Kuhn", "Hilary Putnam", "Derrida", "Julius Evola"]
+		"Thomas Kuhn", "Hilary Putnam", "Derrida", "Julius Evola", "Jean-Paul Sartre"]
 	,
 	"buddhist_sutras" : ["The Dhammapada", "Avatamsaka Sutra", "Vimalakirti Sutra", 
 		"Exalted Sublime Golden Light", "Diamond Sutra", "Heart Sutra", 
@@ -14,9 +14,9 @@ const menu = {
 		"Self-Nature", "Dharma", "Tao", "Sunyata",
 		 "Skillful Means", "Omniscience", "Ekayāna"]
 	,
-	"western_glossary" : ["Matter", "Form", "Science", "Context", "Virtue", "Language", "Logic", "Deconstruction", "Self", "Becoming", "Time", "Ethics", "Aristocracy"]
+	"western_glossary" : ["non-Being", "Matter", "Form", "Science", "Context", "Virtue", "Language", "Logic", "Deconstruction", "Self", "Becoming", "Time", "Ethics", "Aristocracy"]
 	,
-	"hermetic_glossary" : ["ein sof", "YHVH", "Sun", "Christ", "Space", "Conquest", "Wisdom", "Final Cause", "Immortality", "Emerald Tablets", "Kingship"]
+	"hermetic_glossary" : ["The One", "ein sof", "YHVH", "Sun", "Christ", "Space", "Conquest", "Wisdom", "Final Cause", "Immortality", "Emerald Tablets", "Kingship"]
 }
 
 export default { menu };
