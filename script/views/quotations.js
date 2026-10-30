@@ -1,65 +1,67 @@
-function initializeQuotationsPage(){
-	//page heading
-	
-	refreshNodes();
-	$("#quotations_container").empty();
-	
-	// Collect matching nodes first so we can sort them
-	let matchedNodes = [];
+module.exports = {
+	unfold : function(){
+		//page heading
+		
+		refreshNodes();
+		$("#quotations_container").empty();
+		
+		// Collect matching nodes first so we can sort them
+		let matchedNodes = [];
 
-	graph.rels.forEach(function(rel){
-		if(ANCHOR.page() === "quotations" && ANCHOR.getParams() && rel.pages.indexOf(ANCHOR.getParams().path) > -1){
-			var start = rel.start;
-			var end = rel.end;
-			var node_start = graph.nodes.find(node => node.index === start);
-			var node_end = graph.nodes.find(node => node.index === end);
-			
-			if(node_start && notQuoted(node_start.index)){				
-				pushIndex(node_start.index);
-				matchedNodes.push(node_start);
-			}
-			if(node_end && notQuoted(node_end.index)){
-				pushIndex(node_end.index);
-				matchedNodes.push(node_end);
-			}
-		}
-	});
-
-	// --- HELPER FUNCTION TO COUNT EDGES ---
-	function getNodeEdgeCount(nodeIndex) {
-		let count = 0;
-		graph.rels.forEach(function(rel) {
-			if (rel.start === nodeIndex || rel.end === nodeIndex) {
-				count++;
+		graph.rels.forEach(function(rel){
+			if(ANCHOR.page() === "quotations" && ANCHOR.getParams() && rel.pages.indexOf(ANCHOR.getParams().path) > -1){
+				var start = rel.start;
+				var end = rel.end;
+				var node_start = graph.nodes.find(node => node.index === start);
+				var node_end = graph.nodes.find(node => node.index === end);
+				
+				if(node_start && notQuoted(node_start.index)){				
+					pushIndex(node_start.index);
+					matchedNodes.push(node_start);
+				}
+				if(node_end && notQuoted(node_end.index)){
+					pushIndex(node_end.index);
+					matchedNodes.push(node_end);
+				}
 			}
 		});
-		return count;
-	}
 
-	// --- QUANTUM SORT + NUMBER OF EDGES SORTING LOGIC ---
-	matchedNodes.sort(function(a, b) {
-		// 1. Quantum sort factor (from your Val Town proxy QRNG property, e.g., a.qrng)
-		let qrngA = a.qrng !== undefined ? a.qrng : 0;
-		let qrngB = b.qrng !== undefined ? b.qrng : 0;
-
-		// 2. Number of edges factor
-		let edgesA = getNodeEdgeCount(a.index);
-		let edgesB = getNodeEdgeCount(b.index);
-
-		// Combined Sorting: Primary sort by QRNG value, secondary tie-breaker by edge count (descending)
-		if (qrngA !== qrngB) {
-			return qrngA - qrngB; // Ascending QRNG order
-		} else {
-			return edgesB - edgesA; // Descending edge count order if QRNG values match
+		// --- HELPER FUNCTION TO COUNT EDGES ---
+		function getNodeEdgeCount(nodeIndex) {
+			let count = 0;
+			graph.rels.forEach(function(rel) {
+				if (rel.start === nodeIndex || rel.end === nodeIndex) {
+					count++;
+				}
+			});
+			return count;
 		}
-	});
 
-	// Render the sorted nodes
-	matchedNodes.forEach(function(node){
-		implementQuotation(node);
-	});
+		// --- QUANTUM SORT + NUMBER OF EDGES SORTING LOGIC ---
+		matchedNodes.sort(function(a, b) {
+			// 1. Quantum sort factor (from your Val Town proxy QRNG property, e.g., a.qrng)
+			let qrngA = a.qrng !== undefined ? a.qrng : 0;
+			let qrngB = b.qrng !== undefined ? b.qrng : 0;
 
-	$("div.quotations").scrollTop();
+			// 2. Number of edges factor
+			let edgesA = getNodeEdgeCount(a.index);
+			let edgesB = getNodeEdgeCount(b.index);
+
+			// Combined Sorting: Primary sort by QRNG value, secondary tie-breaker by edge count (descending)
+			if (qrngA !== qrngB) {
+				return qrngA - qrngB; // Ascending QRNG order
+			} else {
+				return edgesB - edgesA; // Descending edge count order if QRNG values match
+			}
+		});
+
+		// Render the sorted nodes
+		matchedNodes.forEach(function(node){
+			implementQuotation(node);
+		});
+
+		$("div.quotations").scrollTop();
+	}
 }
 
 function implementQuotation(node){
