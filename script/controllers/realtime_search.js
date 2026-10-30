@@ -1,3 +1,5 @@
+import MVC from '../../lib/MAINFRAME';
+
 const unfold = function(){
     const params = TEMPLAR.paramREC();
     const query = params && params.q ? decodeURIComponent(params.q) : "";
