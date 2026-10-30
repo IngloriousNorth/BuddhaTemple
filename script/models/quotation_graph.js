@@ -1,6 +1,16 @@
 const graph = {
 	nodes : [
 		{
+			index : "nietzsche_myth",
+			quotation : "Without myth every culture loses its healthy creative natural power: it is only a horizon surrounded with myths that unifies a whole cultural movement.",
+			src : "Nietzsche, The Birth of Tradgedy"
+		},
+		{
+			index : "heidegger_logos",
+			quotation : "Dasein is ever that which it is not yet, and which it can be... Projection is the existential constitution of being-in-the-world with regard to understanding as the potentiality-for-being.",
+			src : "Martin Heidegger, Being and Time"
+		},
+		{
 			index : "hart_extraordinary",
 			quotation : "In Strategy, the longest [indirect] way round is often the shortest way home.",
 			src : "B.H. Liddel Hart, Strategy."
@@ -907,7 +917,12 @@ const graph = {
 			src: "Traditionalist Synthesis on Arya and Kingship",
 			pages: ["Eastern Lexicon", "Aristocracy", "Arya"],
 			ai: true
-		}
+		},
+		{
+      		index: "apparitional_city",
+     		"quotation": "This is not the True Nirvana, it is only... My Apparition! The single-vehicle is the only, True Nirvana.",
+      		"src": "The Lotus Sutra, Chapter 7: The Parable of the Apparitional City"
+    }
 	],
 	rels : [	
 		{
@@ -1475,32 +1490,32 @@ const graph = {
 		{
 			start : "derrida_dependent",
 			end : "lotus_dependent",
-			pages :["The Lotus Sutra", "Derrida", "Matter", "Logic", "Deconstruction", "Dependent Origination"]
+			pages :["The Lotus Sutra", "Derrida", "MythOS", "Matter", "Logic", "Deconstruction", "Dependent Origination"]
 		},
 		{
 			start : "derrida_context",
 			end : "lotus_omniscience",
-			pages: ["Skillful Means", "Derrida", "Deconstruction", "Lotus Sutra", "Omniscience", "Wisdom"]
+			pages: ["Skillful Means", "Derrida", "MythOS", "Deconstruction", "Lotus Sutra", "Omniscience", "Wisdom"]
 		},
 		{
 			start : "derrida_context",
 			end : "nietzsche_bee",
-			pages: ["Nietzsche", "Derrida", "Deconstruction", "Logic"]
+			pages: ["Nietzsche", "Derrida", "MythOS", "Deconstruction", "Logic"]
 		},
 		{
 			start : "nietzsche_metaphor",
 			end : "derrida_context",
-			pages : ["Nietzsche", "Derrida", "Language", "Deconstruction", "Maya", "Dependent Origination"]
+			pages : ["Nietzsche", "Derrida", "Language", "MythOS", "Deconstruction", "Maya", "Dependent Origination"]
 		},
 		{
 			start : "derrida_context",
 			end : "lotus_dependent",
-			pages : ["The Lotus Sutra", "Derrida", "Language", "Deconstruction", "Maya", "Dependent Origination"]
+			pages : ["The Lotus Sutra", "Derrida", "MythOS", "Language", "Deconstruction", "Maya", "Dependent Origination"]
 		},
 		{
 			start : "nietzsche_metaphor",
 			end : "lotus_dependent",
-			pages : ["The Lotus Sutra", "Nietzsche", "Dependent Origination", "Language", "Deconstruction", "Derrida"]
+			pages : ["The Lotus Sutra", "Nietzsche", "MythOS", "Dependent Origination", "Language", "Deconstruction", "Derrida"]
 		},
 		{
 			start : "gunther_context",
@@ -1785,7 +1800,7 @@ const graph = {
 		{
 			start : "paul_skill",
 			end : "thoth_star",
-			pages : ["Christ", "Wisdom"]
+			pages : ["Christ", "MythOS", "Wisdom"]
 		},
 		{
 			start : "einstein_relativity",
@@ -1982,6 +1997,48 @@ const graph = {
 			start : "sun_extraordinary",
 			end : "tao_conquest",
 			pages : ["Conquest", "Tao", "Virtue", "Skillful Means"]
+		}
+		,
+		{
+			start : "heraclitus_logos",
+			end : "heidegger_logos",
+			pages : ["Heidegger", "Heraclitus", "Logos", "Self", "Relativity"]
+		},
+		{
+			start : "heidegger_logos",
+			end : "einstein_relativity",
+			pages : ["Heidegger", "Relativity", "MythOS"]
+		},
+		{
+			start : "apparitional_city",
+			end : "nietzsche_bee",
+			pages : ["Nietzsche", "Lotus Sutra", "MythOS", "Nirvana", "Virtue"]
+		}
+		,
+		{
+			start : "heidegger_hermeneutic_circle",
+			end : "derrida_dependent",
+			pages : ["Heidegger", "Derrida", "Hermeneutic Circle", "Dependent Origination"]
+		},
+		{
+			start : "heidegger_hermeneutic_circle",
+			end : "saussure_sign",
+			pages : ["Saussure", "Heidegger", "Context", "Sunyata"]
+		},
+		{
+			start : "heidegger_hermeneutic_circle",
+			end : "apparitional_city",
+			pages : ["Lotus Sutra", "Heidegger", "MythOS"]
+		},
+		{
+			start : "heidegger_hermeneutic_circle",
+			end : "nietzsche_myth",
+			pages : ["Nietzsche", "Heidegger", "MythOS", "Context", "Sunyata", "Dharma"]
+		},
+		{
+			start : "hegelian_master",
+			end : "tao_conquest",
+			pages : ["MythOS", "Tao", "Conquest", "Hegel", "Self", "Eternity"]
 		}
 	]
 };

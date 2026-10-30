@@ -322,16 +322,14 @@ div.TEMPLAR{
 	float:left;
 	display:block;
 	margin:0 auto;
+	line-height:33px;
 	position:relative;
 	text-align:justify;
 	font-family:"Share Tech", serif, system-ui;
 	box-sizing:border-box;
-	line-height:19px;
 	font-size:19px;
 	display:inline-block;
-	
-	line-height:23px;
-
+	padding:55px;
 
 	
 }
@@ -345,7 +343,8 @@ div.TEMPLAR{
 	bottom:9px;
 	font-size:16px;
 	padding-top:11px;
-	padding-right:16px;
+	padding-right:55px;
+
 	display:inline-block;
 
 	font-family:"Rationale", sans-serif;

@@ -14,9 +14,9 @@ const menu = {
 		"Self-Nature", "Dharma", "Tao", "Sunyata",
 		 "Skillful Means", "Omniscience", "Ekayāna"]
 	,
-	"western_glossary" : ["non-Being", "Matter", "Form", "Science", "Context", "Virtue", "Language", "Logic", "Deconstruction", "Self", "Becoming", "Time", "Ethics", "Aristocracy"]
+	"western_glossary" : ["non-Being", "Matter", "Form", "Science", "Context", "Virtue", "Language", "Logic", "Deconstruction", "Self", "Becoming", "Time", "Aristocracy"]
 	,
-	"hermetic_glossary" : ["The One", "ein sof", "YHVH", "Sun", "Christ", "Space", "Conquest", "Wisdom", "Final Cause", "Immortality", "Emerald Tablets", "Kingship"]
+	"hermetic_glossary" : ["The One", "MythOS", "ein sof", "YHVH", "Sun", "Christ", "Space", "Conquest", "Wisdom", "Final Cause", "Immortality", "Emerald Tablets", "Kingship"]
 }
 
 export default { menu };
