@@ -64,8 +64,8 @@ $(document).ready(function(){
 		}
 	}
 
-	$(document).on("ANCHOR", function(){
-		$('.ANCHOR_partial').animate({
+	$(document).on("TEMPLAR", function(){
+		$('.TEMPLAR').animate({
             scrollTop: 0
         }, 'smooth');
 	})
