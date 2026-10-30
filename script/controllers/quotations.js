@@ -64,24 +64,6 @@ module.exports = {
 	}
 }
 
-function implementQuotation(node){
-	var div = document.createElement("div");
-	$(div).addClass("quotation_div");
-	
-	var p = document.createElement("p");
-	$(p).addClass("quotation");
-	$(p).html(node.quotation);
-	
-	var src = document.createElement("p");
-	$(src).addClass("src");
-	$(src).text(" -- " + node.src + (node.ai ? "Gemini" : ""));
-	
-	$(div).append(p);
-	$(div).append("<br>");
-	$(div).append(src);
-	$("#quotations_container").append(div);
-}
-
 function pushIndex(index){
 	nodeIndexes.push(index);
 }
