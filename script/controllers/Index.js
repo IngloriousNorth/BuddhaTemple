@@ -36,7 +36,7 @@ $(document).on("TEMPLAR", function(){
 	$(".mobile_menu").hide();
 	
 	if(TEMPLAR.pageREC() === "flash"){
-		$(".page_heading").text("Flash Cards")
+		$(".page_heading").text("Flash Card")
 	}
 	else{
 		$(".page_heading").text(TEMPLAR.paramREC().path)
