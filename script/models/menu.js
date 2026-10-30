@@ -19,4 +19,4 @@ const menu = {
 	"hermetic_glossary" : ["ein sof", "YHVH", "Sun", "Christ", "Space", "Conquest", "Wisdom", "Final Cause", "Immortality", "Emerald Tablets", "Kingship"]
 }
 
-export default menu;
+export default { menu };
