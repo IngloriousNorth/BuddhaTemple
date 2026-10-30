@@ -1,5 +1,5 @@
 import MVC from '../../lib/MAINFRAME.js';
-
+import TEMPLAR from '../../lib/TEMPLAR.js';
 $(document).ready(function(){
 	TEMPLAR.initialize({
 		defaultPage : "flash",
