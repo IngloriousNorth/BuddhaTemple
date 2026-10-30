@@ -1,7 +1,7 @@
 import MVC from '../../lib/MAINFRAME.js';
 
 const initialize = function(index = undefined){
-    console.log(MVC.Model.quotationGraph);
+    
     var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
     if(!node){
         MVC.View.home.initialize();
