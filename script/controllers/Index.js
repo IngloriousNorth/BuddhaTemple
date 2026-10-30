@@ -10,7 +10,7 @@ $(document).ready(function(){
 					page : "flash",
 					fn : function(){
 						MVC.View.home.initialize();
-						MVC.Controller.flashCard.initialize(TEMPLAR.paramREC().index);
+						MVC.Controller.flashCard.initialize(TEMPLAR.paramREC()?.index);
 					}
 				},
 				{
