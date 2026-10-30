@@ -1,4 +1,4 @@
-import MVC from '../../lib/MAINFRAME';
+import MVC from '../../lib/MAINFRAME.js';
 
 const initialize = function(index){
     var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
