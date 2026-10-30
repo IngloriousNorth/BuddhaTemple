@@ -3,7 +3,7 @@ import TEMPLAR from '../../lib/TEMPLAR.js';
 
 $(document).ready(function(){
 	TEMPLAR.initialize({
-		defaultPage : "flash",
+		default : "flash",
 		helm : 
 			[
 				{ 
