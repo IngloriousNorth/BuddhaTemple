@@ -27,7 +27,7 @@ $(document).ready(function(){
 				}
 
 			]
-	}, ()=>MVC.View.menu.unfold());
+	}, ()=>MVC.View.menuV.unfold());
 })
 
 $(document).on("TEMPLAR", function(){
