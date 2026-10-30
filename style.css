@@ -33,6 +33,8 @@ body {
 	height: 100%;
 	table-layout: fixed;
 	overflow: hidden;
+	background-color:#000000 !important;
+
 }
 ol, ul {
 	list-style: none;
@@ -47,11 +49,15 @@ q:before, q:after {
 }
 
 .ANCHOR_partial{
-	background-color:#000000;
+	background-color:#000000 !important;
+}
+
+#myriad{
+	width:100%;
 }
 
 .sidebar{
-	background-color:#000;
+	background-color:darkcyan;
 	width:281px;
 	border-right:32px solid silver;
 	position:absolute;
@@ -67,18 +73,20 @@ button{
 	font-family:"Zen Dots", system-ui;
 	width:94px;
 	height:55px;
-	color: palevioletred;
-	background-color: mediumaquamarine;
+	color: gold;
+	background-color: #000000;
 	border: 1px solid goldenrod;
 	box-shadow:2px 3px 2px silver;
 	border-radius:5px;
 	display:block;
+	position:absoulute;
+	marign-top:128px;
 	cursor:pointer;
 	margin-top:40px;
 }
 
 button:hover{
-	border:2px solid green;
+	border:4px solid gold;
 	box-shadow:3px 5px 7px silver;
 	font-weight:bold;
 	color:white;
@@ -101,15 +109,15 @@ button:hover{
 	top:0;
 	height:72px;
 	width:300px !important;
-	background:slateblue;
+	background:goldenrod;
 	z-index:9999;
 	border-bottom-left-radius:16px;
 	border-bottom-right-radius:16px;
-	color:gold;
+	color:slateblue;
 }
 
 #quotationSearchInput::placeholder{
-	color:silver;
+	color:lightslateblue;
 }
 
 header{
@@ -120,7 +128,7 @@ header{
 	height:72px;
 	top:0;
 	right:0;
-	background-color:#000000;
+	background-color:darkred;
 
 }
 
@@ -145,7 +153,7 @@ h1{
 }
 
 .menu{
-	width:209px;
+	width:233px;
 	height:100%;
 	margin:0 auto;
 	overflow-y:auto;
@@ -215,7 +223,7 @@ a.quotations {
 }
 
 a.quotations:hover{
-	color:darkcyan;
+	color:goldenrod;
 }
 
 
@@ -248,7 +256,6 @@ div.home{
 	position:fixed;
 	z-index:9;
 	color:white !important;
-	background-color:black;
 	text-shadow:3px 2px cyan;
 	letter-spacing:4px;
 	width:333px;
@@ -259,6 +266,10 @@ div.home{
 	font-family:"Zen Dots", "Georgia";
 	
 
+}
+
+.ANCHOR_partial{
+	padding-top:27px;
 }
 
 .quotation_div{
@@ -277,7 +288,6 @@ div.home{
 }
 
 .src{
-	cursor: pointer;
 }
 
 .quotation::first-letter, #myriad::first-letter{
@@ -297,7 +307,7 @@ div.home{
 
 
 .quotation{
-	color:white;
+	color:#50C777;
 	float:left;
 	display:block;
 	position:relative;
@@ -353,8 +363,8 @@ div.home{
 
 }
 
-#myriad::first-letter{
-	color:black;
+.quotation::first-letter{
+	color:gold !important;
 	font-size:32px;
 	width:34px;
 	font-style:italic;

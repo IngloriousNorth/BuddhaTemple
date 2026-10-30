@@ -3,7 +3,8 @@
 		<link rel="icon" type="image/png" href="https://i.imgur.com/dqr0VGJ.png" sizes="32x32" />
 		<meta name="vewiport" content="width-device-width, initial-scale=1.0">
 		<script src="lib/jquery-3.6.0.min.js"></script>
-		<script src="lib/anchor.js"></script>
+		<script src="lib/MAINFRAME.js" type="module"></script>
+		<script src="lib/TEMPLAR.js"></script>
 		<!--Models!-->
 		<script src="script/models/menu.js"></script>
 		<script src="script/models/home.js"></script>
@@ -13,10 +14,10 @@
 		<script src="script/views/quotations.js"></script>
 		<script src="script/views/home.js"></script>
 		<!--Controllers!-->
-		<script src="script/controllers/page.js"></script>
 		<script src="script/controllers/quotation_graph.js"></script>
 		<script src="script/controllers/realtime_search.js"></script>
-		<script src="script/controllers/quantum_flash.js"></script>
+		<script src="script/controllers/flash_card.js"></script>
+		<script src="script/controllers/Index.js" type="module"></script>
 
 
 
@@ -28,44 +29,12 @@
 	</head>
 	<body>
 		
-		<header><a href="index.html#home" class="ANCHOR home"><h1>single-vehicle.io</h1></a>
-			<input type="text" id="quotationSearchInput" placeholder="Search quotations (supports regex)..." style="width: 100%; padding: 8px; font-size: 16px;"><h2 class="page_heading"></h2>
+		<header><a href="#" class="TEMPLAR flash"><h1>BuddhaTemple</h1></a>
+			<input type="text" id="quotationSearchInput" placeholder="Graph Search..." style="width: 100%; padding: 8px; font-size: 16px;"><h2 class="page_heading"></h2>
 		</header>
-		<div id="mobile_header">
-			<a href="index.html#" id="ham">&#9776;</a>
-		</div>
 
-		<ul class="menu mobile_menu">
-			
-			<li class="sutras_li"><a href="index.html#" class="show" id="sutras_tog1">&#9654;</a><a href="index.html#" class="hide" id="sutras_tog">&#9660;</a><a class="mobile_nav_a" href="index.html#">Buddhist Sutras</a>
-				<ul class="mobile_sub sutras_menu">
-					
-				</ul>
-			</li>
-			<li class="thinkers_li"><a href="index.html#" class="show" id="char_tog1">&#9654;</a><a href="index.html#" class="hide" id="char_tog">&#9660;</a><a class="mobile_nav_a" href="index.html#">Western Thinkers</a>
-				<ul class="mobile_sub thinkers_menu">
-					
-				</ul>
-			</li>
-			<li class="buddhist_li"><a href="index.html#" class="show" id="buddha_tog1">&#9654;</a><a href="index.html#" class="hide" id="buddha_tog">&#9660;</a><a class="mobile_nav_a" href="index.html#">Eastern Lexicon</a>
-				<ul class="mobile_sub eastern_menu">
-					
-				</ul>
-			</li>
-			<li class="hermetic_li"><a href="index.html#" class="show" id="hermetic_tog1">&#9654;</a><a href="index.html#" class="hide" id="herm_tog">&#9660;</a><a class="mobile_nav_a" href="index.html#">Western Lexicon</a>
-				<ul class="mobile_sub western_menu">
-					
-				</ul>
-			</li>	
-			<li class="thoth_li"><a href="index.html#" class="show">&#9654;</a><a href="index.html#" class="hide">&#9660;</a><a class="mobile_nav_a" href="index.html#">Hermetic Lexicon</a>
-				<ul class="mobile_sub hermetic_menu">
-					
-				</ul>
-			</li>			
-		</ul>
 		<div class="sidebar">
 			<ul class="menu">
-
 				<li class="sutras_li"><a href="index.html#" class="show" id="sutras_tog1">&#9654;</a><a href="index.html#" class="hide" id="sutras_tog">&#9660;</a><a class="nav_a" href="index.html#">Buddhist Sutras</a>
 					<ul class="sutras_menu">
 						
@@ -76,17 +45,17 @@
 						
 					</ul>
 				</li>
-				<li class="buddhist_li"><a href="index.html#" class="show" id="buddha_tog1">&#9654;</a><a href="index.html#" class="hide" id="buddha_tog">&#9660;</a><a class="nav_a" href="index.html#">Eastern Lexicon</a>
+				<li class="buddhist_li"><a href="index.html#" class="show" id="buddha_tog1">&#9654;</a><a href="index.html#" class="hide" id="buddha_tog">&#9660;</a><a class="nav_a" href="index.html#">Eastern Philosophy</a>
 					<ul class="eastern_menu">
 						
 					</ul>
 				</li>
-				<li class="hermetic_li"><a href="index.html#" class="show" id="hermetic_tog1">&#9654;</a><a href="index.html#" class="hide" id="herm_tog">&#9660;</a><a class="nav_a" href="index.html#">Western Lexicon</a>
+				<li class="hermetic_li"><a href="index.html#" class="show" id="hermetic_tog1">&#9654;</a><a href="index.html#" class="hide" id="herm_tog">&#9660;</a><a class="nav_a" href="index.html#">Western Philosophy</a>
 					<ul class="western_menu">
 						
 					</ul>
 				</li>
-				<li class="thoth_li"><a href="index.html#" class="show">&#9654;</a><a href="index.html#" class="hide">&#9660;</a><a class="nav_a" href="index.html#">Hermetic Lexicon</a>
+				<li class="thoth_li"><a href="index.html#" class="show">&#9654;</a><a href="index.html#" class="hide">&#9660;</a><a class="nav_a" href="index.html#">Hermetics</a>
 				<ul class="hermetic_menu">
 					
 				</ul>
@@ -98,26 +67,22 @@
 		
 
 
-		<div class="ANCHOR_partial home">
+		<div class="TEMPLAR flash">
 			<div class="myriad_div">
-				<p id="myriad" class="quotation"></p>
+				<p id="myriad" class="quotation"></p><br>
 				<span id="myriad_src" class="src"></span>
 				<br>
-				<button id="QFC">Quantum Flash</button>
+				<button id="QRNG_flash_card">Flash Card</button>
 			</div>
-			<p id="home_description"></p>
-			<p id="navigation_instructions"></p>
-			<p id="engineering"></p>		
 		</div>
-		<div class="ANCHOR_partial quotations">
+		<div class="TEMPLAR quotations">
 
 			<div id="quotations_container">
 				
 			</div>
 		</div>
 
-		<div class="ANCHOR_partial search">
-			<div id="search_results_container"></div>
+		<div class="TEMPLAR search">
 		</div> 
 	</body>
 </html>

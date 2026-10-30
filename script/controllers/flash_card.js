@@ -74,12 +74,14 @@ function QRNG(providedStartKey = null) {
             const targetKey = arr[Math.abs(qIndex) % arr.length];
             const node = graph.nodes.find(n => n.index === targetKey) || graph.nodes[0];
 
+
             if (node) {
                 // Smooth flash card fade transition
+                ANCHOR.setParams("index", node.index)
                 $('#myriad, #myriad_src').fadeOut(150, function() {
                     $('#myriad').html(node.quotation);
-                    $('#myriad_src').html(node.src);
-                    $('#myriad, #myraid_src').fadeIn(200);
+                    $('#myriad_src').html(" -- " + node.src);
+                    $('#myriad, #myriad_src').fadeIn(200);
                 });
             }
         })
