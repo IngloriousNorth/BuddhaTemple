@@ -8,6 +8,7 @@ $(document).ready(function(){
 				{ 
 					page : "flash",
 					fn : function(){
+						MVC.View.home.homeInitialize()
 						MVC.Controller.flashCard.flashInitialize(TEMPLAR.paramREC().index);
 					}
 				},
