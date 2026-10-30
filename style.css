@@ -48,10 +48,6 @@ q:before, q:after {
 	content: none;
 }
 
-.ANCHOR_partial{
-	background-color:#000000 !important;
-}
-
 #myriad{
 	width:100%;
 }
@@ -92,7 +88,7 @@ button:hover{
 	color:white;
 }
 
-.ANCHOR_partial{
+.TEMPLAR{
 	overflow-y:auto;
 	height:100%;
 	position:absolute;
@@ -227,7 +223,7 @@ a.quotations:hover{
 }
 
 
-.ANCHOR_partial{
+.TEMPLAR{
 	left:281px;
 	height:calc(100% - 71px);
 	width:calc(100% - 281px);
@@ -268,7 +264,7 @@ div.home{
 
 }
 
-.ANCHOR_partial{
+.TEMPLAR{
 	padding-top:27px;
 }
 
