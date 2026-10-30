@@ -22,7 +22,7 @@ const unfold = function(){
 		const li = document.createElement("li");
 		const a = document.createElement("a");
 		$(a).text(item)
-		$(a).addClass("ANCHOR")
+		$(a).addClass("TEMPLAR")
 		$(a).addClass("quotations")
 		$(a).attr("href" , "#quotations?path=" + item)
  		$(li).append(a)
