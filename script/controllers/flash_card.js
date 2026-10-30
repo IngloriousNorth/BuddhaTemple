@@ -1,5 +1,5 @@
 const flashInitialize = function(index){
-    var node = graph.nodes.find(n => n.index === index);
+    var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
     $("#myriad").html(node.quotation);
     $("#myriad_src").html(node.src);
 }
@@ -10,15 +10,10 @@ const QRNG = function(providedStartKey = null) {
         .then(data => {
             const qIndex = parseInt(data.number, 10) || 0;
 
-            if (typeof graph === 'undefined' || !graph.nodes || !graph.rels) {
-                console.error('Graph data not found.');
-                return;
-            }
-
             // 1. Build Adjacency List from graph.rels
             const adj = {};
-            graph.nodes.forEach(n => { adj[n.index] = []; });
-            graph.rels.forEach(r => {
+            MVC.Model.quotationGraph.graph.nodes.forEach(n => { adj[n.index] = []; });
+            MVC.Model.quotationGraph.graph.rels.forEach(r => {
                 if (adj[r.start] && adj[r.end]) {
                     adj[r.start].push(r.end);
                     adj[r.end].push(r.start); // Undirected connection graph
