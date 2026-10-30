@@ -1,5 +1,4 @@
-module.exports = {
-	unfold : function(){
+ const unfold = function(){
 		//page heading
 		
 		refreshNodes();
@@ -61,7 +60,7 @@ module.exports = {
 		});
 
 		$("div.quotations").scrollTop();
-	}
+	
 }
 
 function pushIndex(index){
@@ -104,4 +103,4 @@ function implementQuotation(node){
 	
 }
 
-
+export default unfold;
