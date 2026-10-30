@@ -1,4 +1,3 @@
-
 const menu = {
 	"western_thinkers" : ["Heraclitus", "Socrates", "Plato", "Aristotle", "Marcus Aurelius", "Plotinus", 
 		"Meister Eckhart", "Descartes", "Spinoza", "Hume", "Kant", 
