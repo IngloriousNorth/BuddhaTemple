@@ -2,18 +2,18 @@ const unfold = function(){
 	MVC.Model.menu.western_thinkers.forEach(function(item){
 		addDictionary(item, $(".thinkers_menu"))
 	})
-	MVC.Model.menu.menu.buddhist_sutras.forEach(function(item){
+	MVC.Model.menu.buddhist_sutras.forEach(function(item){
 		addDictionary(item, $(".sutras_menu"))
 	})
-	MVC.Model.menu.menu.eastern_glossary.forEach(function(item){
+	MVC.Model.menu.eastern_glossary.forEach(function(item){
 		addDictionary(item, $(".eastern_menu"))
 	})
 
-	MVC.Model.menu.menu.western_glossary.forEach(function(item){
+	MVC.Model.menu.western_glossary.forEach(function(item){
 		addDictionary(item, $(".western_menu"))
 	})
 
-	MVC.Model.menu.menu.hermetic_glossary.forEach(function(item){
+	MVC.Model.menu.hermetic_glossary.forEach(function(item){
 		addDictionary(item, $(".hermetic_menu"))
 	})
 
