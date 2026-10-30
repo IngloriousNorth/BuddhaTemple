@@ -1,5 +1,5 @@
 import MVC from '../../lib/MAINFRAME.js';
-import TEMPEST from '../../lib/TEMPEST.js';
+import TEMPLAR from '../../lib/TEMPLAR.js';
 
 let currentNodeIndex = undefined;
 
