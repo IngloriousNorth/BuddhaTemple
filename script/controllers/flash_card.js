@@ -1,4 +1,4 @@
-const flashInitialize = function(index){
+const initialize = function(index){
     var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
     $("#myriad").html(node.quotation);
     $("#myriad_src").html(node.src);

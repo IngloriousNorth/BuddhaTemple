@@ -6,4 +6,4 @@ homeInitialize = function(){
 	$(".flash #engineering").text(white_lotus.engineering)
 }
 
-export default homeInitialize;
+export default initialize;
