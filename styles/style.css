@@ -104,8 +104,8 @@ div.TEMPLAR{
 
 .quotation_div{
 	padding:32px;
-	height:200px;
-	border-bottom:1px dotted whitesmoke;
+	height:222px;
+	border-bottom:4px dotted whitesmoke;
 }
 
 input{
@@ -123,6 +123,7 @@ input{
 input::placeholder{
 	color:whitesmoke;
 	font-family:"Share Tech", system-ui;
+	font-size:24px;
 
 }
 
@@ -144,7 +145,7 @@ h1{
 	color:#000000;
 	text-shadow:5px 5px gold;
 	text-decoration:none;
-	font-size:27px;
+	font-size:40px;
 	margin-top:17px;
 	z-index:9999;
 	letter-spacing:4px;
@@ -231,6 +232,7 @@ a.quotations {
 	color:whitesmoke;
 	z-index:999;
 	position:relative;
+	letter-spacing:3px;
 	font-size:17px;
 	text-decoration:none;
 	letter-spacing: 3px;
@@ -246,7 +248,7 @@ div.TEMPLAR{
 	left:333px;
 	height:calc(100% - 72px);
 	width:calc(100% - 333px);
-	padding:55px;
+	padding:77px;
 	position:absolute;
 	top:72px;
     background-color: #000000;
@@ -300,7 +302,7 @@ div.TEMPLAR{
 .quotation::first-letter, #myriad::first-letter{
 	float:left;
 	color:BLUEVIOLET !important;
-	font-size:32px;
+	font-size:60px;
 	width:34px;
 	font-style:italic;
 	font-family:"Rationale", "Georgia";
@@ -335,7 +337,7 @@ div.TEMPLAR{
 
 
 .src{
-	color:silver;
+	color:goldenrod;
 	letter-spacing:1px;
 	text-align:right;
 	bottom:9px;
@@ -370,7 +372,7 @@ div.home{
 }
 
 .quotation::first-letter{
-	font-size:32px;
+	font-size:72px;
 	width:34px;
 	font-style:italic;
 	font-family:"Zen Dots", "Georgia";

@@ -70,7 +70,7 @@ $(document).on('input', '#quotationSearchInput', function() {
         TEMPLAR.route("#graph-search?q=" + encodeURIComponent(query));
     } else {
         $('.graph-search').empty().hide();
-        TEMPLAR.route("#flash");
+        TEMPLAR.route("#home");
     }
 });
 
