@@ -36,3 +36,7 @@ $(document).ready(function(){
 			]
 	}, ()=>MVC.View.menuV.unfold());
 })
+
+$(document).on("TEMPLAR", function(){
+	$(".TEMPLAR").scrollTop();
+})

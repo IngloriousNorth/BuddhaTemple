@@ -1,6 +1,6 @@
 const menu = {
 	"western_thinkers" : ["Heraclitus", "Socrates", "Plato", "Aristotle", "Marcus Aurelius", "Plotinus", 
-		"Meister Eckhart", "Descartes", "Spinoza", "Hume", "Kant", 
+		"Descartes", "Spinoza", "Hume", "Kant", 
 		"Hegel", "Nietzsche", "Saussure", "Bertrand Russell", "Gotthard Gunther", 
 		"Thomas Kuhn", "Hilary Putnam", "Derrida", "Julius Evola"]
 	,
