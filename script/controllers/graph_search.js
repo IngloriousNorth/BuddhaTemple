@@ -52,28 +52,18 @@ const unfold = function() {
                 const escapedQuery = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                 // Negative lookahead ensures we don't match inside HTML tags like <br>
                 const regex = new RegExp(`(${escapedQuery})(?![^<>]*>)`, 'gi');
-                return text.replace(regex, '<span style="color: gold; font-weight: bold; background-color: rgba(255, 212, 59, 0.15); padding: 0 2px; border-radius: 3px;">$1</span>');
+                return text.replace(regex, '<span style="color: blue; font-weight: bold; background-color: rgba(255, 212, 59, 0.15); padding: 0 2px; border-radius: 3px;">$1</span>');
             } catch (e) {
                 return text;
             }
         };
 
         matches.forEach(node => {
-            var div = document.createElement("div");
-            $(div).addClass("quotation_div");
-
-            var p = document.createElement("p");
-            $(p).addClass("quotation").html(highlightQuery(node.quotation, query));
-            
-            var src = document.createElement("p");
-            const rawSrcText = " -- " + node.src + (node.ai ? " Gemini" : "");
-            $(src).addClass("src").html(highlightQuery(rawSrcText, query));
-
-            $(div).append(p).append("<br>").append(src);
-            resultsContainer.append(div);
+            MVC.Controller.quotations.implementQuotation(node, "div.TEMPLAR.graph-search")
         });
 
     } catch (e) {
+        console.log(e)
         resultsContainer.html('<p style="color: #ff6b6b;">Invalid regular expression syntax...</p>');
     }
 };

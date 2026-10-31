@@ -57,7 +57,7 @@ const unfold = function() {
     });
 
     matchedNodes.forEach(function(node) {
-        implementQuotation(node);
+        implementQuotation(node, "div.TEMPLAR.quotations");
     });
 
     $("div.TEMPLAR").scrollTop();
@@ -79,7 +79,7 @@ function notQuoted(index) {
     return nodeIndexes.indexOf(index) === -1;
 }
 
-function implementQuotation(node) {
+const implementQuotation = function(node, container) {
     var div = document.createElement("div");
     $(div).addClass("quotation_div");
     
@@ -96,7 +96,7 @@ function implementQuotation(node) {
     $(div).append(p).append("<br><br><br>").append(a);
     
     // Fixed container selector matching the rest of the file
-    $("div.TEMPLAR.quotations").append(div);
+    $(container).append(div);
 }
 
-export default { unfold };
+export default { unfold, implementQuotation };

@@ -18,11 +18,11 @@ const initialize = function(index = undefined){
 
     var node = MVC.Model.quotationGraph.graph.nodes.find(n => n.index === index);
     if(!node){
-        MVC.View.homeV.initialize();
+        MVC.View.home.initialize();
     }
     else{
         $("#myriad").html(node.quotation);
-        $("#myriad_src").html(node.src);    
+        $("#myriad_src").html(" -- " + node.src);    
     }
 }
 

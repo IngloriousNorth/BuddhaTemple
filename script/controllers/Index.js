@@ -14,7 +14,7 @@ $(document).ready(function(){
 					page : "home",
 					fn : function(){
 						$(".page_heading").text("Home")
-						MVC.View.homeV.initialize();//wat
+						MVC.View.home.initialize();
 						MVC.Controller.flash.initialize(TEMPLAR.paramREC()?.index);
 					}
 				},
@@ -34,7 +34,7 @@ $(document).ready(function(){
 				}
 
 			]
-	}, ()=>MVC.View.menuV.unfold());
+	}, ()=>MVC.View.menu.unfold());
 })
 
 $(document).on("TEMPLAR", function(){
