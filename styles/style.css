@@ -468,6 +468,10 @@ div.home{
 }
 
 @media screen and (max-width:1079px){
+	div.TEMPEST{
+		padding:32px;
+	}
+
 	.quotation_div{
 		padding:16px;
 	}
