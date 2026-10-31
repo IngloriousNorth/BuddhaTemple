@@ -32,7 +32,7 @@ body {
 	line-height: 1;
 	height: 100%;
 	table-layout: fixed;
-
+	border:3px dotted gold !important;
 	overflow: hidden;
 	background-image:url("/img/WhiteTara-LrgPUJA.jpg");
 	background-size:cover;
@@ -290,6 +290,8 @@ div.TEMPEST{
 button{
 	position:fixed;
 	z-index:99999;
+	left:26px;
+	top:26px;
 }
 
 .home p{
