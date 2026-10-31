@@ -86,6 +86,7 @@ q:before, q:after {
 .quotation_div{
 	padding:44px;
 	height:444 !important;
+	overflow:hidden;
 	position:relative !important;
 }
 
