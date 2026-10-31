@@ -33,7 +33,7 @@ body {
 	height: 100%;
 	table-layout: fixed;
 	overflow: hidden;
-	background-color:lightyellow; !important;
+	background-image:url("/mahakala.jpg");
 
 }
 ol, ul {
@@ -53,23 +53,51 @@ q:before, q:after {
 }
 
 .sidebar{
-	background:linear-gradient(180deg, darkslategray, darkviolet, black) !important;
-	width:333px;
+	display:none;
+	background:linear-gradient(207deg, #000000, slategray, lightskyblue) !important;
+	width:288px;
 	padding-right:15px;
-	border-right:47px solid DARKGOLDENROD !important;
-	box-shadow:4px 4px 4px #0fc9c9;
+	border-right:40px solid darkgoldenrod !important;
+	box-shadow:13px 13px 17px gold;
 	position:absolute;
 	top:0px;
 	z-index:999;
 	position:absolute;
 	height:100%;
-	box-shadow:3px 4px 5px black;
 
+}
+
+/* If using a custom wrapper span like <span class="dropcap">T</span> */
+.dropcap, 
+.quotation::first-letter {
+    float: left;
+    font-size: 55px;           /* Adjust size as needed */
+    line-height: 0.8;          /* Tight line-height prevents vertical bleed */
+    margin-right: 8px;         /* Creates breathing room so text doesn't overlap */
+    margin-bottom: -4px;
+    padding-top: 4px;
+    color:BLUEVIOLET !important;
+    text-shadow:1px 3px black;
+    font-style:italic;
+    font-family: "Zen Dots", "Georgia", serif;
+}
+
+.quotation_div{
+	padding:44px;
+	height:444 !important;
+	position:relative !important;
+}
+
+/* Ensure the quotation container properly clears floats */
+.quotation_div .quotation {
+    overflow: hidden;          /* Establishes new block formatting context */
+    box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 button{
 	font-family:"Zen Dots", system-ui;
-	width:94px;
+	width:134px;
 	height:72px;
 	color: slateblue;
 	background-color: palegoldenrod;
@@ -96,41 +124,57 @@ button:hover{
 	text-align:right;
 }
 
-div.TEMPLAR{
+div.TEMPEST{
 	overflow-y:auto;
 	height:100%;
+	width:78%;
+	margin-left:8%;
 	position:absolute;
 	box-sizing:border-box;
-	right:0px;
-	top:69px;
+	right:64px;
 	bottom:0px;
 	position:absolute;
+	border-radius:127px;
 }
 
 .quotation_div{
-	padding:32px;
-	height:auto;
-	min-height:333px;
-	border-bottom:3px solid YELLOW;
+	border-bottom:3px solid yellow !important;
+	/* 1. Force the container to include padding and borders inside its total width/height */
+    box-sizing: border-box;
+    
+    /* 2. Ensure it expands dynamically to fit all text/edits without overlapping */
+    height: auto;
+    min-height: fit-content;
+    
+    /* 3. Your desired padding inside the border */
+    padding: 16px; 
+    
+    /* 4. Keep your bottom border styling intact */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); 
+    
+    /* 5. Ensure text wrapping so long lines stay inside the box */
+    word-wrap: break-word;
+    margin:32px 64px 32px 64px;
+    overflow-wrap: break-word;
 }
 
 input{
 	position:fixed;
 	right:0;
 	bottom:0;
-	height:72px;
+	height:53px;
 	width:225px !important;
-	background:linear-gradient(90deg, yellow, goldenrod, slategray);
+	background:linear-gradient(90deg, whitesmoke, silver, darkslategray);
 	z-index:9999;
 	font-family:"Share Tech", system-ui;
-	color:mediumvioletred;
+	color:gold;
 	border-radius:8px;
-	border:4px solid darkviolet;
+	border:1px dotted goldenrod;
 	box-shadow:2px 3px 2px cyan;
 }
 
 input::placeholder{
-	color:darkviolet;
+	color:BLUEVIOLET;
 	text-shadow:2px 2px #000;
 	font-family:"Share Tech", system-ui;
 	font-size:24px;
@@ -139,16 +183,16 @@ input::placeholder{
 
 header{
 	z-index:9999;
-	box-shadow:7px 7px 7px goldenrod;
+	box-shadow:8px 9px 8px whitesmoke;
 	position:fixed;
 	width:100%;
 	height:72px;
 	top:0;
-
+	display:none;
 	right:0;
 	background-color:darkred;
-	background:radial-gradient(black, darkred);
-	border-bottom:11px solid #007BFF;
+	background:linear-gradient(180deg, orangered, silver, #0F0F0F);
+	border-bottom:7px solid goldenrod;
 	border-bottom-left-radius: 32px;
 	border-bottom-right-radius: 32px;
 
@@ -157,7 +201,7 @@ header{
 h1{
 	display:block;
 	color:BLUEVIOLET;
-	text-shadow:3px 4px gold;
+	text-shadow:5px 5px gold;
 	font-size:40px;
 	margin-top:17px;
 	z-index:9997;
@@ -198,8 +242,8 @@ h1 a, h1 a:visited{
 	display:block;
 	padding:21px;
 	width:281px;
-	color:GOLD !important;
-	text-shadow:2px 1px cyan;
+	color:GOLDENROD !important;
+	text-shadow:2px 3px blueviolet;
 	position:relative;
 	letter-spacing:4px;
 	box-sizing:border-box;
@@ -259,18 +303,12 @@ a.quotations:hover{
 }
 
 
-div.TEMPLAR{
-	left:333px;
-	height:calc(100% - 72px);
-	width:calc(100% - 333px);
-	padding:77px;
-	position:absolute;
+div.TEMPEST{
+	height:87%;
+	padding:99px;
 	top:72px;
-    background: radial-gradient(#000000, darkslategray, darkslateblue);
+	background: rgba(218, 165, 32, 0.222);
     background-blend-mode: lighten;
-		overflow-y:auto;
-		text-align:center;
-
 }
 
 .src{
@@ -306,7 +344,7 @@ div.home{
 
 }
 
-div.TEMPLAR{
+div.TEMPEST{
 	padding-top:27px;
 }
 
@@ -314,24 +352,10 @@ div.TEMPLAR{
 .src{
 }
 
-.quotation::first-letter, #myriad::first-letter{
-	float:left;
-	color:gold !important;
-	margin-left:17px;
-	font-size:60px;
-	width:34px;
-	font-style:italic;
-	font-family:"Zen Dots", "Georgia";
-	display:inline-block;
-	vertical-align:middle;
-
-
-}
-
 
 
 .quotation{
-	color:palevioletred;
+	color:WHITESMOKE !important;
 	float:left;
 	display:block;
 	margin:0 auto;
@@ -340,25 +364,61 @@ div.TEMPLAR{
 	text-align:justify;
 	font-family:"Share Tech", serif, system-ui;
 	box-sizing:border-box;
-	font-size:19px;
+	font-size:21px;
 	display:inline-block;
 
 	
 }
 
+/* 1. Container anchor and safe scrolling area */
+.quotation_div {
+    position: relative;          /* Anchors absolute children */
+    min-height: 120px;           /* Breathing room */
+    box-sizing: border-box;
+    padding: 16px;               
+    padding-bottom: 40px;        /* Prevents text overlap with .src */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.quotation_div .quotation {
+    margin: 0 0 10px 0;
+}
+
+/* 2. Pin .src to the bottom of each card */
+.quotation_div .src {
+    position: absolute;
+    bottom: 12px;                
+    left: 16px;                  
+    right: 16px;                 
+    margin: 0;
+}
+
+/* 3. Ensure the scrollable feed view behaves cleanly */
+div.TEMPEST.quotations {
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
 
 
 .src{
-	color:goldenrod;
+	color:SILVER !important;
 	letter-spacing:1px;
 	text-align:right;
 	bottom:9px;
 	font-size:24px;
-	padding-bottom:15px;
+	text-shadow:2px 1px black;
+	padding-bottom:40px;
 	marign-right:17px;
 	display:inline-block;
-	position:relative;
-	top:14px;
+	position:absolute;
+	bottom:14px;
+	padding-right:17px;
+	right:14px;
 	font-family:"Rationale", sans-serif;
 }
 
@@ -405,10 +465,6 @@ div.home{
 	width:281px;
 }
 
-header{
-	display:block;
-}
-
 #js_mobile_menu, .js_mobile_menu{
 	display:none;
 }
@@ -421,7 +477,7 @@ header{
 
 @media screen and (max-width:1079px){
 	#js_mobile_menu{
-		display:block;
+		display:none;
 		font-size:45px;
 		position:fixed;
 		z-index:9999;
@@ -487,7 +543,7 @@ header{
 
 
 
-	div.TEMPLAR{
+	div.TEMPEST{
 		width:100%;
 		left:0px;
 		border-radius:0;
