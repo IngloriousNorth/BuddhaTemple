@@ -2,7 +2,7 @@ import MVC from '../../lib/MAINFRAME.js';
 import TEMPLAR from '../../lib/TEMPLAR.js';
 
 const initialize = function(index = undefined){
-    $("button").on('click', function() {
+    $("button").off("click").on('click', function() {
         const currentText = $('#myriad').text().trim();
         let startNodeKey = null;
 
