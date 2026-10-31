@@ -77,7 +77,7 @@ q:before, q:after {
     margin-right: 8px;         /* Creates breathing room so text doesn't overlap */
     margin-bottom: -4px;
     padding-top: 4px;
-    color:gold !important;
+    color:DARKGOLDENROD !important;
     text-shadow:1px 3px black;
     font-style:italic;
     font-family: "Zen Dots", "Georgia", serif;
