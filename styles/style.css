@@ -32,7 +32,7 @@ body {
 	line-height: 1;
 	height: 100%;
 	table-layout: fixed;
-	
+
 	overflow: hidden;
 	background-image:url("/mahakala.jpg");
 
@@ -77,7 +77,7 @@ q:before, q:after {
     margin-right: 8px;         /* Creates breathing room so text doesn't overlap */
     margin-bottom: -4px;
     padding-top: 4px;
-    color:BLUEVIOLET !important;
+    color:gold !important;
     text-shadow:1px 3px black;
     font-style:italic;
     font-family: "Zen Dots", "Georgia", serif;
@@ -408,7 +408,7 @@ div.TEMPEST.quotations {
 
 
 .src{
-	color:SILVER !important;
+	color:goldenrod !important;
 	letter-spacing:1px;
 	text-align:right;
 	bottom:9px;
