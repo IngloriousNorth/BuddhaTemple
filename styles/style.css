@@ -410,7 +410,8 @@ div.TEMPEST.quotations {
 .src{
 	color:goldenrod !important;
 	letter-spacing:1px;
-	text-align:right;
+	text-align:left;
+	float:left!important;
 	bottom:9px;
 	font-size:24px;
 	text-shadow:2px 1px black;
