@@ -22,7 +22,38 @@
 		<link href="https://fonts.googleapis.com/css2?family=Rationale&family=Share+Tech&family=Zen+Dots&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		
+		<!-- Add this inside your <header> or sidebar -->
+		<div class="ambient-audio-container" style="display: inline-block; margin-left: 15px; vertical-align: middle;">
+		    <audio id="buddhistChant" loop preload="auto">
+		        <!-- Free public domain/creative commons ambient chant link -->
+		        <source src="https://dn710302.ca.archive.org/0/items/39ZenMeditationMusic2HOURSBuddhistMonkPeaceChantHealingMantraChantingPositiveEnergy/36%20Nam%20Myoho%20Renge%20Kyo-%20Morning%20Gongyo%20%28Medium%29.mp3" type="audio/mpeg">
+		        Your browser does not support the audio element.
+		    </audio>
+		    <button id="audioToggleBtn" title="Toggle Ambient Chant" style="background: rgba(218, 165, 32, 0.2); border: 1px solid rgba(218, 165, 32, 0.5); color: #fff; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px;">Chant: Off
+		    </button>
+		    <script>
+				    $(document).ready(function() {
+					    const audio = $('#buddhistChant')[0];
+					    audio.volume = 0.25; // Gentle, quiet background level
+
+					    $('#audioToggleBtn').on('click', function(e) {
+					        e.preventDefault();
+					        if (audio.paused) {
+					            audio.play().then(() => {
+					                $(this).text('Chant: On');
+					                $(this).css('background', 'rgba(218, 165, 32, 0.5)');
+					            }).catch(err => {
+					                console.warn("Audio play blocked:", err);
+					            });
+					        } else {
+					            audio.pause();
+					            $(this).text('Chant: Off');
+					            $(this).css('background', 'rgba(218, 165, 32, 0.2)');
+					        }
+					    });
+					})
+				</script>
+		</div>
 		<div class="TEMPEST quantum_flash">
 			
 		</div>
