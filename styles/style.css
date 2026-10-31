@@ -121,6 +121,7 @@ input{
 	z-index:9999;
 	font-family:"Share Tech", system-ui;
 	color:mediumvioletred;
+	border-radius:8px;
 	border:1px dotted cyan;
 }
 
@@ -178,7 +179,7 @@ h1{
 }
 
 .menu li{
-	border-bottom:1px solid goldenrod;
+	border-bottom:3px dotted palegoldenrod;
 	
 }
 
