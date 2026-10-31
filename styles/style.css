@@ -472,6 +472,7 @@ div.home{
 @media screen and (max-width:1079px){
 	.quotation{
 		font-size:18px;
+		line-height:23px;
 	}
 
 	#js_mobile_menu{
