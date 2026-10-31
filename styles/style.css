@@ -234,7 +234,7 @@ a.quotations {
 	display:block;
 	height:40px;
 	box-sizing:border-box;
-	color:palevioletred;
+	color:mediumvioletred;
 	z-index:999;
 	position:relative;
 	letter-spacing:3px;
@@ -439,7 +439,7 @@ header{
 	}
 
 	.js_mobile_menu{
-		background:orangered;
+		background:grey;
 		width:100%;
 		position:absolute;
 		z-index:9998;
@@ -479,7 +479,10 @@ header{
 
 	input{
 		position:fixed;
-		right:0px;
+		right:auto;
+		left:0;
+		top:auto;
+		bottom:0;
 		border:none !important;
 		height:72px;
 		background:gray !important;i
