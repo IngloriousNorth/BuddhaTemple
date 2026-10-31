@@ -133,14 +133,14 @@ input::placeholder{
 
 header{
 	z-index:9999;
-	box-shadow:4px 4px 5px black;
+	box-shadow:4px 4px 5px gold;
 	position:fixed;
 	width:100%;
 	height:72px;
 	top:0;
 	right:0;
 	background-color:darkred;
-	border-bottom:4px solid mediumaquamarine;
+	border-bottom:10px solid blue;
 
 }
 
