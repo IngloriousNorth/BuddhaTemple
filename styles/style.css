@@ -427,8 +427,9 @@ header{
 		color:whitesmoke;
 		left:3px;
 		top:7px;
+		text-decoration:none;
 	}
-
+	
 	#js_mobile_menu:hover{
 		color:gold;
 	}
