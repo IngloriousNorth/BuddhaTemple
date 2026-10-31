@@ -328,7 +328,20 @@ div.TEMPEST{
 }
 
 
+.quot{
+	font-size:72px;
+	color:gold;
+}
 
+#up{
+	position:absolute;
+	left:-33px;
+}
+
+#down{
+	positon:absolute;
+	right:-2px;
+}
 
 .quotation{
 	color:#0A0A0A !important;
@@ -340,9 +353,9 @@ div.TEMPEST{
 	line-height:72px;
 	position:relative;
 	text-align:justify;
-	font-family:"Share Tech", serif, system-ui;
+	font-family:"Share Tech", serif;
 	box-sizing:border-box;
-	font-size:21px;
+	font-size:24px;
 	display:inline-block;
 
 	
@@ -453,6 +466,10 @@ div.home{
 }
 
 @media screen and (max-width:1079px){
+	.quotation{
+		font-size:18px;
+	}
+
 	#js_mobile_menu{
 		display:none;
 		font-size:45px;

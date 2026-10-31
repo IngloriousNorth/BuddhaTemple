@@ -18,8 +18,17 @@ const initialize = async function(index = undefined) {
         return;
     } else {
         currentNodeIndex = node.index;
-        $(".quotation").html(node.quotation);
-        $(".src").html(" -- " + node.src);    
+            $('.quotation').fadeOut(150, function() {
+            // 1. Set the raw quotation text
+            $('.quotation').html(node.quotation);
+            
+            // 2. Prepend and append the quotation mark spans dynamically
+            $('.quotation').prepend(`<span class='quot' id='up'>"</span>`);
+            $('.quotation').append(`<span id='down' class='quot'>"</span>`);
+            
+            // 3. Fade them back in together smoothly
+            $('.quotation').fadeIn(150);
+        });
     }
 
     // Clear any existing interval to prevent stacking multiple timers
@@ -89,10 +98,16 @@ const rotateFlashCard = async function() {
     if (node) {
         currentNodeIndex = node.index;
         
-        $('.quotation, .src').fadeOut(150, function() {
+       $('.quotation').fadeOut(150, function() {
+            // 1. Set the raw quotation text
             $('.quotation').html(node.quotation);
-            $('.src').html(" -- " + node.src);
-            $('.quotation, .src').fadeIn(200);
+            
+            // 2. Prepend and append the quotation mark spans dynamically
+            $('.quotation').prepend(`<span class='quot' id='up'>"</span>`);
+            $('.quotation').append(`<span id='down' class='quot'>"</span>`);
+            
+            // 3. Fade them back in together smoothly
+            $('.quotation').fadeIn(150);
         });
     }
 }
