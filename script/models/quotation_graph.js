@@ -696,7 +696,7 @@ const graph = {
 		},
 		{
 			index : "thoth_yhvh",
-			quotation : "The father is the active creative principle, the Yod [Fire] of Tetrgrammaton; the mother is the passive creative principle, the He [Water]; the son is the result of their union, the Vod [Air]; the daughter is the ultimate issue, return to rest, the final He [Earth]... In the language of the alchemists, these phenomena [YHVH] were classified for convenience under the figure of four 'elements'.",
+			quotation : "In the language of the alchemists, these phenomena [YHVH] were classified for convenience under the figure of four 'elements'.",
 			src : "Aleister Crowley, The Book of Thoth",
 			ai: false
 		},
