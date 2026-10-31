@@ -122,9 +122,6 @@ button:hover{
 	color:DARKGOLDENROD;
 }
 
-.src{
-	text-align:right;
-}
 
 div.TEMPEST{
 	overflow-y:auto;
@@ -314,9 +311,6 @@ div.TEMPEST{
     background-blend-mode: lighten;
 }
 
-.src{
-	float:right;
-}
 
 .home p{
 	
@@ -351,9 +345,6 @@ div.TEMPEST{
 	padding-top:27px;
 }
 
-
-.src{
-}
 
 
 
@@ -422,7 +413,7 @@ div.TEMPEST.quotations {
 	position:absolute;
 	bottom:14px;
 	padding-right:17px;
-	right:14px;
+	left:14px;
 	font-family:"Rationale", sans-serif;
 }
 
