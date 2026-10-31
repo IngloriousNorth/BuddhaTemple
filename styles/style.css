@@ -350,7 +350,7 @@ div.TEMPEST{
 	float:left;
 	display:block;
 	margin:0 auto;
-	margin-top:55px;
+	margin-top:32px;
 	line-height:72px;
 	position:relative;
 	letter-spacing:1px;
@@ -468,9 +468,14 @@ div.home{
 }
 
 @media screen and (max-width:1079px){
+	.quotation_div{
+		padding:16px;
+	}
+
 	.quotation{
 		font-size:18px;
-		line-height:58px;
+		line-height:44px;
+
 	}
 
 	#js_mobile_menu{
