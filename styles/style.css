@@ -32,6 +32,7 @@ body {
 	line-height: 1;
 	height: 100%;
 	table-layout: fixed;
+	
 	overflow: hidden;
 	background-image:url("/mahakala.jpg");
 
@@ -308,6 +309,7 @@ div.TEMPEST{
 	padding:99px;
 	top:72px;
 	background: rgba(218, 165, 32, 0.222);
+	overflow:hidden;
     background-blend-mode: lighten;
 }
 
