@@ -127,7 +127,7 @@ div.TEMPEST{
     
     /* 5. Ensure text wrapping so long lines stay inside the box */
     word-wrap: break-word;
-    margin:32px 64px 32px 64px;
+    margin:32px;
     overflow-wrap: break-word;
 }
 
@@ -345,7 +345,6 @@ div.TEMPEST{
     position: relative;          /* Anchors absolute children */
     min-height: 120px;           /* Breathing room */
     box-sizing: border-box;
-    padding: 16px;               
     padding-bottom: 40px;        /* Prevents text overlap with .src */
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     word-wrap: break-word;
@@ -361,7 +360,6 @@ div.TEMPEST{
     position: absolute;
     bottom: 12px;                
     left: 16px;                  
-    right: 16px;                 
     margin: 0;
 }
 
