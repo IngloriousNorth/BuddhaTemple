@@ -879,7 +879,7 @@ const graph = {
 		{
 			index: "arya_arhat_identity",
 			quotation: "The noble one (Arya) is so called because of noble qualities; the Arhat has destroyed the enemy of defilements, crossed the ocean of becoming, and stands firm in the unconditioned truth.",
-			src: "Early Buddhist & Vedic Lexicon (Arya / Arhat Synthesis)",
+			src: "Google Gemini AI",
 			pages: ["Eastern Lexicon", "Dharma"],
 			ai: true
 		},
