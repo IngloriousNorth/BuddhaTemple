@@ -347,8 +347,7 @@ div.TEMPEST{
 }
 
 .quotation{
-	color:#0A0A0A !important;
-	text-shadow:1px 2px WHITESMOKE;
+	color:WHITESMOKE !important;
 	float:left;
 	display:block;
 	margin:0 auto;
