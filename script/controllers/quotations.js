@@ -86,10 +86,14 @@ function implementQuotation(node) {
     var p = document.createElement("p");
     $(p).addClass("quotation").html(node.quotation);
     
-    var src = document.createElement("p");
-    $(src).addClass("src").text(" -- " + node.src + (node.ai ? " Gemini" : ""));
+    const a = document.createElement("a");
+    $(a).attr("href", `#home?index=${node.index}`);
     
-    $(div).append(p).append("<br><br><br><br><br>").append(src);
+
+    var src = document.createElement("p");
+    $(src).addClass("src").text(" -- " + node.src + (node.ai ? " [AI]" : ""));
+    $(a).append(src);
+    $(div).append(p).append("<br><br><br>").append(a);
     
     // Fixed container selector matching the rest of the file
     $("div.TEMPLAR.quotations").append(div);

@@ -106,8 +106,9 @@ div.TEMPLAR{
 
 .quotation_div{
 	padding:32px;
-	height:333px;
-	border-bottom:4px dotted whitesmoke;
+	height:auto;
+	min-height:333px;
+	border-bottom:5px dotted silver;
 }
 
 input{
@@ -116,10 +117,10 @@ input{
 	top:0;
 	height:72px;
 	width:225px !important;
-	background:gray!important;
+	background:gray !important;
 	z-index:9999;
 	font-family:"Share Tech", system-ui;
-	color:gold;
+	color:mediumvioletred;
 	border:1px dotted cyan;
 }
 
@@ -343,8 +344,8 @@ div.TEMPLAR{
 	text-align:right;
 	bottom:9px;
 	font-size:24px;
-	padding-top:11px;
 	padding-right:55px;
+	padding-bottom:15px;
 
 	display:inline-block;
 
