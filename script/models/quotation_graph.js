@@ -1738,6 +1738,11 @@ const graph = {
 			pages : ["Avatamsaka Sutra", "MythOS" "Sun", "Wisdom"]
 		},
 		{
+			start : "plotinus_the_one",
+			end : "nietzsche_gateway_moment",
+			pages : ["Nietzsche", "Plotinus", "Eternity"]
+		},
+		{
 			start: "emerald_sun",
 			end : "vimalakirti_root",
 			pages : ["Sun", "Form", "Space", "MythOS" "Sunyata (Emptiness)"]
