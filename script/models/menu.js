@@ -1,7 +1,7 @@
 const menu = {
 	"western_thinkers" : ["Heraclitus", "Socrates", "Plato", "Aristotle", "Marcus Aurelius", "Plotinus", 
 		"Descartes", "Spinoza", "Hume", "Kant", 
-		"Hegel", "Nietzsche", "Saussure", "Bertrand Russell", "Gotthard Gunther", 
+		"Hegel", "Nietzsche", "Saussure", "Bertrand Russell", 
 		"Thomas Kuhn", "Hilary Putnam", "Derrida", "Julius Evola", "Jean-Paul Sartre"]
 	,
 	"buddhist_sutras" : ["The Dhammapada", "Avatamsaka Sutra", "Vimalakirti Sutra", 
