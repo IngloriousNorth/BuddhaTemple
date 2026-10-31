@@ -78,9 +78,10 @@ button{
 	border-radius:5px;
 	display:block;
 	position:absoulute;
-	marign-top:128px;
 	cursor:pointer;
-	margin-top:55px;
+	position:fixed;
+	left:0;
+	bottom:0;
 	margin:0 auto;
 }
 
@@ -429,7 +430,7 @@ header{
 		top:7px;
 		text-decoration:none;
 	}
-	
+
 	#js_mobile_menu:hover{
 		color:gold;
 	}
