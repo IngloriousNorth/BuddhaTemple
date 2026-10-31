@@ -117,7 +117,7 @@ input{
 	bottom:0;
 	height:72px;
 	width:225px !important;
-	background:linear-gradient(90deg, palegoldenrod, goldenrod, darkgoldenrod);
+	background:linear-gradient(90deg, lightgoldenrodyellow, palegoldenrod, slategray);
 	z-index:9999;
 	font-family:"Share Tech", system-ui;
 	color:mediumvioletred;
@@ -312,11 +312,11 @@ div.TEMPLAR{
 
 .quotation::first-letter, #myriad::first-letter{
 	float:left;
-	color:BLUEVIOLET !important;
+	color:gold !important;
 	font-size:60px;
 	width:34px;
 	font-style:italic;
-	font-family:"Rationale", "Georgia";
+	font-family:"Zen Dots", "Georgia";
 	display:inline-block;
 	vertical-align:middle;
 	padding-right:7px;
@@ -327,11 +327,11 @@ div.TEMPLAR{
 
 
 .quotation{
-	color:cyan;
+	color:palevioletred;
 	float:left;
 	display:block;
 	margin:0 auto;
-	line-height:33px;
+	line-height:47px;
 	position:relative;
 	text-align:justify;
 	font-family:"Share Tech", serif, system-ui;
@@ -381,14 +381,6 @@ div.home{
 
 }
 
-.quotation::first-letter{
-	font-size:72px;
-	width:34px;
-	font-style:italic;
-	font-family:"Zen Dots", "Georgia";
-	padding-right:7px;
-
-}
 
 #myriad_src{
 	text-align:left;
@@ -427,7 +419,7 @@ header{
 @media screen and (max-width:1079px){
 	#js_mobile_menu{
 		display:block;
-		font-size:60px;
+		font-size:45px;
 		position:fixed;
 		z-index:9999;
 		color:whitesmoke;
@@ -453,16 +445,29 @@ header{
 		top:72px;
 	}
 
+	.menu{
+		width:85%;
+		margin-top:33px;
+	}
+
 	.sidebar{
 		display:none;
 	}
 
+	.quotation_div{
+		padding:13px;
+	}
+
+	.quotation{
+		padding:14px;
+	}
+
 	h1{
 		font-size:24px;
-		margin:0 auto;
-		position:relative;
+		position:fixed;
 		text-decoration:none;
 		top:13px;
+		left:55px;
 	}
 
 	.page_heading{
