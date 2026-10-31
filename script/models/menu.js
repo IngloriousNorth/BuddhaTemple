@@ -11,7 +11,7 @@ const menu = {
 	,	
 	"eastern_glossary" : [ "Arya", "Dependent Origination", 
 		"anatta", "Karma", "Maya", "Yogacara", "Suffering", 
-		"Self-Nature", "Dharma", "Tao", "Sunyata",
+		"Self-Nature", "Dharma", "Tao", "Sunyata (Emptiness)",
 		 "Skillful Means", "Omniscience"]
 	,
 	"western_glossary" : ["non-Being", "Matter", "Form", "Science", "Context", "Virtue", "Language", "Logic", "Deconstruction", "Self", "Becoming", "Time", "Aristocracy"]

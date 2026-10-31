@@ -1060,7 +1060,7 @@ const graph = {
 		{
 			start : "lankavatara_nature",
 			end : "logos_as_such",
-			pages : ["Hume", "Self", "anatta", "Sunyata", "Self-Nature", "Lankavatara Sutra"]
+			pages : ["Hume", "Self", "anatta", "Sunyata (Emptiness)", "Self-Nature", "Lankavatara Sutra"]
 		},
 		{
 			start : "cogito",
@@ -1245,22 +1245,22 @@ const graph = {
 		{
 			start: "socrates_oracle",
 			end: "tao_emptiness",
-			pages: ["Wisdom", "Omniscience", "Tao", "Socrates", "Dharma", "Sunyata"]
+			pages: ["Wisdom", "Omniscience", "Tao", "Socrates", "Dharma", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "socrates_oracle",
 			end : "culatanhasankhaya_omniscience",
-			pages: ["Socrates", "Omniscience", "Sunyata", "Wisdom", "Dharma", "Maya"]
+			pages: ["Socrates", "Omniscience", "Sunyata (Emptiness)", "Wisdom", "Dharma", "Maya"]
 		},
 		{
 			start : "culatanhasankhaya_omniscience",
 			end : "vimalakirti_root",
-			pages: ["Socrates", "Omniscience", "Wisdom", "Dharma", "Sunyata"]
+			pages: ["Socrates", "Omniscience", "Wisdom", "Dharma", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "vimalakirti_root",
 			end : "tao_emptiness",
-			pages: ["Tao", "Omniscience", "Wisdom", "Sunyata"]
+			pages: ["Tao", "Omniscience", "Wisdom", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "socrates_demiourgus",
@@ -1280,22 +1280,22 @@ const graph = {
 		{
 			start : "nietzsche_love",
 			end : "dhammapada_love",
-			pages: ["Dharma", "Virtue", "The Dhammapada", "Nietzsche", "Maya", "Sunyata"]
+			pages: ["Dharma", "Virtue", "The Dhammapada", "Nietzsche", "Maya", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "lotus_beyond",
 			end : "diamond_beyond",
-			pages : ["Dharma", "Virtue", "Diamond Sutra", "The Lotus Sutra", "Sunyata"]
+			pages : ["Dharma", "Virtue", "Diamond Sutra", "The Lotus Sutra", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "nietzsche_love",
 			end : "lotus_beyond",
-			pages : ["Dharma", "Virtue", "The Lotus Sutra", "Nietzsche", "Sunyata"]
+			pages : ["Dharma", "Virtue", "The Lotus Sutra", "Nietzsche", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "nietzsche_love",
 			end : "diamond_beyond",
-			pages : ["Dharma", "Virtue", "Diamond Sutra", "Nietzsche", "Sunyata"]
+			pages : ["Dharma", "Virtue", "Diamond Sutra", "Nietzsche", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "nietzsche_buddha",
@@ -1305,7 +1305,7 @@ const graph = {
 		{
 			start : "nietzsche_buddha",
 			end : "nirvana_beyond",
-			pages : ["Nirvana Sutra", "Virtue", "Dharma", "Nietzsche", "Sunyata"]
+			pages : ["Nirvana Sutra", "Virtue", "Dharma", "Nietzsche", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "nietzsche_buddha",
@@ -1345,7 +1345,7 @@ const graph = {
 		{
 			start : "russell_logic",
 			end : "nietzsche_bee",
-			pages : ["Bertrand Russell", "Nietzsche", "Logic", "Sunyata", "Wisdom", "Omniscience"]
+			pages : ["Bertrand Russell", "Nietzsche", "Logic", "Sunyata (Emptiness)", "Wisdom", "Omniscience"]
 		},
 		{
 			start : "nietzsche_suffering",
@@ -1360,7 +1360,7 @@ const graph = {
 		{
 			start : "socrates_beyond",
 			end:  "dhammapada_love",
-			pages : ["Dharma", "Virtue", "Plato", "Socrates", "The Dhammapada", "Sunyata"]
+			pages : ["Dharma", "Virtue", "Plato", "Socrates", "The Dhammapada", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "socrates_beyond",
@@ -1375,7 +1375,7 @@ const graph = {
 		{
 			start : "russell_universe",
 			end : "diamond_entity",
-			pages : ["Bertrand Russell", "Diamond Sutra", "Logic", "Sunyata", "Wisdom", "Omniscience", "Science"]
+			pages : ["Bertrand Russell", "Diamond Sutra", "Logic", "Sunyata (Emptiness)", "Wisdom", "Omniscience", "Science"]
 		},
 		{
 			start : "russell_universe",
@@ -1390,27 +1390,27 @@ const graph = {
 		{
 			start : "russell_logic",
 			end : "diamond_entity",
-			pages : ["Bertrand Russell", "Diamond Sutra", "Logic", "Sunyata", "Wisdom", "Omniscience"]
+			pages : ["Bertrand Russell", "Diamond Sutra", "Logic", "Sunyata (Emptiness)", "Wisdom", "Omniscience"]
 		},
 		{
 			start : "russell_logic",
 			end : "russell_universe",
-			pages : ["Bertrand Russell", "Logic", "Sunyata", "Wisdom", "Omniscience"]
+			pages : ["Bertrand Russell", "Logic", "Sunyata (Emptiness)", "Wisdom", "Omniscience"]
 		},
 		{
 			start : "russell_universe",
 			end : "gunther_context",
-			pages : ["Bertrand Russell", "Logic", "Sunyata"]
+			pages : ["Bertrand Russell", "Logic", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "russell_logic",
 			end : "gunther_context",
-			pages : ["Bertrand Russell", "Logic", "Sunyata", "Matter", "Omniscience"]
+			pages : ["Bertrand Russell", "Logic", "Sunyata (Emptiness)", "Matter", "Omniscience"]
 		},
 		{
 			start : "gunther_context",
 			end : "putnam_internalism",
-			pages : ["Bertrand Russell", "Logic", "Sunyata", "Maya", "Matter", "Wisdom", "Kant", "Language", "Omniscience"]
+			pages : ["Bertrand Russell", "Logic", "Sunyata (Emptiness)", "Maya", "Matter", "Wisdom", "Kant", "Language", "Omniscience"]
 		},
 		{
 			start : "lotus_omniscience",
@@ -1470,12 +1470,12 @@ const graph = {
 		{
 			start : "heart_form",
 			end: "emptiness_light",
-			pages : ["Tibetan Book of the Dead", "Heart Sutra", "Sunyata", "Form", "Logic", "Science", "Eternity"]
+			pages : ["Tibetan Book of the Dead", "Heart Sutra", "Sunyata (Emptiness)", "Form", "Logic", "Science", "Eternity"]
 		},
 		{
 			start : "emptiness_light",
 			end: "nirvana_eternity",
-			pages : ["Tibetan Book of the Dead", "Nirvana Sutra", "Sunyata", "Form", "Logic", "Eternity"]
+			pages : ["Tibetan Book of the Dead", "Nirvana Sutra", "Sunyata (Emptiness)", "Form", "Logic", "Eternity"]
 		},
 		{
 			start :"lotus_dharma",
@@ -1545,17 +1545,17 @@ const graph = {
 		{
 			start : "derrida_void",
 			end: "tibetan_mind",
-			pages : ["Derrida", "Deconstruction", "Sunyata", "Space", "Tibetan Book of the Dead"]
+			pages : ["Derrida", "Deconstruction", "Sunyata (Emptiness)", "Space", "Tibetan Book of the Dead"]
 		},
 		{
 			start : "derrida_void",
 			end: "vimalakirti_root",
-			pages : ["Derrida", "Deconstruction", "Sunyata", "Space", "Vimalakirti Sutra"]
+			pages : ["Derrida", "Deconstruction", "Sunyata (Emptiness)", "Space", "Vimalakirti Sutra"]
 		},
 		{
 			start : "tibetan_mind",
 			end: "vimalakirti_root",
-			pages : ["Tibetan Book of the Dead", "Maya", "Derrida", "Deconstruction", "Sunyata", "Space", "Vimalakirti Sutra"]
+			pages : ["Tibetan Book of the Dead", "Maya", "Derrida", "Deconstruction", "Sunyata (Emptiness)", "Space", "Vimalakirti Sutra"]
 		},
 		{
 			start : "derrida_pure",
@@ -1565,17 +1565,17 @@ const graph = {
 		{
 			start : "derrida_psychic",
 			end : "tibetan_mind",
-			pages : ["Derrida", "Tibetan Book of the Dead", "Sunyata", "Space", "Language"]
+			pages : ["Derrida", "Tibetan Book of the Dead", "Sunyata (Emptiness)", "Space", "Language"]
 		},
 		{
 			start : "heart_form",
 			end : "derrida_psychic",
-			pages : ["Derrida", "Deconstruction", "Space", "Sunyata", "Heart Sutra"]
+			pages : ["Derrida", "Deconstruction", "Space", "Sunyata (Emptiness)", "Heart Sutra"]
 		},
 		{
 			start : "derrida_psychic",
 			end : "vimalakirti_root",
-			pages : ["Derrida", "Vimalakirti Sutra", "Space", "Sunyata", "Deconstruction"]
+			pages : ["Derrida", "Vimalakirti Sutra", "Space", "Sunyata (Emptiness)", "Deconstruction"]
 		},
 		{
 			start : "derrida_dependent",
@@ -1725,7 +1725,7 @@ const graph = {
 		{
 			start : "diamond_entity",
 			end : "tibetan_mandala",
-			pages : ["Tibetan Book of the Dead", "Diamond Sutra", "Maya", "Sunyata", "Language"]
+			pages : ["Tibetan Book of the Dead", "Diamond Sutra", "Maya", "Sunyata (Emptiness)", "Language"]
 		},
 		{
 			start : "tao_name",
@@ -1735,12 +1735,12 @@ const graph = {
 		{
 			start : "thoth_star",
 			end : "avatam_lands",
-			pages : ["Avatamsaka Sutra", "Sun", "Wisdom"]
+			pages : ["Avatamsaka Sutra", "MythOS" "Sun", "Wisdom"]
 		},
 		{
 			start: "emerald_sun",
 			end : "vimalakirti_root",
-			pages : ["Sun", "Form", "Space", "Sunyata"]
+			pages : ["Sun", "Form", "Space", "MythOS" "Sunyata (Emptiness)"]
 		},
 		{
 			start : "for_science",
@@ -1790,7 +1790,7 @@ const graph = {
 		{
 			start: "paul_skill",
 			end : "universally_good",
-			pages : ["Christ", "Avatamsaka Sutra", "Skillful Means", "Dependent Origination", "Sunyata"]
+			pages : ["Christ", "Avatamsaka Sutra", "Skillful Means", "Dependent Origination", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "paul_skill",
@@ -1971,7 +1971,7 @@ const graph = {
 		{
 			start : "sartre_nothingness",
 			end : "heart_form",
-			pages : ["Heart Sutra", "Jean-Paul Sartre", "non-Being", "Sunyata"]
+			pages : ["Heart Sutra", "Jean-Paul Sartre", "non-Being", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "allah_tawhid",
@@ -1981,7 +1981,7 @@ const graph = {
 		{
 			start : "diamond_marks",
 			end : "sartre_nothignness",
-			pages : ["Diamond Sutra", "Jean-Paul Sartre", "non-Being", "Sunyata", "Virtue"]
+			pages : ["Diamond Sutra", "Jean-Paul Sartre", "non-Being", "Sunyata (Emptiness)", "Virtue"]
 		},
 		{
 			start : "hart_extraordinary",
@@ -2023,7 +2023,7 @@ const graph = {
 		{
 			start : "heidegger_hermeneutic_circle",
 			end : "saussure_sign",
-			pages : ["Saussure", "Heidegger", "Context", "Sunyata"]
+			pages : ["Saussure", "Heidegger", "Context", "Sunyata (Emptiness)"]
 		},
 		{
 			start : "heidegger_hermeneutic_circle",
@@ -2033,7 +2033,7 @@ const graph = {
 		{
 			start : "heidegger_hermeneutic_circle",
 			end : "nietzsche_myth",
-			pages : ["Nietzsche", "Heidegger", "MythOS", "Context", "Sunyata", "Dharma"]
+			pages : ["Nietzsche", "Heidegger", "MythOS", "Context", "Sunyata (Emptiness)", "Dharma"]
 		},
 		{
 			start : "hegelian_master",
