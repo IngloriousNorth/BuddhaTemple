@@ -34,7 +34,7 @@ body {
 	table-layout: fixed;
 
 	overflow: hidden;
-	background-image:url("/mahakala.jpg");
+	background-image:url("/img/WhiteTara-LrgPUJA.jpg");
 
 }
 ol, ul {
@@ -279,8 +279,8 @@ a.quotations:hover{
 div.TEMPEST{
 	height:87%;
 	padding:99px;
-	top:72px;
-	left:99px;
+	top:77px;
+	left:77px;
 	background: rgba(0, 193, 255, 0.444);	overflow:hidden;
     background-blend-mode: lighten;
     margin: 0 auto;
@@ -324,7 +324,7 @@ div.TEMPEST{
 
 
 .quotation{
-	color:WHITESMOKE !important;
+	color:#007BFF !important;
 	float:left;
 	display:block;
 	margin:0 auto;
@@ -375,7 +375,7 @@ div.TEMPEST.quotations {
 
 
 .src{
-	color:goldenrod !important;
+	color:WHITESMOKE !important;
 	letter-spacing:1px;
 	text-align:left;
 	float:left!important;
